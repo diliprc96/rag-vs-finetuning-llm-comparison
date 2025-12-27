@@ -1,0 +1,16 @@
+torch
+transformers
+peft
+bitsandbytes
+accelerate
+trl
+langchain
+faiss-cpu
+sentence-transformers
+anthropic
+scipy
+pandas
+beautifulsoup4
+lxml
+requests
+tqdm

@@ -1,0 +1,4 @@
+{"id": 1, "type": "objective", "question": "What is the SI unit of force?", "gold": "Newton", "gold_numeric": null, "reference": "OpenStax Ch.4: Force and Newton's laws."}
+{"id": 2, "type": "objective", "question": "If F = 20 N acts on m = 4 kg, calculate acceleration.", "gold": "5", "gold_numeric": 5.0, "reference": "F = ma"}
+{"id": 3, "type": "explain", "question": "A book sits on a table. Draw free-body diagram and explain why it doesn't accelerate.", "gold": "Normal force cancels gravity; net force zero; static equilibrium.", "reference": "OpenStax Ch.4 example: Free-body diagrams."}
+{"id": 4, "type": "explain", "question": "Why does a satellite in circular orbit have constant speed but changing velocity?", "gold": "Speed constant because magnitude of velocity unchanged; direction changes due to centripetal acceleration toward center; velocity vector rotates.", "reference": "OpenStax Ch.5: Circular motion and gravitation."}
