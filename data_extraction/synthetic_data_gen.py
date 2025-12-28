@@ -7,7 +7,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from anthropic import Anthropic
-
+from dotenv import load_dotenv
+load_dotenv()
 # Configuration
 INPUT_FILE = "data_extraction/openstax_physics_vol1_ch1_6.json"
 OUTPUT_FILE = "data_extraction/alpaca_physics_5k.jsonl"
@@ -35,43 +36,72 @@ Format:
 Return ONLY the JSON list. No other text.
 """
 
+RAW_OUTPUT_FILE = "data_extraction/raw_claude_responses.jsonl"
+
 def generate_batch(client, text, num_pairs=3):
-    try:
-        # Pre-fill the assistant response with "[" to force JSON mode
-        message = client.messages.create(
-            model=MODEL_NAME,
-            max_tokens=4000,
-            temperature=0.5,
-            system=SYSTEM_PROMPT,
-            messages=[
-                {"role": "user", "content": USER_PROMPT_TEMPLATE.format(text=text, num_pairs=num_pairs)},
-                {"role": "assistant", "content": "["}
-            ]
-        )
-        response_text = message.content[0].text.strip()
-        print(f"DEBUG REQ: Response received. Length: {len(response_text)}")
-        
-        if response_text.startswith("["):
-            clean_text = response_text
-        else:
-            clean_text = "[" + response_text
-        
+    max_retries = 5
+    base_delay = 20
+    
+    for attempt in range(max_retries):
         try:
-            data = json.loads(clean_text, strict=False)
-            print(f"DEBUG: Parsed {len(data)} items.")
-            return data
-        except json.JSONDecodeError as e:
-            print(f"ERROR: JSON Parse Error {e}")
-            print(f"RAW TEXT START: {clean_text[:100]}")
-            return []
-    except Exception as e:
-        print(f"Error generating batch: {e}")
-        return []
+            # Pre-fill the assistant response with "[" to force JSON mode
+            message = client.messages.create(
+                model=MODEL_NAME,
+                max_tokens=2000, 
+                temperature=0.5,
+                system=SYSTEM_PROMPT,
+                messages=[
+                    {"role": "user", "content": USER_PROMPT_TEMPLATE.format(text=text, num_pairs=num_pairs)},
+                    {"role": "assistant", "content": "["}
+                ]
+            )
+            response_text = message.content[0].text.strip()
+            
+            # Save raw response immediately!
+            try:
+                with open(RAW_OUTPUT_FILE, "a", encoding="utf-8") as f:
+                    log_entry = {
+                        "timestamp": time.time(),
+                        "chunk_snippet": text[:100],
+                        "raw_response": response_text
+                    }
+                    f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
+            except Exception as e:
+                print(f"WARN: Failed to save raw log: {e}")
+
+            if response_text.startswith("["):
+                clean_text = response_text
+            else:
+                clean_text = "[" + response_text
+            
+            try:
+                data = json.loads(clean_text, strict=False)
+                return data
+            except json.JSONDecodeError as e:
+                print(f"WARN: JSON Parse Error {e} in chunk. Raw response saved to {RAW_OUTPUT_FILE}.")
+                return []
+                
+        except Exception as e:
+            # Only retry on network/rate limit, NOT on code errors
+            if "rate_limit_error" in str(e) or "429" in str(e):
+                delay = base_delay * (2 ** attempt)
+                print(f"Rate limit hit. Retrying in {delay}s...")
+                time.sleep(delay)
+            elif "overloaded" in str(e):
+                delay = base_delay * (2 ** attempt)
+                print(f"API Overloaded. Retrying in {delay}s...")
+                time.sleep(delay)
+            else:
+                print(f"Error generating batch: {e}")
+                return []
+    
+    print("Max retries exceeded for batch.")
+    return []
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0, help="Test run with limited number of chunks")
-    parser.add_argument("--workers", type=int, default=4, help="Number of concurrent threads")
+    parser.add_argument("--workers", type=int, default=1, help="Number of concurrent threads")
     args = parser.parse_args()
 
     if not API_KEY:
@@ -111,12 +141,16 @@ def main():
             if data:
                 results.extend(data)
     else:
+        # We also add a small delay between submissions to smooth out spikes if workers > 1
         with ThreadPoolExecutor(max_workers=args.workers) as executor:
             future_to_chunk = {executor.submit(generate_batch, client, chunk, pairs_per_chunk): chunk for chunk in all_chunks}
+            
             for future in tqdm(as_completed(future_to_chunk), total=len(all_chunks)):
                 data = future.result()
                 if data:
                     results.extend(data)
+                # Small sleep to be nice to the API if running single threaded loop effectively
+                time.sleep(1.0)
 
     print(f"Generated {len(results)} pairs.")
     
