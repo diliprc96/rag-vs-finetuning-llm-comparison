@@ -12,7 +12,7 @@ from transformers import (
     pipeline,
     logging,
 )
-from trl import SFTTrainer
+from trl import SFTTrainer, SFTConfig
 
 # Configuration
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
@@ -76,8 +76,8 @@ def main():
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj"]
     )
 
-    # Training Arguments
-    training_arguments = TrainingArguments(
+    # SFTConfig (replaces TrainingArguments)
+    sft_config = SFTConfig(
         output_dir=OUTPUT_DIR,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
@@ -95,7 +95,9 @@ def main():
         group_by_length=True,
         lr_scheduler_type="constant",
         report_to="tensorboard",
-        save_total_limit=2, # Limits to saving only the last 2 checkpoints to save space
+        save_total_limit=2,
+        max_length=2048,
+        packing=False,
     )
 
     print("Starting SFTTrainer...")
@@ -104,10 +106,8 @@ def main():
         train_dataset=dataset,
         peft_config=peft_config,
         formatting_func=format_prompts,
-        max_seq_length=2048,
-        tokenizer=tokenizer,
-        args=training_arguments,
-        packing=False,
+        processing_class=tokenizer,
+        args=sft_config,
     )
 
     # Handle boolean vs string for resume_from_checkpoint
