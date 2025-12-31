@@ -1,3 +1,7 @@
-data_extraction\data_extraction_venv
-data_extraction\openstax_physics\
+data_extraction/data_extraction_venv
+data_extraction/openstax_physics/
 .env
+evaluation/__pycache__/
+rag_pipeline/__pycache__/
+results/
+evaluation/results_table.csv
