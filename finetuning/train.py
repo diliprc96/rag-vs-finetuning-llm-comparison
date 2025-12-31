@@ -34,16 +34,17 @@ def main():
     dataset = load_dataset('json', data_files=args.dataset_path, split="train")
 
     # Formatting function
-    def format_prompts(examples):
-        output_texts = []
-        for instruction, input_text, output in zip(examples['instruction'], examples['input'], examples['output']):
-            # Mistral Instruct Format: [INST] instruction [/INST] output
-            if input_text:
-                prompt = f"[INST] {instruction}\n\n{input_text} [/INST] {output}"
-            else:
-                prompt = f"[INST] {instruction} [/INST] {output}"
-            output_texts.append(prompt)
-        return output_texts
+    def format_prompts(example):
+        instruction = example['instruction']
+        input_text = example['input']
+        output = example['output']
+        
+        # Mistral Instruct Format: [INST] instruction [/INST] output
+        if input_text:
+            prompt = f"[INST] {instruction}\n\n{input_text} [/INST] {output}"
+        else:
+            prompt = f"[INST] {instruction} [/INST] {output}"
+        return prompt
 
     # QLoRA Config
     bnb_config = BitsAndBytesConfig(

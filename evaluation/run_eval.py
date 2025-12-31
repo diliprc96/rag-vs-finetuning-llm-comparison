@@ -6,6 +6,8 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import PeftModel, PeftConfig
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from rag_pipeline.retriever import load_index, retrieve, format_docs
 from evaluation.scorers import grade_mcq, grade_numeric, grade_explanation
 
