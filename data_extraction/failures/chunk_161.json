@@ -1,0 +1,97 @@
+{
+    "instruction": "What is the angle between the two vectors $\\vec{B}$ and $\\vec{A}$ when $|\\vec{A}+\\vec{B}|=3.0\\text{cm}$?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Vector $\\vec{B}$": "5.0 cm long",
+          "Vector $\\vec{A}$": "4.0 cm long",
+          "$|\\vec{A}+\\vec{B}|=3.0\\text{cm}$"
+        },
+      "Solution":
+        {
+          "To find the angle between $\\vec{B}$ and $\\vec{A}$, we can use the law of cosines:",
+          "$|\\vec{A}+\\vec{B}|^2 = |\\vec{A}|^2 + |\\vec{B}|^2 - 2|\\vec{A}||\\vec{B}|\\cos\\theta$",
+          "Substituting the given values:",
+          "$3.0^2 = 4.0^2 + 5.0^2 - 2(4.0)(5.0)\\cos\\theta$",
+          "Solving for $\\cos\\theta$:",
+          "$\\cos\\theta = \\frac{4.0^2 + 5.0^2 - 3.0^2}{2(4.0)(5.0)} = 0.5$",
+          "Therefore, the angle $\\theta$ between $\\vec{B}$ and $\\vec{A}$ is $60$ degrees."
+        }
+    }
+  },
+  {
+    "instruction": "What is the component of the force vector $\\vec{G}=(3.0\\hat{i}+4.0\\hat{j}+10.0\\hat{k})\\text{N}$ along the force vector $\\vec{H}=(1.0\\hat{i}+4.0\\hat{j})\\text{N}$?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Force vector $\\vec{G}$": "(3.0\\hat{i}+4.0\\hat{j}+10.0\\hat{k})\\text{N}$",
+          "Force vector $\\vec{H}$": "(1.0\\hat{i}+4.0\\hat{j})\\text{N}$"
+        },
+      "Solution":
+        {
+          "To find the component of $\\vec{G}$ along $\\vec{H}$, we use the dot product:",
+          "$\\vec{G} \\cdot \\vec{H} = |\\vec{G}||\\vec{H}|\\cos\\theta$",
+          "where $\\theta$ is the angle between $\\vec{G}$ and $\\vec{H}$.",
+          "The magnitude of $\\vec{G}$ is $\\sqrt{3.0^2 + 4.0^2 + 10.0^2} = 11\\text{N}$.",
+          "The magnitude of $\\vec{H}$ is $\\sqrt{1.0^2 + 4.0^2} = 4\\text{N}$.",
+          "The angle $\\theta$ between $\\vec{G}$ and $\\vec{H}$ can be found using the dot product formula:",
+          "$\\cos\\theta = \\frac{\\vec{G} \\cdot \\vec{H}}{|\\vec{G}||\\vec{H}|}$",
+          "Substituting the values, we get:",
+          "$\\cos\\theta = \\frac{3.0(1.0) + 4.0(4.0)}{11 \\cdot 4} = \\frac{19}{44}$",
+          "Therefore, the component of $\\vec{G}$ along $\\vec{H}$ is $|\\vec{G}||\\vec{H}|\\cos\\theta = 11 \\cdot 4 \\cdot \\frac{19}{44} = 19\\text{N}$."
+        }
+    }
+  },
+  {
+    "instruction": "Explain why the distance between two points in a plane is invariant under rotations of the coordinate system.",
+    "input": "",
+    "output": {
+      "Explanation":
+        {
+          "The distance between two points in a plane is given by the Pythagorean theorem:",
+          "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$",
+          "When the coordinate system is rotated by an angle $\\theta$, the new coordinates $(x', y')$ are related to the original coordinates $(x, y)$ by the transformation equations:",
+          "$x' = x\\cos\\theta + y\\sin\\theta$",
+          "$y' = -x\\sin\\theta + y\\cos\\theta$",
+          "Substituting these expressions into the distance formula, we get:",
+          "$d = \\sqrt{((x_2\\cos\\theta + y_2\\sin\\theta) - (x_1\\cos\\theta + y_1\\sin\\theta))^2 + ((-x_2\\sin\\theta + y_2\\cos\\theta) - (-x_1\\sin\\theta + y_1\\cos\\theta))^2}$",
+          "Simplifying, we get:",
+          "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$",
+          "This is the same as the original distance formula, showing that the distance between two points is invariant under rotations of the coordinate system."
+        }
+    }
+  },
+  {
+    "instruction": "Explain the relationship between the vectors $\\vec{A}$, $\\vec{B}$, and $\\vec{C}^\\prime$ in the given triangle.",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "The figure shows a triangle formed by the three vectors $\\vec{A}$, $\\vec{B}$, and $\\vec{C}$.",
+          "The vector $\\vec{C}^\\prime$ is drawn between the midpoints of $\\vec{A}$ and $\\vec{B}$."
+        },
+      "Explanation":
+        {
+          "The relationship between the vectors $\\vec{A}$, $\\vec{B}$, and $\\vec{C}^\\prime$ is that $\\vec{C}^\\prime = \\vec{C}/2$.",
+          "This can be shown using the properties of vectors and the geometry of the triangle.",
+          "Since $\\vec{C}^\\prime$ is drawn between the midpoints of $\\vec{A}$ and $\\vec{B}$, it represents half the distance between the endpoints of $\\vec{A}$ and $\\vec{B}$.",
+          "Therefore, the magnitude of $\\vec{C}^\\prime$ is half the magnitude of $\\vec{C}$, and the direction of $\\vec{C}^\\prime$ is the same as the direction of $\\vec{C}$.",
+          "In other words, $\\vec{C}^\\prime = \\vec{C}/2$."
+        }
+    }
+  },
+  {
+    "instruction": "Derive the transformation equations for the coordinates $(x', y')$ in the rotated coordinate system $S'$ in terms of the coordinates $(x, y)$ in the original coordinate system $S$.",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "The coordinate system $S$ is rotated about its origin by an angle $\\theta$ to become the new coordinate system $S'$.",
+          "A point in the plane has coordinates $(x, y)$ in $S$ and coordinates $(x', y')$ in $S'$."
+        },
+      "Solution":
+        {
+          "To derive the transformation equations, we can use the properties of trigonometric functions and the geometry of the rotation.",
+          "Let's consider a vector $\\

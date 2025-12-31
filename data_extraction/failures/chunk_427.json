@@ -1,0 +1,69 @@
+{
+    "instruction": "What is the net force in component form?",
+    "input": "",
+    "output": {
+      "Fx": 130.0 * cos(32 * 3.14159 / 180),
+      "Fy": 130.0 * sin(32 * 3.14159 / 180) + 180.0
+    }
+  },
+  {
+    "instruction": "What is the magnitude and direction of the net force?",
+    "input": "",
+    "output": {
+      "magnitude": Math.sqrt(Math.pow(130.0 * cos(32 * 3.14159 / 180), 2) + Math.pow(130.0 * sin(32 * 3.14159 / 180) + 180.0, 2)),
+      "direction": Math.atan2(130.0 * sin(32 * 3.14159 / 180) + 180.0, 130.0 * cos(32 * 3.14159 / 180)) * 180 / 3.14159
+    }
+  },
+  {
+    "instruction": "What combined force should David and Stephanie apply to prevent the couch from moving?",
+    "input": "",
+    "output": {
+      "Fds": Math.sqrt(Math.pow(130.0 * cos(32 * 3.14159 / 180), 2) + Math.pow(130.0 * sin(32 * 3.14159 / 180) + 180.0, 2))
+    }
+  },
+  {
+    "instruction": "What is the net external force on Andrea, the 63.0-kg sprinter?",
+    "input": "",
+    "output": {
+      "Fnet": 63.0 * 4.200
+    }
+  },
+  {
+    "instruction": "What will be Andrea's time for the 100.00-m dash?",
+    "input": "",
+    "output": {
+      "time": Math.sqrt(2 * 100.00 / 4.200)
+    }
+  },
+  {
+    "instruction": "What is the magnitude of the cleaner's cart acceleration?",
+    "input": "",
+    "output": {
+      "acceleration": 60.0 / 4.50
+    }
+  },
+  {
+    "instruction": "What is the mass of the astronaut?",
+    "input": "",
+    "output": {
+      "mass": 50.0 / 0.893
+    }
+  },
+  {
+    "instruction": "What is the equation for the acceleration of the system (astronaut and spaceship)?",
+    "input": "",
+    "output": {
+      "acceleration": 50.0 / (mass of astronaut + mass of spaceship)
+    }
+  },
+  {
+    "instruction": "How would the recoil of the vehicle affect the measurement of the astronaut's acceleration?",
+    "input": "",
+    "output": "The recoil of the vehicle would cause the observed acceleration of the astronaut to be different from the actual acceleration due to the applied force. To avoid this, a method that applies the force directly to the astronaut, without affecting the vehicle, should be used."
+  },
+  {
+    "instruction": "Explain how the mass of an astronaut can be measured in orbit using a known force and the resulting acceleration.",
+    "input": "",
+    "output": "To measure the mass of an astronaut in orbit, a known force can be applied to the astronaut, and the resulting acceleration can be measured. Using Newton's second law, F = ma, the mass of the astronaut can be calculated by dividing the applied force by the measured acceleration. This method is necessary because the astronaut appears to be 'weightless' in orbit, and a direct measurement of their weight is not possible."
+  }
+]

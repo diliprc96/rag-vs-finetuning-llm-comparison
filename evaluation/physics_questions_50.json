@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "type": "mcq",
+        "question": "Which of the following units is an SI base unit?\n(A) Newton\n(B) Joule\n(C) Kilogram\n(D) Watt",
+        "answer": "C"
+    },
+    {
+        "id": 2,
+        "type": "numeric",
+        "question": "If an object travels 100 meters in 4 seconds, what is its average speed in m/s?",
+        "answer": "25"
+    },
+    {
+        "id": 3,
+        "type": "explanation",
+        "question": "Explain the difference between accuracy and precision.",
+        "answer": "Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate."
+    }
+]

@@ -1,0 +1,77 @@
+{
+    "instruction": "What is the acceleration of gravity, g, and in which direction is it positive?",
+    "input": "",
+    "output": {
+      "g": -9.8 m/s^2,
+      "positive_direction": "upward"
+    }
+  },
+  {
+    "instruction": "Explain the meaning of Equation 3.15: v = v_0 - gt",
+    "input": "",
+    "output": {
+      "description": "Equation 3.15 describes the velocity v of an object in free fall as a function of time t. The initial velocity v_0 is subtracted from the product of the acceleration of gravity g and the time t to give the final velocity v."
+    }
+  },
+  {
+    "instruction": "Explain the meaning of Equation 3.16: y = y_0 + v_0t - 1/2 gt^2",
+    "input": "",
+    "output": {
+      "description": "Equation 3.16 describes the position y of an object in free fall as a function of time t. The initial position y_0 is added to the product of the initial velocity v_0 and time t, then subtracted by half the product of the acceleration of gravity g and the square of the time t^2."
+    }
+  },
+  {
+    "instruction": "Explain the meaning of Equation 3.17: v^2 = v_0^2 - 2g(y - y_0)",
+    "input": "",
+    "output": {
+      "description": "Equation 3.17 describes the final velocity v of an object in free fall in terms of the initial velocity v_0, the acceleration of gravity g, and the change in position y - y_0. The final velocity v is equal to the square root of the initial velocity v_0 squared minus twice the product of the acceleration of gravity g and the change in position y - y_0."
+    }
+  },
+  {
+    "instruction": "What are the steps in the Problem-Solving Strategy for free fall problems?",
+    "input": "",
+    "output": {
+      "steps": [
+        "Decide on the sign of the acceleration of gravity g (positive downward or negative upward)",
+        "Draw a sketch of the problem to visualize the physics",
+        "Record the known and unknown variables from the problem description",
+        "Decide which of Equations 3.15, 3.16, and 3.17 to use to solve for the unknowns"
+      ]
+    }
+  },
+  {
+    "instruction": "In Example 3.14, a ball is thrown downward from the top of a 98-m-high building with an initial velocity of -4.9 m/s. What is the time it takes for the ball to reach the ground?",
+    "input": "",
+    "output": {
+      "time_to_ground": 4.5 s
+    }
+  },
+  {
+    "instruction": "In Example 3.14, what is the velocity of the ball when it reaches the ground?",
+    "input": "",
+    "output": {
+      "velocity_at_ground": -49 m/s
+    }
+  },
+  {
+    "instruction": "If the acceleration of gravity g is positive, what does that indicate about the positive direction?",
+    "input": "",
+    "output": {
+      "positive_direction": "downward"
+    }
+  },
+  {
+    "instruction": "Why is it important to draw a sketch when solving free fall problems?",
+    "input": "",
+    "output": {
+      "importance": "Drawing a sketch helps to visualize the physics of the problem and the relevant variables, which can aid in selecting the appropriate equations to solve for the unknowns."
+    }
+  },
+  {
+    "instruction": "What is the purpose of recording the known and unknown variables when solving free fall problems?",
+    "input": "",
+    "output": {
+      "purpose": "Recording the known and unknown variables helps to devise a strategy for selecting the appropriate equations to solve the problem."
+    }
+  }
+]

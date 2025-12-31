@@ -1,0 +1,65 @@
+========================================
+STATISTICS REPORT
+========================================
+Total Chunks in Log: 539
+Total Pairs Found (Raw Yield): 4423
+Average Pairs per Chunk: 8.21
+Chunks with 0 pairs: 46
+Chunks with < 10 pairs: 111
+Theoretical Max (if 10/chunk): 5390
+Actual Yield Rate: 82.1%
+----------------------------------------
+
+SAMPLES OF 0-YIELD CHUNKS:
+Line 3:
+  Input Snippet: $(1.4Ã{10}^{21}\text{mi})(1.4Ã{10}^{21}\text{mi})$
+
+from our own galaxy (which is called the
+
+Milk
+  Response Preview: {     "instruction": "What is the distance between two points in the Milky Way galaxy?",     "input": "",     "output": {       "distance": 1.96 * 10^42 square meters,       "explanation": "The text s
+--------------------
+Line 8:
+  Input Snippet: Physics has many applications in the biological sciences. On the microscopic level, it helps describ
+  Response Preview: {     "instruction": "Explain how physics is involved in medical diagnostics.",     "input": "",     "output": {       "Physics is involved in various medical diagnostic techniques, such as: - Radiogr
+--------------------
+Line 29:
+  Input Snippet: Check Your Understanding
+
+1.3
+
+We know from
+
+Figure 1.4
+
+that the diameter of Earth is on the order 
+  Response Preview: {     "instruction": "What is the order of magnitude of Earth's surface area in square kilometers?",     "input": "",     "output": {       "Earth's diameter is on the order of 10^7 m, so its surface 
+--------------------
+Line 73:
+  Input Snippet: The volume of Earth is on the order of 10
+
+21
+
+m
+
+3
+
+. (a) What is this in cubic kilometers (km
+
+3
+
+
+  Response Preview: {     "instruction": "What is the volume of Earth in cubic kilometers (km^3)?",     "input": "",     "output": {       "volume_in_km3": 1.08321 * 10**12     }   },   {     "instruction": "What is the 
+--------------------
+Line 85:
+  Input Snippet: $DâDâ$
+
+is the direction of the arrow. The length of the arrow represents the
+
+magnitude
+
+D
+
+of 
+  Response Preview: {     "instruction": "What does the length of the arrow represent in the vector $\vec{D}$?",     "input": "",     "output": "The length of the arrow represents the magnitude of the vector $\vec{D}$." 
+--------------------

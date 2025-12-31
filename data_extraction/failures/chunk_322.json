@@ -1,0 +1,71 @@
+{
+    "instruction": "What is the initial velocity required for a golfer to launch a shot at 40° to the horizontal on the world's longest par 3 hole?",
+    "input": "",
+    "output": {
+      "Initial Velocity": 86.3 m/s
+    }
+  },
+  {
+    "instruction": "What is the time it takes for the golf ball to reach the green on the world's longest par 3 hole?",
+    "input": "",
+    "output": {
+      "Time to Reach Green": 10.4 s
+    }
+  },
+  {
+    "instruction": "What is the maximum speed a field goal kicker can impart to a football kicked at 45° to the horizontal?",
+    "input": "",
+    "output": {
+      "Maximum Kicker Speed": 31.1 m/s
+    }
+  },
+  {
+    "instruction": "Can a defensive lineman with a 2.5 m vertical reach block a 45.7 m field goal attempt if he is 4.6 m away from the kicker?",
+    "input": "",
+    "output": {
+      "Can Lineman Block Field Goal?": "No, the ball will clear the lineman's reach."
+    }
+  },
+  {
+    "instruction": "Can a defensive lineman with a 2.5 m vertical reach block a 45.7 m field goal attempt if he is 1.0 m away from the kicker?",
+    "input": "",
+    "output": {
+      "Can Lineman Block Field Goal?": "Yes, the ball will not clear the lineman's reach."
+    }
+  },
+  {
+    "instruction": "How long after the initial moment will the truck and car be closest to each other?",
+    "input": "",
+    "output": {
+      "Time to Closest Approach": 20.0 s
+    }
+  },
+  {
+    "instruction": "How far apart will the truck and car be when they are closest to each other?",
+    "input": "",
+    "output": {
+      "Distance at Closest Approach": 22.4 m
+    }
+  },
+  {
+    "instruction": "Explain the concept of projectile motion and how it applies to the golf shot and field goal kick problems.",
+    "input": "",
+    "output": {
+      "Projectile Motion Explanation": "Projectile motion is the motion of an object that is launched into the air and moves under the influence of gravity and air resistance (if present). In the golf shot and field goal kick problems, the ball is launched at an angle to the horizontal and follows a parabolic trajectory, with the initial velocity, launch angle, and gravitational acceleration determining the ball's motion and final position."
+    }
+  },
+  {
+    "instruction": "Describe the difference between the horizontal and vertical components of the initial velocity in the golf shot and field goal kick problems.",
+    "input": "",
+    "output": {
+      "Velocity Components Explanation": "The initial velocity of the golf shot and field goal kick can be broken down into horizontal and vertical components. The horizontal component determines the range or distance the ball travels, while the vertical component determines the maximum height and time of flight. The relative magnitudes of these components, determined by the launch angle, are crucial in solving these types of projectile motion problems."
+    }
+  },
+  {
+    "instruction": "Explain the concept of air resistance and how it would affect the motion of the golf ball and football in these problems.",
+    "input": "",
+    "output": {
+      "Air Resistance Explanation": "Air resistance, or drag, is a force that acts on objects moving through the air, opposing their motion. In the given problems, air resistance is neglected, which simplifies the analysis and allows the use of basic projectile motion equations. However, in reality, air resistance would have an effect on the motion of the golf ball and football, causing them to deviate from the ideal parabolic trajectory and potentially reducing their range or altering their path. The magnitude of the air resistance effect would depend on factors such as the object's speed, size, and shape."
+    }
+  }
+]

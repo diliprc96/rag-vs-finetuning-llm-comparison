@@ -1,0 +1,127 @@
+{
+    "instruction": "Find the distance between points A and B and their polar coordinates.",
+    "input": "A(2.00 m, -4.00 m) and B(-3.00 m, 3.00 m)",
+    "output": {
+      "distance": "5.00 m",
+      "polar_coordinates": {
+        "A": {
+          "r": 4.47 ,
+          "theta": -63.4°
+        },
+        "B": {
+          "r": 3.61,
+          "theta": 139.1°
+        }
+      }
+    }
+  },
+  {
+    "instruction": "Find the scalar components and displacement vector of the fly's motion.",
+    "input": "Fly's initial position: (4.0 m, 1.5 m, 2.5 m), final position: (1.0 m, 4.5 m, 0.5 m)",
+    "output": {
+      "displacement_vector": {
+        "i": -3.0 ,
+        "j": 3.0,
+        "k": -2.0
+      },
+      "magnitude": 5.00 
+    }
+  },
+  {
+    "instruction": "Calculate the sum and difference of vectors A and B, including their magnitudes and direction angles.",
+    "input": "A = -3i - 2j, B = -i - 4j",
+    "output": {
+      "A+B": {
+        "components": {
+          "i": -4,
+          "j": -6
+        },
+        "magnitude": 7.21,
+        "direction_angle": 236.31°
+      },
+      "A-B": {
+        "components": {
+          "i": -2,
+          "j": 2
+        },
+        "magnitude": 2.83,
+        "direction_angle": 135°
+      }
+    }
+  },
+  {
+    "instruction": "Find the resultant displacement vector, its magnitude, and the total distance traveled if the particle undergoes three consecutive displacements.",
+    "input": "D1 = (3.0i - 4.0j - 2.0k) mm, D2 = (1.0i - 7.0j + 4.0k) mm, D3 = (-7.0i + 4.0j + 1.0k) mm",
+    "output": {
+      "resultant_displacement": {
+        "i": -3.0,
+        "j": -7.0,
+        "k": 3.0
+      },
+      "magnitude": 8.06 ,
+      "total_distance": 24.18
+    }
+  },
+  {
+    "instruction": "Calculate the displacements and their magnitudes for the given vectors A and B.",
+    "input": "A = (3.00i - 4.00j + 4.00k) m, B = (2.00i + 3.00j - 7.00k) m",
+    "output": {
+      "C = A + B": {
+        "components": {
+          "i": 5.00,
+          "j": -1.00,
+          "k": -3.00
+        },
+        "magnitude": 6.32
+      },
+      "D = 2A - B": {
+        "components": {
+          "i": 4.00,
+          "j": -11.00,
+          "k": 15.00
+        },
+        "magnitude": 19.00
+      }
+    }
+  },
+  {
+    "instruction": "Calculate the final position and displacement of the plane after two flights.",
+    "input": "First flight: 40.0 km at 60° north of east, Second flight: 30.0 km at 15°",
+    "output": {
+      "final_position": {
+        "x": 55.00,
+        "y": 20.00
+      },
+      "displacement": {
+        "magnitude": 58.31,
+        "direction": 19.80°
+      }
+    }
+  },
+  {
+    "instruction": "Explain the concept of vector addition.",
+    "input": "",
+    "output": "Vector addition is the process of combining two or more vectors to obtain a resultant vector. The resultant vector represents the net effect of the individual vectors. To add vectors, we can use the parallelogram rule or the triangle rule, where the vectors are represented as the sides of a parallelogram or a triangle, and the resultant vector is the diagonal or the third side of the triangle, respectively."
+  },
+  {
+    "instruction": "How do you find the magnitude and direction of a vector?",
+    "input": "",
+    "output": "To find the magnitude (length) of a vector, we use the formula: |A| = √(A_x^2 + A_y^2 + A_z^2), where A_x, A_y, and A_z are the scalar components of the vector A.
+
+To find the direction of a vector, we use the formula: θ = tan^-1(A_y/A_x) for a 2D vector, or θ = tan^-1(A_y/A_x) and φ = tan^-1(A_z/√(A_x^2 + A_y^2)) for a 3D vector, where θ and φ are the angles the vector makes with the positive x-axis and the positive z-axis, respectively."
+  },
+  {
+    "instruction": "Explain the difference between scalar and vector quantities in physics.",
+    "input": "",
+    "output": "Scalar quantities are physical quantities that have only a magnitude (numerical value) and no direction, such as mass, time, and temperature. Vector quantities, on the other hand, have both a magnitude and a direction, such as displacement, velocity, acceleration, and force. Vector quantities can be added or subtracted using vector operations, while scalar quantities can only be added or subtracted directly."
+  },
+  {
+    "instruction": "How do you resolve a vector into its components?",
+    "input": "",
+    "output": "To resolve a vector into its components, you can use the following steps:
+1. Identify the coordinate system (e.g., Cartesian, polar, or spherical).
+2. Determine the angle(s) the vector makes with the coordinate axes.
+3. Use trigonometric functions to calculate the scalar components of the vector along each axis.
+For example, in a 2D Cartesian system, if a vector A has a magnitude of 5 units and makes an angle of 30° with the positive x-axis, the components would be A_x = 5 cos(30°) and A_y = 5 sin(30°)."
+  }
+]

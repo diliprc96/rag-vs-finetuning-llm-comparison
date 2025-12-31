@@ -1,0 +1,58 @@
+{
+    "instruction": "What is the formula for average acceleration?",
+    "input": "",
+    "output": "$\bar{a} = \\frac{\Delta v}{\Delta t}$"
+  },
+  {
+    "instruction": "What are the SI units for acceleration?",
+    "input": "",
+    "output": "The SI units for acceleration are m/s^2, or meters per second squared."
+  },
+  {
+    "instruction": "Explain the difference between a change in velocity due to a change in magnitude versus a change in direction.",
+    "input": "",
+    "output": "A change in velocity can be due to a change in magnitude (speed) or a change in direction, or both. If a runner traveling at 10 km/h due east slows to a stop, reverses direction, and continues at 10 km/h due west, the velocity has changed due to a change in direction, even though the magnitude (speed) is the same in both directions."
+  },
+  {
+    "instruction": "In what direction is the acceleration when an object is slowing down?",
+    "input": "",
+    "output": "When an object is slowing down, the acceleration is in the direction opposite to the direction of motion, even though this is commonly referred to as deceleration."
+  },
+  {
+    "instruction": "A car is traveling at 50 m/s and then slows down to 20 m/s over a period of 5 seconds. What is the average acceleration?",
+    "input": "",
+    "output": "$\bar{a} = \\frac{\Delta v}{\Delta t} = \\frac{20 \, \text{m/s} - 50 \, \text{m/s}}{5 \, \text{s}} = -6 \, \text{m/s}^2$"
+  },
+  {
+    "instruction": "Explain the difference between velocity and acceleration.",
+    "input": "",
+    "output": "Velocity is a vector quantity that describes the rate of change of position with respect to time, including both magnitude (speed) and direction. Acceleration is also a vector quantity that describes the rate of change of velocity with respect to time, including changes in both magnitude (speed) and direction."
+  },
+  {
+    "instruction": "A ball is thrown straight up into the air. What is the direction of the acceleration at the highest point of the ball's trajectory?",
+    "input": "",
+    "output": "At the highest point of the ball's trajectory, the acceleration is directed downward, opposite to the direction of motion, even though the velocity is momentarily zero."
+  },
+  {
+    "instruction": "What is the relationship between acceleration and the change in velocity?",
+    "input": "",
+    "output": "Acceleration is defined as the change in velocity divided by the change in time: $\bar{a} = \frac{\Delta v}{\Delta t}$. This means that acceleration is the rate of change of velocity, or how quickly the velocity is changing."
+  },
+  {
+    "instruction": "A car accelerates from 0 to 60 mph in 5 seconds. What is the average acceleration?",
+    "input": "",
+    "output": "To calculate the average acceleration, we use the formula $\bar{a} = \frac{\Delta v}{\Delta t}$. 
+Given:
+- Initial velocity, $v_i = 0$ mph
+- Final velocity, $v_f = 60$ mph
+- Time interval, $\Delta t = 5$ s
+
+Plugging these values into the formula:
+$\bar{a} = \frac{v_f - v_i}{\Delta t} = \frac{60 \, \text{mph} - 0 \, \text{mph}}{5 \, \text{s}} = 12 \, \text{mph/s}$"
+  },
+  {
+    "instruction": "Explain the difference between instantaneous acceleration and average acceleration.",
+    "input": "",
+    "output": "Instantaneous acceleration is the acceleration at a specific instant in time, whereas average acceleration is the change in velocity divided by the change in time over a finite time interval. Instantaneous acceleration is the derivative of velocity with respect to time, while average acceleration is the ratio of the change in velocity to the change in time."
+  }
+]

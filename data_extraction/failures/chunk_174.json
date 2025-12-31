@@ -1,0 +1,85 @@
+{
+    "instruction": "Find the distances you would have to drive straight east and then straight north to arrive at the same point as driving 7.50 km in a straight line 15° east of north.",
+    "input": "",
+    "output": {
+      "east_distance": 6.48 km,
+      "north_distance": 3.75 km
+    }
+  },
+  {
+    "instruction": "Show that you still arrive at the same point if the east and north legs are reversed in order.",
+    "input": "",
+    "output": {
+      "explanation": "If the east and north legs are reversed, the resulting point will be the same as driving 7.50 km in a straight line 15° east of north. This is because the order of the vector components does not affect the final position."
+    }
+  },
+  {
+    "instruction": "Find the magnitude and direction of the pull on a sledge being pulled by two horses, given the net force vector in Cartesian coordinates as F = (-2980.0 i + 8200.0 j) N.",
+    "input": "",
+    "output": {
+      "magnitude": 8500 N,
+      "direction": 69.8° north of east
+    }
+  },
+  {
+    "instruction": "A trapper walks a 5.0-km straight-line distance from her cabin to the lake. Determine the east and north components of her displacement vector. How many more kilometers would she have to walk if she walked along the component displacements? What is her displacement vector?",
+    "input": "",
+    "output": {
+      "east_component": 4.33 km,
+      "north_component": 2.50 km,
+      "additional_distance": 0.17 km,
+      "displacement_vector": (4.33 km, 2.50 km)
+    }
+  },
+  {
+    "instruction": "Convert the polar coordinates 4π/3 and 5.50 m to Cartesian coordinates.",
+    "input": "",
+    "output": {
+      "x": -2.75 m,
+      "y": 4.77 m
+    }
+  },
+  {
+    "instruction": "Two points in a plane have polar coordinates P1(2.500 m, π/6) and P2(3.800 m, 2π/3). Determine their Cartesian coordinates and the distance between them in the Cartesian coordinate system, rounded to the nearest centimeter.",
+    "input": "",
+    "output": {
+      "P1_x": 2.17 m,
+      "P1_y": 1.25 m,
+      "P2_x": -1.90 m,
+      "P2_y": 3.30 m,
+      "distance": 4.87 m
+    }
+  },
+  {
+    "instruction": "A chameleon is resting on a lanai screen at coordinates (2.000 m, 1.000 m) in a Cartesian coordinate system. (a) How far is it from the corner of the screen? (b) What is its location in polar coordinates?",
+    "input": "",
+    "output": {
+      "distance_from_corner": 2.24 m,
+      "polar_coordinates": {
+        "r": 2.24 m,
+        "theta": 26.6°
+      }
+    }
+  },
+  {
+    "instruction": "Explain the difference between the x-axis and the east direction in a Cartesian coordinate system.",
+    "input": "",
+    "output": {
+      "explanation": "In a Cartesian coordinate system, the x-axis is defined as the horizontal axis, with positive values to the right. The east direction, on the other hand, is a cardinal direction in the real world. While the x-axis and the east direction are often aligned, they are not necessarily the same thing. The x-axis is a mathematical construct, while the east direction is a physical orientation."
+    }
+  },
+  {
+    "instruction": "What is the relationship between Cartesian and polar coordinates?",
+    "input": "",
+    "output": {
+      "explanation": "Cartesian and polar coordinates are two different ways of representing the same point in a 2D plane. Cartesian coordinates use an x-y coordinate system, while polar coordinates use a distance (r) and angle (θ) to specify a point. The two coordinate systems are related by the equations: x = r cos(θ) and y = r sin(θ)."
+    }
+  },
+  {
+    "instruction": "Explain the concept of vector addition and how it applies to the problem of driving 7.50 km in a straight line 15° east of north.",
+    "input": "",
+    "output": {
+      "explanation": "Vector addition is the process of combining two or more vectors to find a single resultant vector. In the problem of driving 7.50 km in a straight line 15° east of north, the displacement can be represented as the vector sum of an east component and a north component. By applying vector addition, we can find the individual east and north components that, when combined, result in the same overall displacement as the original 7.50 km straight-line trip."
+    }
+  }
+]

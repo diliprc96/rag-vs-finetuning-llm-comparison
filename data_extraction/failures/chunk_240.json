@@ -1,0 +1,72 @@
+{
+    "instruction": "What is the velocity of the electron when it emerges from the region where it undergoes acceleration?",
+    "input": "",
+    "output": {
+      "velocity": 4.3 * 10**5 m/s
+    }
+  },
+  {
+    "instruction": "How long does it take the electron to cross the 5.0 cm region where it undergoes acceleration?",
+    "input": "",
+    "output": {
+      "time": 1.0 * 10**-7 s
+    }
+  },
+  {
+    "instruction": "What minimum acceleration must the ambulance have to reach the intersection before the light turns red?",
+    "input": "",
+    "output": {
+      "acceleration": 12.5 m/s^2
+    }
+  },
+  {
+    "instruction": "What is the speed of the ambulance when it reaches the intersection?",
+    "input": "",
+    "output": {
+      "speed": 25 m/s
+    }
+  },
+  {
+    "instruction": "What is the acceleration of the slowing down motorcycle?",
+    "input": "",
+    "output": {
+      "acceleration": -0.025 m/s^2
+    }
+  },
+  {
+    "instruction": "What are the velocities of the motorcycle at the beginning and end of the 2-km trip?",
+    "input": "",
+    "output": {
+      "initial_velocity": 10 m/s,
+      "final_velocity": 0 m/s
+    }
+  },
+  {
+    "instruction": "Sketch the velocity-versus-time graph for the cyclist's trip.",
+    "input": "",
+    "output": {
+      "graph": "The velocity-versus-time graph would show an initial acceleration, followed by a constant velocity, and then a deceleration to a stop."
+    }
+  },
+  {
+    "instruction": "What is the acceleration of the cyclist during the last 3 minutes of the trip?",
+    "input": "",
+    "output": {
+      "acceleration": -0.3 m/s^2
+    }
+  },
+  {
+    "instruction": "How far does the cyclist travel?",
+    "input": "",
+    "output": {
+      "distance": 1.5 km
+    }
+  },
+  {
+    "instruction": "What acceleration must the two trains have to stop just short of colliding?",
+    "input": "",
+    "output": {
+      "acceleration": -0.6 m/s^2
+    }
+  }
+]

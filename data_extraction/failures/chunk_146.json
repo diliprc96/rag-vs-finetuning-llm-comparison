@@ -1,0 +1,71 @@
+{
+    "instruction": "What is the anticommutative property of vector multiplication?",
+    "input": "",
+    "output": {
+      "The anticommutative property means the vector product reverses the sign when the order of multiplication is reversed: $AâÃBâ=\text{â}BâÃAâ$."
+    }
+  },
+  {
+    "instruction": "Describe the corkscrew right-hand rule for determining the direction of the cross product.",
+    "input": "",
+    "output": {
+      "The corkscrew right-hand rule is a common mnemonic used to determine the direction of the vector product. A corkscrew is placed in a direction perpendicular to the plane that contains the two vectors, and its handle is turned in the direction from the first to the second vector in the product. The direction of the cross product is given by the progression of the corkscrew."
+    }
+  },
+  {
+    "instruction": "What is the relationship between the vectors $AâÃBâ$ and $BâÃAâ$ according to the text?",
+    "input": "",
+    "output": {
+      "The vectors $AâÃBâ$ and $BâÃAâ$ are antiparallel to each other, meaning they point in opposite directions."
+    }
+  },
+  {
+    "instruction": "What is the direction of the vector $BâÃAâBâÃAâ$ according to the text?",
+    "input": "",
+    "output": {
+      "The vector $BâÃAâBâÃAâ$ must point downward, as seen in Figure 2.29(b)."
+    }
+  },
+  {
+    "instruction": "What is the relationship between the vectors $AâAâ$ and $BâBâ$ in the corkscrew right-hand rule?",
+    "input": "",
+    "output": {
+      "In the corkscrew right-hand rule, the corkscrew is placed in a direction perpendicular to the plane that contains the vectors $AâAâ$ and $BâBâ$."
+    }
+  },
+  {
+    "instruction": "What is the definition of torque according to the text?",
+    "input": "",
+    "output": {
+      "The physical vector quantity that makes the nut turn is called torque (denoted by $Ïâ)Ïâ)$."
+    }
+  },
+  {
+    "instruction": "What factors determine the mechanical advantage of a wrench?",
+    "input": "",
+    "output": {
+      "The mechanical advantage that a wrench provides depends on the magnitude of the applied force, its direction with respect to the wrench handle, and the distance from the nut to the point where the force vector is attached."
+    }
+  },
+  {
+    "instruction": "What is the relationship between the vectors $AâÃBâ$ and $BâÃAâ$ according to the text?",
+    "input": "",
+    "output": {
+      "The vectors $AâÃBâ$ and $BâÃAâ$ are antiparallel to each other, and vector multiplication is anticommutative, meaning the vector product reverses the sign when the order of multiplication is reversed."
+    }
+  },
+  {
+    "instruction": "Explain the concept of the corkscrew right-hand rule.",
+    "input": "",
+    "output": {
+      "The corkscrew right-hand rule is a mnemonic used to determine the direction of the cross product. A corkscrew is placed in a direction perpendicular to the plane that contains the two vectors, and its handle is turned in the direction from the first to the second vector in the product. The direction of the cross product is given by the progression of the corkscrew."
+    }
+  },
+  {
+    "instruction": "What is the significance of the radial vector $RâRâ$ in the context of a wrench?",
+    "input": "",
+    "output": {
+      "The distance $R$ from the nut to the point where the force vector $FâFâ$ is attached is represented by the radial vector $RâRâ$. This distance is one of the factors that determines the mechanical advantage provided by the wrench."
+    }
+  }
+]

@@ -1,0 +1,79 @@
+{
+    "instruction": "Explain the direction of the force exerted on you by the car seat when negotiating a curve that is ideally banked for your car's speed.",
+    "input": "",
+    "output": {
+      "When negotiating an ideally banked curve, the force exerted on you by the car seat is directed inward, towards the center of the curve. This inward force is the centripetal force that keeps the car and its occupants moving in a circular path, counteracting the tendency to move in a straight line due to inertia."
+    }
+  },
+  {
+    "instruction": "Explain what force stretches the string attached to a mass moving in a circular path on a frictionless table, and identify its physical origin.",
+    "input": "",
+    "output": {
+      "The force that stretches the string is the centripetal force, which is directed towards the center of the circular path. This centripetal force is provided by the tension in the string, which is a reaction force in accordance with Newton's third law. The physical origin of this centripetal force is the need to constantly change the direction of the mass's velocity, which requires a force directed towards the center of the circular path."
+    }
+  },
+  {
+    "instruction": "Explain what causes the rotation of water (and other material) when a toilet is flushed or a sink is drained, and the direction of the rotation in the Northern Hemisphere.",
+    "input": "",
+    "output": {
+      "When water (and other material) flows directly towards a drain, the Coriolis effect causes the rotation. In the Northern Hemisphere, the Coriolis effect deflects the flow to the right, resulting in a counterclockwise rotation around the drain. This is a small effect, and in most toilets, the rotation is primarily caused by directional water jets."
+    }
+  },
+  {
+    "instruction": "Describe the path of a car as it leaves the road when it encounters a patch of ice with a very low coefficient of kinetic friction.",
+    "input": "",
+    "output": {
+      "When a car encounters a patch of ice with a very low coefficient of kinetic friction, the car will slide off the road. The path of the car will be a straight line, as the car will continue moving in the direction it was traveling when it lost traction, rather than following the curve of the road. This is because the low friction on the ice prevents the car from generating the necessary centripetal force to follow the curve."
+    }
+  },
+  {
+    "instruction": "Explain what pins the riders to the wall in an amusement park ride where a large vertical barrel is spun up and the floor drops away, and identify all the forces acting on them.",
+    "input": "",
+    "output": {
+      "In the amusement park ride where a large vertical barrel is spun up and the floor drops away, the riders are pinned to the wall by the centrifugal force, which is an inertial force experienced in the rotating frame of reference of the barrel. In the inertial frame of reference of the Earth, the forces acting on the riders are:
+1. The normal force from the wall, which is directed inward and perpendicular to the wall.
+2. The gravitational force, which is directed downward.
+3. The centripetal force, which is directed inward and towards the center of the circular motion, and is provided by the normal force from the wall."
+    }
+  },
+  {
+    "instruction": "Solve the following problem: A mass is moving in a circular path on a frictionless table. Explain the force that stretches the string attaching the mass to the nail, and identify its physical origin.",
+    "input": "",
+    "output": {
+      "The force that stretches the string attaching the mass to the nail is the centripetal force. This force is directed towards the center of the circular path and is necessary to constantly change the direction of the mass's velocity.
+The physical origin of this centripetal force is the tension in the string, which is a reaction force in accordance with Newton's third law. The string must exert a force on the mass to keep it moving in a circular path, and this force is the centripetal force."
+    }
+  },
+  {
+    "instruction": "Explain the cause and direction of the rotation of water when a toilet is flushed or a sink is drained in the Northern Hemisphere.",
+    "input": "",
+    "output": {
+      "The rotation of water when a toilet is flushed or a sink is drained in the Northern Hemisphere is caused by the Coriolis effect. The Coriolis effect deflects the flow of water to the right, resulting in a counterclockwise rotation around the drain. This is a small effect, and in most toilets, the rotation is primarily caused by directional water jets."
+    }
+  },
+  {
+    "instruction": "Describe the path of a car as it leaves the road when it encounters a patch of ice with a very low coefficient of kinetic friction.",
+    "input": "",
+    "output": {
+      "When a car encounters a patch of ice with a very low coefficient of kinetic friction, the car will slide off the road in a straight line. This is because the low friction on the ice prevents the car from generating the necessary centripetal force to follow the curve of the road. Instead, the car will continue moving in the direction it was traveling when it lost traction, rather than following the curve of the road."
+    }
+  },
+  {
+    "instruction": "Explain the forces acting on riders in an amusement park ride where a large vertical barrel is spun up and the floor drops away.",
+    "input": "",
+    "output": {
+      "In the amusement park ride where a large vertical barrel is spun up and the floor drops away, the riders are pinned to the wall by the centrifugal force, which is an inertial force experienced in the rotating frame of reference of the barrel. In the inertial frame of reference of the Earth, the forces acting on the riders are:
+1. The normal force from the wall, which is directed inward and perpendicular to the wall.
+2. The gravitational force, which is directed downward.
+3. The centripetal force, which is directed inward and towards the center of the circular motion, and is provided by the normal force from the wall."
+    }
+  },
+  {
+    "instruction": "Explain the direction of the rotation of water when a toilet is flushed or a sink is drained in the Northern Hemisphere, and whether the direction would reverse if the water were forced up the drain.",
+    "input": "",
+    "output": {
+      "The rotation of water when a toilet is flushed or a sink is drained in the Northern Hemisphere is counterclockwise, due to the Coriolis effect. The Coriolis effect deflects the flow of water to the right, resulting in this counterclockwise rotation around the drain.
+If the water were forced up the drain, the direction of rotation would reverse and become clockwise. This is because the Coriolis effect would still deflect the flow of water, but in the opposite direction, leading to a clockwise rotation around the drain."
+    }
+  }
+]

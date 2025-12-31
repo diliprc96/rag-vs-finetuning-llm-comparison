@@ -15,3 +15,5 @@ lxml
 requests
 tqdm
 datasets
+langchain-community
+langchain-huggingface

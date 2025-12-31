@@ -1,0 +1,168 @@
+{
+    "instruction": "How much time elapses between the moment the front of the truck is even with the back of the car and the moment the back of the truck is even with the front of the car?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Truck length": 10.0 m,
+          "Truck velocity": 97.0 km/h,
+          "Car length": 3.0 m,
+          "Car velocity": 80.0 km/h
+        },
+      "Calculation":
+        {
+          "Relative velocity": 97.0 km/h - 80.0 km/h = 17.0 km/h = 4.72 m/s,
+          "Time elapsed": (10.0 m + 3.0 m) / 4.72 m/s = 2.76 s
+        },
+      "Result": "The time elapsed between the front of the truck being even with the back of the car and the back of the truck being even with the front of the car is 2.76 seconds."
+    }
+  },
+  {
+    "instruction": "How long does it take the police car to catch the speeding car?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Speeding car velocity": 40 m/s,
+          "Police car acceleration": 4 m/s^2
+        },
+      "Calculation":
+        {
+          "Time to catch the speeding car": (40 m/s - 0 m/s) / 4 m/s^2 = 10 s
+        },
+      "Result": "It takes the police car 10 seconds to catch the speeding car."
+    }
+  },
+  {
+    "instruction": "How long does it take Jacob to catch Pablo?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Pablo's velocity": 3 m/s,
+          "Jacob's initial velocity": 3 m/s,
+          "Jacob's acceleration": 0.05 m/s^2,
+          "Initial distance between Pablo and Jacob": 50 m
+        },
+      "Calculation":
+        {
+          "Time for Jacob to catch Pablo": sqrt(2 * 50 m / 0.05 m/s^2) = 20 s
+        },
+      "Result": "It takes Jacob 20 seconds to catch Pablo."
+    }
+  },
+  {
+    "instruction": "What is the distance covered by Jacob?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Pablo's velocity": 3 m/s,
+          "Jacob's initial velocity": 3 m/s,
+          "Jacob's acceleration": 0.05 m/s^2,
+          "Initial distance between Pablo and Jacob": 50 m
+        },
+      "Calculation":
+        {
+          "Time for Jacob to catch Pablo": sqrt(2 * 50 m / 0.05 m/s^2) = 20 s,
+          "Distance covered by Jacob": 3 m/s * 20 s + 0.5 * 0.05 m/s^2 * (20 s)^2 = 60 m + 20 m = 80 m
+        },
+      "Result": "The distance covered by Jacob is 80 meters."
+    }
+  },
+  {
+    "instruction": "What is the final velocity of Jacob?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Pablo's velocity": 3 m/s,
+          "Jacob's initial velocity": 3 m/s,
+          "Jacob's acceleration": 0.05 m/s^2,
+          "Initial distance between Pablo and Jacob": 50 m
+        },
+      "Calculation":
+        {
+          "Time for Jacob to catch Pablo": sqrt(2 * 50 m / 0.05 m/s^2) = 20 s,
+          "Final velocity of Jacob": 3 m/s + 0.05 m/s^2 * 20 s = 4 m/s
+        },
+      "Result": "The final velocity of Jacob is 4 meters per second."
+    }
+  },
+  {
+    "instruction": "Is it reasonable for the runner to cross the finish line from 75 m away in the given time?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Distance to finish line": 75 m,
+          "Initial velocity": 8 m/s,
+          "Acceleration": -0.5 m/s^2
+        },
+      "Calculation":
+        {
+          "Time to cross the finish line": sqrt(2 * 75 m / 0.5 m/s^2) = 12 s
+        },
+      "Result": "No, this result is not reasonable. The time it takes the runner to cross the finish line from 75 meters away with the given initial velocity and acceleration is 12 seconds, which is an unreasonably short time for a runner to cover that distance."
+    }
+  },
+  {
+    "instruction": "What are the initial and final velocities of the airplane?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Acceleration": 5.00 m/s^2,
+          "Time": 30.0 s,
+          "Distance": 10.0 km = 10,000 m
+        },
+      "Calculation":
+        {
+          "Initial velocity": 0 m/s,
+          "Final velocity": v_f = sqrt(2 * 10,000 m * 5.00 m/s^2) = 200 m/s
+        },
+      "Result": {
+        "Initial velocity": 0 m/s,
+        "Final velocity": 200 m/s
+      }
+    }
+  },
+  {
+    "instruction": "Compare the distance traveled of an object that undergoes a change in velocity that is twice its initial velocity with an object that changes its velocity by four times its initial velocity over the same time period.",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Object 1: Change in velocity is twice the initial velocity",
+          "Object 2: Change in velocity is four times the initial velocity",
+          "Time period is the same for both objects"
+        },
+      "Calculation":
+        {
+          "For Object 1, the change in velocity is 2v_i, and the distance traveled is proportional to (2v_i)^2 = 4v_i^2.",
+          "For Object 2, the change in velocity is 4v_i, and the distance traveled is proportional to (4v_i)^2 = 16v_i^2.",
+          "Therefore, the distance traveled by Object 2 is 4 times the distance traveled by Object 1."
+        },
+      "Result": "The object that undergoes a change in velocity that is four times its initial velocity will travel a distance that is 4 times the distance traveled by the object that undergoes a change in velocity that is twice its initial velocity, over the same time period."
+    }
+  },
+  {
+    "instruction": "With what acceleration must the object have for its total displacement to be zero at a later time t?",
+    "input": "",
+    "output": {
+      "Given":
+        {
+          "Object is moving east with a constant velocity",
+          "Initial position: x_0 at time t_0 = 0"
+        },
+      "Calculation":
+        {
+          "For the total displacement to be zero at a later time t, the object must have an acceleration in the opposite direction of its initial velocity.",
+          "The acceleration required is: a = -v_0 / t",
+          "where v_0 is the initial velocity and t is the time at which the displacement is zero."
+        },
+      "Result": "The object must have an acceleration of -v_0 / t in the opposite direction of its initial velocity in order for its total displacement to be zero at a later time t."
+    }
+  },
+  {
+    "instruction": "Explain

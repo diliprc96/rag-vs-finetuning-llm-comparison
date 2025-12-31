@@ -1,0 +1,40 @@
+{
+    "instruction": "Verify that the units for viscosity are kilograms per meter per second using Stokes' law.",
+    "input": "",
+    "output": {
+      "Stokes' law states that the drag force F on a spherical object moving at a low velocity v through a fluid with viscosity η is given by:\n\nF = 6πηrv\n\nWhere r is the radius of the object.\n\nThe units of each term in this equation are:\n\nF (force) = kg·m/s^2\nr (radius) = m\nv (velocity) = m/s\n\nSolving for η (viscosity):\nF = 6πηrv\nη = F / (6πrv)\n\nThe units of viscosity η are:\nη = (kg·m/s^2) / (m·m/s) = kg/(m·s).\n\nThus, the units for viscosity are kilograms per meter per second, as required."
+    }
+  },
+  {
+    "instruction": "Find the terminal velocity of a spherical bacterium (diameter 2.00μm) falling in water.",
+    "input": "",
+    "output": {
+      "To find the terminal velocity of a spherical bacterium falling in water, we can use Stokes' law:\n\nF_d = 6πηrv\n\nWhere:\nF_d = drag force\nη = dynamic viscosity of water\nr = radius of the bacterium\nv = terminal velocity\n\nAt terminal velocity, the drag force is equal to the weight of the bacterium:\nF_d = mg\n\nSubstituting and solving for v:\nv = (2r^2(ρ_b - ρ_w)g) / (9η)\n\nGiven:\nr = 1.00 μm = 1.00 × 10^-6 m\nρ_b = 1.10 × 10^3 kg/m^3 (density of bacterium)\nρ_w = 1000 kg/m^3 (density of water)\ng = 9.8 m/s^2\nη = 1.00 × 10^-3 Pa·s (viscosity of water)\n\nCalculating the terminal velocity:\nv = (2 × (1.00 × 10^-6 m)^2 × (1.10 × 10^3 kg/m^3 - 1000 kg/m^3) × 9.8 m/s^2) / (9 × 1.00 × 10^-3 Pa·s)\nv = 1.83 × 10^-5 m/s = 0.0183 mm/s"
+    }
+  },
+  {
+    "instruction": "Calculate the viscosity of motor oil given that a steel ball bearing (density 7.8×10^3 kg/m^3, diameter 3.0 mm) takes 12 s to fall 0.60 m in the oil.",
+    "input": "",
+    "output": {
+      "To calculate the viscosity of the motor oil, we can use Stokes' law:\n\nF_d = 6πηrv\n\nWhere:\nF_d = drag force\nη = dynamic viscosity of the oil\nr = radius of the ball bearing\nv = terminal velocity of the ball bearing\n\nAt terminal velocity, the drag force is equal to the weight of the ball bearing:\nF_d = mg\n\nSubstituting and solving for η:\nη = (2r^2(ρ_b - ρ_w)g) / (9v)\n\nGiven:\nr = 1.5 mm = 1.5 × 10^-3 m\nρ_b = 7.8 × 10^3 kg/m^3 (density of steel ball bearing)\nρ_w = 900 kg/m^3 (assumed density of motor oil)\ng = 9.8 m/s^2\nv = 0.60 m / 12 s = 0.05 m/s\n\nCalculating the viscosity:\nη = (2 × (1.5 × 10^-3 m)^2 × (7.8 × 10^3 kg/m^3 - 900 kg/m^3) × 9.8 m/s^2) / (9 × 0.05 m/s)\nη = 0.922 Pa·s = 0.922 kg/(m·s)"
+    }
+  },
+  {
+    "instruction": "Suppose the resistive force of the air on a skydiver can be approximated by f = -bv^2. If the terminal velocity of a 50.0-kg skydiver is 60.0 m/s, what is the value of b?",
+    "input": "",
+    "output": {
+      "To find the value of b, we can use the fact that at terminal velocity, the drag force is equal to the weight of the skydiver.\n\nThe drag force is given by f = -bv^2, where v is the terminal velocity.\n\nAt terminal velocity, the drag force is equal to the weight of the skydiver:\nf = mg\n-bv^2 = mg\n\nSolving for b:\nb = mg / v^2\n\nGiven:\nm = 50.0 kg\nv = 60.0 m/s\ng = 9.8 m/s^2\n\nCalculating b:\nb = (50.0 kg × 9.8 m/s^2) / (60.0 m/s)^2\nb = 0.817 kg/m"
+    }
+  },
+  {
+    "instruction": "A small diamond of mass 10.0 g drops from a swimmer's earring and falls through the water, reaching a terminal velocity of 2.0 m/s. Assuming the frictional force on the diamond obeys f = -bv, what is b?",
+    "input": "",
+    "output": {
+      "To find the value of b, we can use the fact that at terminal velocity, the drag force is equal to the weight of the diamond.\n\nThe drag force is given by f = -bv, where v is the terminal velocity.\n\nAt terminal velocity, the drag force is equal to the weight of the diamond:\nf = mg\n-bv = mg\n\nSolving for b:\nb = mg / v\n\nGiven:\nm = 10.0 g = 0.010 kg\nv = 2.0 m/s\ng = 9.8 m/s^2\n\nCalculating b:\nb = (0.010 kg × 9.8 m/s^2) / 2.0 m/s\nb = 0.049 kg/s"
+    }
+  },
+  {
+    "instruction": "How far does the diamond fall before it reaches 90 percent of its terminal speed?",
+    "input": "",
+    "output": {
+      "To find the distance the diamond falls before reaching 90% of its terminal speed, we can use the equation of motion for an object with constant acceleration:\n\nv = u + at\nd = ut + 0.5at^2\n\nWhere:\nv = final velocity (90% of terminal velocity)\nu = initial velocity (0 m/s)\na = acceleration\nt = time\nd = distance\n\nAt terminal velocity, the acceleration is zero, so the drag force is equal to the weight of the diamond:\nF_d = mg\n-bv = mg\na = F_d / m = -bg / m\n\nSubstituting and solving for the time t when v = 0.9v_t:\nv = 0.9v_t\n0.9v_t = 0 + at\nt = 0.9v_t / a = 0.9v_t / (-bg/m)\n\nThen, the distance d can be calculated as:\nd = 0 + 0.

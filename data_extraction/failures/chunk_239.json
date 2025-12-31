@@ -1,0 +1,90 @@
+{
+    "instruction": "What is the time it took for Nolan Ryan's pitch to reach home plate?",
+    "input": "",
+    "output": {
+      "distance_to_home_plate": 18.4,
+      "pitch_velocity": 160.0,
+      "time_to_reach_home_plate": 18.4 / (160.0 / 3.6)
+    }
+  },
+  {
+    "instruction": "How do the average velocities of the two planes compare?",
+    "input": "",
+    "output": {
+      "distance": 3000,
+      "time_for_first_plane": 5.0,
+      "time_for_second_plane": 4.5,
+      "average_velocity_first_plane": 3000 / 5.0,
+      "average_velocity_second_plane": 3000 / 4.5
+    }
+  },
+  {
+    "instruction": "Is the cyclist's trip time reasonable?",
+    "input": "",
+    "output": {
+      "total_distance": 16.0 + 8.0 + 8.0 + 32.0 + 11.2,
+      "average_velocity": 24,
+      "total_time": (16.0 + 8.0 + 8.0 + 32.0 + 11.2) / 24
+    }
+  },
+  {
+    "instruction": "What are the object's velocities at t=1.0s and t=6.0s?",
+    "input": "",
+    "output": {
+      "acceleration": 1.2 + 1.2,
+      "velocity_at_4s": -3.4,
+      "velocity_at_1s": -3.4 - 1.2 * 3,
+      "velocity_at_6s": -3.4 + 1.2 * 2
+    }
+  },
+  {
+    "instruction": "What are the velocity and acceleration of the particle at t=2.0s and t=5.0s?",
+    "input": "",
+    "output": {
+      "position_function": "x(t) = 2.0 - 4.0 * t^2",
+      "velocity_at_2s": -16.0 * 2,
+      "acceleration_at_2s": -16.0,
+      "velocity_at_5s": -16.0 * 5,
+      "acceleration_at_5s": -16.0
+    }
+  },
+  {
+    "instruction": "What is the acceleration of the particle?",
+    "input": "",
+    "output": {
+      "velocity_at_2s": 2.0,
+      "velocity_at_5.2s": -7.6,
+      "acceleration": ((-7.6) - 2.0) / (5.2 - 2.0)
+    }
+  },
+  {
+    "instruction": "What is the acceleration of the caboose?",
+    "input": "",
+    "output": {
+      "time": 5.0,
+      "distance": 30,
+      "acceleration": 2 * 30 / (5.0 ** 2)
+    }
+  },
+  {
+    "instruction": "What is the velocity of the electron?",
+    "input": "",
+    "output": {
+      "velocity": 4.0e5
+    }
+  },
+  {
+    "instruction": "Explain the concept of average velocity.",
+    "input": "",
+    "output": {
+      "description": "Average velocity is the total displacement of an object divided by the total time taken to cover that displacement. It represents the constant velocity an object would need to have to cover the same distance in the same time."
+    }
+  },
+  {
+    "instruction": "How is acceleration calculated?",
+    "input": "",
+    "output": {
+      "description": "Acceleration is the rate of change of velocity over time. It is calculated as the change in velocity divided by the change in time: a = (v2 - v1) / (t2 - t1)."
+    }
+  }
+]

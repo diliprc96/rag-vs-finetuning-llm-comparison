@@ -1,0 +1,71 @@
+{
+    "instruction": "What is the x-component of the acceleration of the skier?",
+    "input": "",
+    "output": {
+      "x-component of acceleration": 2.0 m/s^2
+    }
+  },
+  {
+    "instruction": "What is the y-component of the acceleration of the skier?",
+    "input": "",
+    "output": {
+      "y-component of acceleration": -0.54 m/s^2
+    }
+  },
+  {
+    "instruction": "What is the equation for the x-position of the skier as a function of time?",
+    "input": "",
+    "output": {
+      "x-position equation": "x(t) = 75.0 m + (4.1 m/s)t + (1/2)(2.0 m/s^2)t^2"
+    }
+  },
+  {
+    "instruction": "What is the equation for the x-velocity of the skier as a function of time?",
+    "input": "",
+    "output": {
+      "x-velocity equation": "v_x(t) = 4.1 m/s + (2.0 m/s^2)t"
+    }
+  },
+  {
+    "instruction": "What is the equation for the y-position of the skier as a function of time?",
+    "input": "",
+    "output": {
+      "y-position equation": "y(t) = -50.0 m + (-1.1 m/s)t + (1/2)(-0.54 m/s^2)t^2"
+    }
+  },
+  {
+    "instruction": "What is the equation for the y-velocity of the skier as a function of time?",
+    "input": "",
+    "output": {
+      "y-velocity equation": "v_y(t) = -1.1 m/s + (-0.54 m/s^2)t"
+    }
+  },
+  {
+    "instruction": "What is the skier's position in the x-direction after 10 seconds?",
+    "input": "",
+    "output": {
+      "x-position after 10 seconds": "175.0 m"
+    }
+  },
+  {
+    "instruction": "What is the skier's position in the y-direction after 10 seconds?",
+    "input": "",
+    "output": {
+      "y-position after 10 seconds": "-105.4 m"
+    }
+  },
+  {
+    "instruction": "What is the skier's velocity in the x-direction after 10 seconds?",
+    "input": "",
+    "output": {
+      "x-velocity after 10 seconds": "24.1 m/s"
+    }
+  },
+  {
+    "instruction": "What is the skier's velocity in the y-direction after 10 seconds?",
+    "input": "",
+    "output": {
+      "y-velocity after 10 seconds": "-6.4 m/s"
+    }
+  }
+]

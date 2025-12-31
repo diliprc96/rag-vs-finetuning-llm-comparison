@@ -1,0 +1,113 @@
+{
+    "instruction": "What is the volume of Earth in cubic kilometers (km^3)?",
+    "input": "",
+    "output": {
+      "volume_in_km3": 1.08321 * 10**12
+    }
+  },
+  {
+    "instruction": "What is the volume of Earth in cubic miles (mi^3)?",
+    "input": "",
+    "output": {
+      "volume_in_mi3": 2.59885 * 10**11
+    }
+  },
+  {
+    "instruction": "What is the volume of Earth in cubic centimeters (cm^3)?",
+    "input": "",
+    "output": {
+      "volume_in_cm3": 1.08321 * 10**21
+    }
+  },
+  {
+    "instruction": "What is the speed limit of 100 km/h in meters per second?",
+    "input": "",
+    "output": {
+      "speed_in_m/s": 27.78
+    }
+  },
+  {
+    "instruction": "What is the speed limit of 100 km/h in miles per hour?",
+    "input": "",
+    "output": {
+      "speed_in_mi/h": 62.14
+    }
+  },
+  {
+    "instruction": "A car is traveling at 33 m/s. What is its speed in kilometers per hour?",
+    "input": "",
+    "output": {
+      "speed_in_km/h": 118.8
+    }
+  },
+  {
+    "instruction": "Is the car traveling at 33 m/s exceeding the 90 km/h speed limit?",
+    "input": "",
+    "output": {
+      "exceeding_speed_limit": true
+    }
+  },
+  {
+    "instruction": "Show that 1 m/s = 3.6 km/h",
+    "input": "",
+    "output": {
+      "conversion": "1 m/s = 3.6 km/h"
+    }
+  },
+  {
+    "instruction": "Show that 1 m/s = 2.2 mi/h",
+    "input": "",
+    "output": {
+      "conversion": "1 m/s = 2.2 mi/h"
+    }
+  },
+  {
+    "instruction": "What is the length of an American football field in meters?",
+    "input": "",
+    "output": {
+      "field_length_in_m": 91.44
+    }
+  },
+  {
+    "instruction": "What is the area of a large soccer field in square feet?",
+    "input": "",
+    "output": {
+      "field_area_in_sq_ft": 12,277.25
+    }
+  },
+  {
+    "instruction": "What is the height in meters of a person who is 6 ft 1.0 in. tall?",
+    "input": "",
+    "output": {
+      "height_in_m": 1.85
+    }
+  },
+  {
+    "instruction": "What is the height of Mount Everest in kilometers?",
+    "input": "",
+    "output": {
+      "height_in_km": 8.848
+    }
+  },
+  {
+    "instruction": "What is the speed of sound in kilometers per hour?",
+    "input": "",
+    "output": {
+      "speed_of_sound_in_km/h": 1,231.2
+    }
+  },
+  {
+    "instruction": "A tectonic plate has an average speed of 4.0 cm/yr. What distance does it move in 1.0 s?",
+    "input": "",
+    "output": {
+      "distance_moved_in_1s": 1.27 * 10**-9
+    }
+  },
+  {
+    "instruction": "What is the tectonic plate's speed in kilometers per million years?",
+    "input": "",
+    "output": {
+      "speed_in_km/Myr": 40
+    }
+  }
+]
