@@ -30,9 +30,51 @@ def main():
     args = parser.parse_args()
 
     print(f"Loading dataset from {args.dataset_path}...")
-    # ... (rest of loading) ...
+    # Load dataset (Alpaca format handles 'instruction', 'input', 'output')
+    dataset = load_dataset('json', data_files=args.dataset_path, split="train")
 
-    # [SKIPPED CODE]
+    # Formatting function
+    def format_prompts(examples):
+        output_texts = []
+        for instruction, input_text, output in zip(examples['instruction'], examples['input'], examples['output']):
+            # Mistral Instruct Format: [INST] instruction [/INST] output
+            if input_text:
+                prompt = f"[INST] {instruction}\n\n{input_text} [/INST] {output}"
+            else:
+                prompt = f"[INST] {instruction} [/INST] {output}"
+            output_texts.append(prompt)
+        return output_texts
+
+    # QLoRA Config
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_use_double_quant=False,
+    )
+
+    print(f"Loading model {MODEL_NAME}...")
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        quantization_config=bnb_config,
+        device_map="auto"
+    )
+    model.config.use_cache = False
+    model.config.pretraining_tp = 1
+
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "right"
+
+    # PEFT Config
+    peft_config = LoraConfig(
+        lora_alpha=16,
+        lora_dropout=0.1,
+        r=64,
+        bias="none",
+        task_type="CAUSAL_LM",
+        target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj"]
+    )
 
     # Training Arguments
     training_arguments = TrainingArguments(
