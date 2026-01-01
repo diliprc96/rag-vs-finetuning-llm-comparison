@@ -1,0 +1,775 @@
+config,question_id,type,question,predicted,correct,score_mcq,score_numeric,score_explanation
+Base,1,mcq,Which of the following units is an SI base unit? (A) Newton (B) Joule (C) Kilogram (D) Watt,"All of the given units (A) Newton, (B) Joule, (C) Kilogram, and (D) Watt are SI base units.
+
+Newton (N) is the unit of mass times acceleration, and it measures the force.
+Joule (J) is the unit of energy.
+Kilogram (kg) is the base unit of mass.
+Watt (W) is the unit of power.
+
+The International System of Units (SI) has seven base units: meter (m), kilogram (kg), second (s), ampere (A), kelvin (K), mole (mol), and candela (cd). Newton, Joule, kilogram, and watt are derived from these seven base units.",C,0.0,0.0,0.0
+Base,2,numeric,"If an object travels 100 meters in 4 seconds, what is its average speed in m/s?","To find the average speed of an object, you can use the formula:
+
+Average speed = Total distance ÷ Total time
+
+Given:
+Total distance = 100 meters
+Total time = 4 seconds
+
+Calculation:
+Average speed = 100 meters ÷ 4 seconds
+
+Average speed = 25 meters/second
+
+So, the average speed of the object is 25 m/s.",25,0.0,1.0,0.0
+Base,3,explanation,Explain the difference between accuracy and precision in the context of experimental physics.,"In experimental physics, accuracy and precision are two important concepts used to evaluate the results of an experiment. While they may seem similar, they refer to different aspects of the data.
+
+Accuracy is a measure of how close the measured value is to the true value or target value. It indicates how well the measurement agrees with the actual value. For example, if a measurement of a mass is 10.1 g for a substance that actually weighs 10 g, then the measurement is 99% accurate.
+
+Precision, on the other hand, refers to the degree of agreement among repeated measurements of the same quantity. It measures the consistency or reproducibility of the results. For instance, if ten measurements of the same mass yield values of 10.1 g, 10.05 g, 10.12 g, and so on, the measurement is precise.
+
+The relationship between accuracy and precision can be illustrated through the bullseye analogy. A target with a small bullseye represents high precision, as the repeated measurements are consistent and clustered close together. However, if the bullseye is not centered on the target, the measurement is not very accurate. Conversely, if the bullseye is centered but large, the measurement may be accurate, but not very precise. In an ideal experiment, both accuracy and precision are high.","Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate.",0.0,0.0,5.0
+Base,4,mcq,What is the dimension of Force? (A) MLT^-1 (B) MLT^-2 (C) ML^2T^-2 (D) LT^-2,"The correct answer is (C) ML^2T^-2.
+
+Force is a vector physical quantity with the SI unit of Newton (N), which is defined as the mass of an object multiplied by its acceleration (mass × acceleration = mass × force/mass = force). According to the SI system, mass has the unit M, length has the unit L, and time has the unit T. Therefore, force has the dimension ML/T^2 or ML^2/T^2, which can be simplified to ML^2T^-2.",B,0.0,0.0,0.0
+Base,5,numeric,A car accelerates from rest to 20 m/s in 5 seconds. What is the magnitude of its average acceleration in m/s^2?,"To find the average acceleration of the car, we can use the formula:
+
+acceleration = change in velocity / change in time
+
+Given:
+change in velocity = final velocity - initial velocity = 20 m/s
+change in time = 5 seconds
+
+So,
+acceleration = 20 m/s / 5 s
+acceleration = 4 m/s^2
+
+Therefore, the magnitude of the average acceleration of the car is 4 m/s^2.",4,0.0,0.0,0.0
+Base,6,mcq,Which vector operation results in a scalar? (A) Cross product (B) Dot product (C) Vector addition (D) Scalar multiplication,"The correct answer is: B. Dot product results in a scalar.
+
+Explanation:
+A cross product is a vector operation that produces a new vector. It is used to find the normal vector to a plane or the vector product of two given vectors.
+
+Vector addition is a vector operation that combines two vectors into a single vector. The result is also a vector.
+
+Scalar multiplication is a scalar operation that multiplies a scalar value by a vector, resulting in a new vector.
+
+However, a dot product is a scalar operation that computes the scalar value of the product of two vectors. It is represented as a dot (•) or a point between the two vectors in symbolic representation. The result of a dot product is a scalar value.",B,1.0,0.0,0.0
+Base,7,mcq,An object in uniform circular motion has a constant: (A) Velocity (B) Speed (C) Acceleration vector (D) Displacement,"The answer is (B) Speed. In uniform circular motion, the object moves at a constant speed, but its velocity changes as it changes direction. The acceleration vector is always directed towards the center of the circle and changes in magnitude as the object moves closer or farther from the center. Displacement, on the other hand, is a vector quantity that represents the change in position of an object, so it is not constant in circular motion.",B,1.0,0.0,0.0
+Base,8,numeric,calculate the work done (in Joules) by a 10 N force moving an object 5 meters in the direction of the force.,"The work done by a force acting on an object is given by the equation:
+
+Work = Force * Distance
+
+In this case, the force is 10 N and the distance is 5 meters. So, the work done would be:
+
+Work = 10 N * 5 m
+Work = 50 Joules",50,0.0,1.0,0.0
+Base,9,explanation,Why does a passenger in a turning car feel pushed to the side?,"When a car turns, the force of inertia acts against the direction of the turn. This means that the passengers and any objects inside the car tend to stay in a straight line relative to the car's original motion, rather than following the direction of the turn.
+
+As the car makes a turn, the outside tires experience more friction with the road, which causes the car to slow down and change direction more gradually than the inside tires. This difference in the rate of change in speed creates a horizontal centripetal force, which pushes the passengers towards the center of the turn.
+
+However, because the car is also moving forward, there is also a horizontal component of the inertia force acting on the passengers. This force tends to keep the passengers moving forward in a straight line relative to the original motion of the car.
+
+When these two forces (the centripetal force and the inertia force) act at the same time, they combine to create an apparent force that pushes the passengers to the side of the car, opposite to the direction of the turn. This is why passengers in a turning car feel pushed to the side.
+
+It's important to note that this force is an illusion, as there is no real external force pushing the passengers to the side. Instead, it's the result of the interaction between the car's motion and the forces of inertia and centripetal acceleration.","This is due to basic inertia (Newton's First Law). The passenger's body tends to continue moving in a straight line, while the car turns. The sensation of being pushed outward is a 'fictitious force' (centrifugal force) experienced in the non-inertial reference frame of the car.",0.0,0.0,4.5
+Base,10,mcq,The slope of a velocity-time graph represents: (A) Displacement (B) Acceleration (C) Force (D) Momentum,"The slope of a velocity-time graph represents acceleration. This is because the change in velocity (the difference between final and initial velocity) over a given time interval is a measure of acceleration. So, the slope of the velocity-time graph, which represents the change in velocity per unit time, is a direct measure of acceleration.",B,0.0,0.0,0.0
+Base,11,numeric,A 2 kg block slides down a frictionless 30-degree incline. value of g is 9.8 m/s^2. What is the acceleration along the incline in m/s^2?,"To find the acceleration of the block sliding down the incline, we can use the formula for the acceleration in terms of mass, gravity, and the angle of the incline:
+
+a = mg sinθ
+
+where:
+m is the mass (2 kg),
+g is the acceleration due to gravity (9.8 m/s²),
+θ is the angle of the incline (30 degrees), and
+a is the acceleration along the incline.
+
+First, let's convert the angle to radians for the formula:
+
+θ = 30° = 0.524 radians
+
+Now, we can calculate the acceleration:
+
+a = mg sinθ
+a = (2 kg) × (9.8 m/s²) × sin(0.524 radians)
+a ≈ 6.27 m/s²
+
+So, the acceleration along the incline is approximately 6.27 m/s².",4.9,0.0,0.0,0.0
+Base,12,mcq,Which of Newton's laws explains recoil in a gun? (A) First Law (B) Second Law (C) Third Law (D) Law of Gravitation,"(C) Third Law: For every action, there is an equal and opposite reaction. When a gun is fired, the bullet is propelled forward due to the action of the explosive force of the gunpowder. Accordingly, there is an equal and opposite reaction that is experienced by the gun, resulting in its recoil.",C,1.0,0.0,0.0
+Base,13,explanation,Describe the relationship between kinetic energy and work as stated by the Work-Energy Theorem.,"The Work-Energy Theorem is a fundamental principle in classical mechanics that describes the relationship between work done on an object and its resulting kinetic energy. According to this theorem, the change in an object's kinetic energy is equal to the work done by the force acting on the object. Mathematically, this can be expressed as:
+
+ΔK.E = W
+
+where ΔK.E represents the change in an object's kinetic energy (K.E), and W represents the work done by the force acting on the object. A positive value of work implies that energy has been transferred to the object, increasing its kinetic energy, while a negative value of work implies that energy has been removed from the object, decreasing its kinetic energy.
+
+It is important to note that this theorem applies to objects moving in a straight line, and for forces that are constant in direction as well as in magnitude. For more complex situations involving forces that change direction or non-constant magnitudes, the Work-Energy Theorem may need to be modified or applied using the concept of energy integrals or the Path Integral Form of the Work-Energy Theorem.
+
+In summary, the Work-Energy Theorem states that the change in an object's kinetic energy is equal to the work done by the force acting on the object. This principle provides a fundamental connection between the work done on an object and the resulting change in its kinetic energy.","The Work-Energy Theorem states that the net work done on an object is equal to the change in its kinetic energy ($W_{net} = \Delta KE$). If positive work is done, kinetic energy increases; if negative work is done, it decreases.",0.0,0.0,4.5
+Base,14,mcq,"If the distance between two masses is doubled, the gravitational force between them becomes: (A) Double (B) Half (C) One-fourth (D) Four times","The answer is (A) Double. The gravitational force between two masses is directly proportional to the mass of each object and inversely proportional to the square of the distance between them (according to Newton's law of universal gravitation). So, if the distance is doubled, the force will also be doubled, assuming the masses remain constant.",C,0.0,0.0,0.0
+Base,15,numeric,Convert 72 km/h to m/s.,"To convert kilometers per hour (km/h) to meters per second (m/s), you can use the following conversion formula: m/s = km/h ÷ 3.6.
+
+So, to convert 72 km/h to m/s:
+
+m/s = 72 km/h ÷ 3.6
+
+m/s = 20 km/s (approximately)
+
+Note: This result is not physically realistic as it is much larger than the speed of an average vehicle or any known object. The error is due to rounding and the approximation involved in the conversion factor (3.6 m/s = 1 hm). The correct conversion is approximately 20 m/s², which is equivalent to 72 km/h in acceleration, not velocity.",20,0.0,0.0,0.0
+Base,16,explanation,Explain why static friction is usually greater than kinetic friction.,"Static friction, which is the force that prevents an object from moving when there is no net force acting on it, is generally greater than kinetic friction, which is the force that opposes the motion of an object once it is in contact with a surface. The reason for this is that at the microscopic level, when two surfaces are in contact but not moving against each other, there are more interactive forces between them that create a stronger resistance to separation.
+
+When two surfaces are in contact, there are various types of forces that come into play. At a molecular level, there are intermolecular forces such as van der Waals forces, electrostatic forces, and chemical forces that can exist between the surfaces. These forces can create a strong attractive interaction between the surfaces, making it harder to move one surface against the other.
+
+On the other hand, when an object is already in motion, there is a thin layer of fluid (like air or water) or deformed material (like the contact between two solid surfaces) between them. This reduces the number of interactive forces between the surfaces, making it easier to move one surface against the other, resulting in a smaller frictional force.
+
+Additionally, the coefficient of static friction (μs) is often greater than the coefficient of kinetic friction (μk) for a given surface pair. This is a measurable property of the surfaces and can be attributed to the factors mentioned above. For example, in the case of a rough surface, the surface irregularities can interlock and create a stronger resistance to motion when there is no net force acting (static friction), compared to when the surface is in motion and these irregularities are being deformed or slippery (kinetic friction).
+
+In summary, static friction is usually greater than kinetic friction due to the presence of stronger intermolecular and surface forces that resist separation between two surfaces when there is no net force acting on them.","Static friction arises from the interlocking of irregularities and molecular bonds between surfaces at rest, requiring more force to break them ('cold welding'). Kinetic friction occurs when surfaces are already sliding, where the contact points don't have enough time to bond as strongly.",0.0,0.0,4.5
+Base,17,mcq,Potential energy is associated with: (A) Motion (B) Position (C) Time (D) Velocity,"(B) Position
+
+Explanation:
+
+Potential energy is a form of energy that a system possesses due to its position or configuration. It depends on the position or arrangement of the objects in a system, rather than their motion or velocity. For example, an object raised to a certain height above the ground has potential energy due to its position relative to the ground. The potential energy is dependent on the position, not the motion or time.",B,1.0,0.0,0.0
+Base,18,numeric,A spring with constant k=100 N/m is compressed by 0.2 m. How much potential energy (in J) is stored?,"To find the potential energy stored in the compressed spring, we can use the formula:
+
+Potential Energy = 0.5 * k * (compression)^2
+
+Where:
+k = spring constant (100 N/m)
+compression = distance compressed (0.2 m)
+
+Substituting the given values into the formula, we get:
+
+Potential Energy = 0.5 * 100 N/m * (0.2 m)²
+
+Calculating this value, we find:
+
+Potential Energy = 0.5 * 100 N/m * 0.04 m²
+Potential Energy = 20 J",2,0.0,0.0,0.0
+Base,19,mcq,"In an inelastic collision, which quantity is conserved? (A) Kinetic Energy (B) Momentum (C) Both (D) Neither","The answer is (C) Both. In an inelastic collision, the total momentum before the collision is equal to the total momentum after the collision. Additionally, the total kinetic energy before the collision is equal to the total kinetic energy after the collision. However, it's important to note that the individual kinetic energies of the colliding objects may change during the collision, but their total remains constant.",B,0.0,0.0,0.0
+Base,20,explanation,What is the difference between mass and weight?,"Mass and weight are two related but distinct concepts in physics. 
+
+Mass is a measure of the amount of matter in an object. It is a fundamental property of an object and remains constant, regardless of where the object is located. Mass is typically measured in kilograms or grams in the SI system.
+
+Weight, on the other hand, is a measure of the force exerted on an object due to gravity. It depends on both the mass of the object and the acceleration due to gravity. Weight is typically measured in newtons or pounds. 
+
+So, all objects have a certain mass, but the weight of an object depends on the location – for example, an object with a certain mass will have more weight on a planet with stronger gravity, and less weight on a planet with weaker gravity.","Mass is the measure of the amount of matter in an object and is intrinsic (scalar, doesn't change with location). Weight is the force of gravity acting on that mass ($W=mg$) and depends on the local gravitational field (vector).",0.0,0.0,5.0
+Base,21,mcq,The area under a force-displacement graph represents: (A) Impulse (B) Work (C) Power (D) Acceleration,"The area under a force-displacement (or work) graph represents the work done by the force. Therefore, the correct answer is (B) Work. Impulse is represented by the area under a force-time graph, power is represented by the work done divided by time, and acceleration is a measure of the rate of change of velocity.",B,0.0,0.0,0.0
+Base,22,numeric,"What is the period (in seconds) of a pendulum of length 1 meter? (Assume g=9.8 m/s^2, use T = 2*pi*sqrt(L/g), pi approx 3.14)","Using the given formula T = 2π√(L/g), where L is the length of the pendulum and g is the acceleration due to gravity, we can find the period T in seconds.
+
+Given: L = 1 m, g = 9.8 m/s²
+
+First, calculate the square root of L/g:
+
+√(L/g) = √(1 m / 9.8 m/s²)
+
+Using a calculator, we get:
+
+√(L/g) ≈ 0.4332 s
+
+Now, multiply this value by 2π:
+
+T = 2π * √(L/g)
+T = 2 * 3.14 * 0.4332 s
+T ≈ 2.11 seconds.
+
+So, the period of a pendulum of length 1 meter is approximately 2.11 seconds.",2.0,0.0,0.0,0.0
+Base,23,explanation,Use the concept of center of mass to explain why a high jumper uses the Fosbury Flop technique.,"The Fosbury Flop is a high jumping technique named after its inventor, Dick Fosbury. In this technique, the jumper approaches the bar with their back to it, then rotates their body in a forward direction over the bar. This is in contrast to the older straight-leg style, where jumpers approached the bar head-on and cleared it by bending their legs and keeping their bodies as horizontal as possible.
+
+The reason why the Fosbury Flop is used in modern high jumping instead of the straight-leg style has to do with the principle of center of mass. In physics, the center of mass is the point in an object where its mass is evenly distributed, such that the weight of the object acts as if it were all located at that point.
+
+When a high jumper uses the straight-leg style, their body forms an inverted pendulum during the jump. This means that their center of mass is located above the base of support, which is their feet. This makes the jump less stable and more difficult to execute, especially when attempting to clear a bar at a high height.
+
+On the other hand, when a jumper uses the Fosbury Flop technique, they rotate their body forward over the bar, which allows their center of mass to be located below the bar during the jump. This makes the jump more stable and easier to execute, as the jumper's center of mass is closer to the base of support and directly under the bar.
+
+Additionally, the Fosbury Flop technique allows jumpers to clear the bar at a higher angle, as they can remain in the air for longer and have more time to clear the bar. By rotating their body forward over the bar, jumpers can also generate more momentum and power, which helps them to clear the bar at a greater height.
+
+In summary, the reason why high jumpers use the Fosbury Flop technique instead of the straight-leg style has to do with the principle of center of mass. By rotating their body forward over the bar, jumpers can position their center of mass below the bar during the jump, making the jump more stable and easier to execute, and allowing them to clear the bar at a higher height.",The Fosbury Flop allows the jumper to arch their back such that their center of mass passes *under* the bar while their body passes over it. This requires less energy/vertical lift compared to techniques where the center of mass must clear the bar height.,0.0,0.0,5.0
+Base,24,mcq,Which force is non-conservative? (A) Gravity (B) Spring force (C) Friction (D) Electrostatic force,"(C) Friction: Friction is a non-conservative force because it does not follow the principle of conservation of energy. When work is done by friction against an object, energy is dissipated and lost as heat, rather than being stored in potential energy like in the cases of gravity and spring forces. In contrast, gravity and spring forces are conservative forces, meaning that the total energy of a system remains constant if no external work is done on the system. Electrostatic forces also follow the principle of conservation of energy and are therefore conservative forces.",C,1.0,0.0,0.0
+Base,25,numeric,A wheel rotates at 300 revolutions per minute. What is its angular velocity in rad/s? (Use pi=3.14),"To find the angular velocity in radians per second, we can use the formula:
+
+Angular velocity = Number of revolutions per minute * (2 * pi * Radians per minute) / 60 minutes
+
+Given that the wheel rotates at 300 revolutions per minute, and we have pi = 3.14:
+
+Angular velocity = 300 * (2 * 3.14 * 1) / 60
+
+Calculate the value:
+
+Angular velocity = 300 * (6.2831853) / 60
+Angular velocity = 37.7011465 rad/s
+
+So the angular velocity of the wheel is approximately 37.70 radians per second.",31.4,0.0,0.0,0.0
+Base,26,explanation,Why is banking of roads used on curves?,"Banking of roads, or the slope or curvature of the pavement on the side of a turn, is used to enhance the safety and stability of vehicles while navigating curves. Here are a few reasons why banking is essential:
+
+1. Centrifugal force: When a vehicle travels at a certain speed around a curve, it tends to move towards the outside of the turn due to centrifugal force. Banking the road gives the vehicle a stable path to follow, allowing it to stay on the road and maintain its intended trajectory.
+
+2. Reduces lateral force: By banking the road, the force required to keep a vehicle on the road during a turn is reduced. This makes the driving experience smoother and more comfortable, especially for inexperienced drivers or when traveling at high speeds.
+
+3. Improves handling: Banking also plays a role in improving a vehicle's handling during turns by allowing the tires to maintain contact with the pavement throughout the turn. This is particularly important for larger vehicles like buses or trucks, which can be more prone to losing traction and tipping over on sharp turns.
+
+4. Increases stopping distance: Banking a road can also help to increase the stopping distance of vehicles during a turn, as the tires are better able to maintain traction and the vehicle's path remains more predictable.
+
+5. Reduces wear and tear: By helping vehicles stay on the road during turns, banking can also help to reduce the wear and tear on tires, brakes, and other components. This can ultimately save drivers money and help to extend the life of their vehicles.
+
+In summary, banking of roads is used on curves to enhance safety, stability, handling, and reduce wear and tear on vehicles during turns. It is an essential design element for roads and highways, and plays a crucial role in ensuring a smooth and efficient driving experience.","Banking provides a component of the Normal force towards the center of the curve, which contributes to the necessary centripetal force. This reduces the reliance on friction to turn the vehicle, allowing for higher speeds or safer turns on slippery surfaces.",0.0,0.0,4.5
+Base,27,mcq,The rate of change of momentum is equal to: (A) Impulse (B) Force (C) Energy (D) Power,"The rate of change of momentum is equal to force (B). This is a fundamental concept in physics, as described by Newton's second law of motion. Impulse (the integral of force over time), energy, and power are related quantities, but they are not equal to the rate of change of momentum.",B,1.0,0.0,0.0
+Base,28,numeric,A 5 kg ball is dropped from a height of 10 meters. What is its potential energy relative to the ground? (g=9.8 m/s^2),"To find the potential energy of the ball, we need to use the formula:
+
+Potential Energy = m * g * h
+
+where m is the mass of the ball, g is the acceleration due to gravity, and h is the height from which the ball is dropped.
+
+Given:
+m = 5 kg
+g = 9.8 m/s^2
+h = 10 m
+
+Plugging the values into the formula, we get:
+
+Potential Energy = 5 kg * 9.8 m/s^2 * 10 m
+Potential Energy = 490 Joules
+
+So, the potential energy of the 5 kg ball relative to the ground is 490 Joules.",490,0.0,1.0,0.0
+Base,29,explanation,Explain Newton's First Law (Law of Inertia) with an example.,"Newton's First Law, also known as the Law of Inertia, states that an object at rest will remain at rest, and an object in motion will continue in motion with a constant velocity in a straight line, unless acted upon by an external force. In other words, an object tends to maintain its state of motion, either of rest or uniform motion in a straight line, unless an external force is applied to it.
+
+Let's consider an example to better understand this law:
+
+Imagine a large wooden block is placed on a frictionless surface, such as an ice rink. Once the block is given a gentle push, it will continue to move smoothly and steadily in a straight line at a constant velocity, without any external force acting on it. This is because there is no force opposing its motion and the only force acting on it is its own weight, which doesn't affect its motion in this scenario.
+
+However, if we introduce an external force, such as pushing against the block with our hand, the block will accelerate and change its velocity as a result. Therefore, the absence of external forces and the resulting constant motion of an object is a key aspect of Newton's First Law.
+
+Another example would be an astronaut floating in a spacecraft in the absence of any gravity. In this scenario, the astronaut remains at rest or moves with a constant velocity as long as no external force acts upon them. Once an external force is applied, such as pressing against a button in the spacecraft, that force will cause an acceleration and a change in velocity for the astronaut.","An object at rest stays at rest, and an object in motion stays in motion with the same velocity unless acted upon by a net external force. Example: A hockey puck sliding on frictionless ice will continue indefinitely until it hits a wall.",0.0,0.0,4.5
+Base,30,mcq,Torque depends on: (A) Force only (B) Lever arm only (C) Force and lever arm (D) Mass and velocity,"The correct answer is (C) Force and lever arm. Torque is a measure of rotational force, and it depends on both the force applied and the distance from the pivot point or lever arm at which the force is applied.",C,1.0,0.0,0.0
+Base,31,numeric,Calculate the impulse derived from a force of 50 N acting for 0.1 seconds.,"The impulse (J) is defined as the product of force (F) and time (t): J = F * t. In this case, the force is 50 N and the time is 0.1 seconds. Therefore, the impulse is: J = 50 N * 0.1 s = 5 Joules (5 N.s)",5,0.0,1.0,0.0
+Base,32,explanation,Why does a solitary force not exist in nature according to Newton's Third Law?,"According to Newton's Third Law of Motion, for every action there is an equal and opposite reaction. This law applies to pairs of interacting objects, not to a single object acting on itself. In other words, the law requires a force to act on one object and, simultaneously, an equal and opposite force to act on another object.
+
+Therefore, the concept of a solitary force does not exist in nature according to Newton's Third Law, as there must always be two objects interacting with each other, each exerting a force on the other. A single object cannot exert a force on itself and simultaneously experience an equal and opposite force, as required by the law.","Newton's Third Law states that for every action, there is an equal and opposite reaction. Forces always occur in pairs (action-reaction pairs) acting on different objects. You cannot touch something without it touching you back.",0.0,0.0,5.0
+Base,33,mcq,Angular momentum is conserved when: (A) Net force is zero (B) Net torque is zero (C) Kinetic energy is constant (D) Velocity is constant,"Answer: (B) Net torque is zero.
+
+Angular momentum is a vector quantity that describes the rotational motion of an object. It is given by the product of the object's moment of inertia, its angular velocity, and its angular position. Angular momentum is conserved in a closed system if and only if the net torque acting on the system is zero. This is a consequence of Newton's second law of motion, which states that the net force on an object is equal to its mass times its acceleration. Since angular momentum is a measure of the object's rotational motion, and acceleration is a measure of the rate of change of an object's velocity, it follows that a constant angular momentum implies a constant velocity only if the net force on the object is zero. However, a constant angular momentum does not necessarily imply a constant kinetic energy or velocity. For example, an object can have a constant angular momentum but still experience a change in kinetic energy if its moment of inertia changes. Similarly, an object can have a constant angular momentum but still have a variable velocity if its angular acceleration is nonzero. Therefore, options (C) and (D) are incorrect. Option (A) is incorrect because a net force can exist in a system without causing a change in angular momentum, as long as the torque produced by the force is balanced by an equal and opposite torque from another source. However, if the net torque is zero, then the angular momentum is conserved.",B,1.0,0.0,0.0
+Base,34,numeric,A 1000 kg car rounds a turn of radius 50 m at 10 m/s. What is the centripetal force required?,"To find the centripetal force required, we can use the formula:
+
+centripetal force = mass * (velocity^2 / radius)
+
+Given:
+mass (m) = 1000 kg
+velocity (v) = 10 m/s
+radius (r) = 50 m
+
+Plugging the values into the formula, we get:
+
+centripetal force = 1000 kg * (10 m/s)^2 / 50 m
+centripetal force = 1000 kg * 100 m^2/s^2 / 50 m
+centripetal force = 2000 N
+
+So, the centripetal force required is 2000 Newtons.",2000,0.0,1.0,0.0
+Base,35,explanation,Differentiate between conservative and non-conservative forces.,"Conservative and non-conservative forces are two types of physical forces that differ in their properties and behavior with respect to energy transfer.
+
+Conservative forces are those forces that can be described by a potential energy function. These forces are always directed towards a point of equilibrium, and the energy associated with them can be stored and later released. Examples of conservative forces include gravity, elastic forces, and electrostatic forces. When a conservative force acts on an object, the energy it transfers to the object is in the form of potential energy, which can be calculated using the potential energy function. Once the object reaches the point of equilibrium, the potential energy is converted back to other forms of energy, such as kinetic energy, and the total energy of the system remains constant, as long as no other external forces are acting on the object.
+
+Non-conservative forces, on the other hand, cannot be described by a potential energy function. These forces do not have a definite direction towards a point of equilibrium, and the energy they transfer to an object is not conserved. Examples of non-conservative forces include friction, air resistance, and viscous forces. When a non-conservative force acts on an object, the energy it transfers is converted into other forms of energy, such as heat, and the total energy of the system decreases. This loss of energy cannot be regained even when the object is at rest, as the non-conservative force continues to act until the object reaches a new state of equilibrium.
+
+In summary, conservative forces are those that can be described by a potential energy function, are always directed towards a point of equilibrium, and can store and later release energy. Non-conservative forces, on the other hand, cannot be described by a potential energy function, do not have a definite direction towards a point of equilibrium, and cause a loss of energy that cannot be regained.","A conservative force (like gravity) does work that is independent of the path taken; energy used against it is stored as potential energy and is recoverable. A non-conservative force (like friction) depends on the path, and work done dissipates mechanical energy into heat.",0.0,0.0,5.0
+Base,36,mcq,A skater spins faster when she pulls her arms in. This is due to conservation of: (A) Energy (B) Linear Momentum (C) Angular Momentum (D) Mass,"The correct answer is (C) Angular Momentum.
+
+When a skater pulls her arms in while spinning, she reduces the length of the lever arm for her body's rotation. This increases the skater's angular velocity (spinning speed), as the total angular momentum (angular velocity multiplied by moment of inertia) remains constant due to the conservation of angular momentum.",C,1.0,0.0,0.0
+Base,37,numeric,Find the kinetic energy of a 2 kg object moving at 3 m/s.,"The formula for calculating the kinetic energy of an object is given by the equation: K.E = 0.5 * m * v^2, where m is the mass of the object and v is its velocity.
+
+Given that the mass (m) of the object is 2 kg and its velocity (v) is 3 m/s, we can calculate the kinetic energy (K.E) as follows:
+
+K.E = 0.5 * m * v^2
+K.E = 0.5 * 2 kg * (3 m/s) ^ 2
+K.E = 0.5 * 2 kg * 9 m^2/s^2
+K.E = 9 Joules
+
+So, the kinetic energy of the 2 kg object moving at 3 m/s is 9 Joules.",9,0.0,1.0,0.0
+Base,38,explanation,How does air resistance affect the trajectory of a projectile?,"Air resistance, also known as drag, is a force that opposes the motion of an object moving through the air. It is caused by the collisions of air molecules with the surface of the object. For a projectile, air resistance can significantly affect its trajectory in several ways:
+
+1. Decreases the maximum height: Air resistance can cause the projectile to lose energy as it moves through the air, which reduces its maximum height. This is because the projectile's kinetic energy is being used to overcome air resistance, instead of being used to increase its altitude.
+
+2. Slows down the projectile: Air resistance can also cause the projectile to slow down as it moves through the air. This can result in a shorter range for the projectile, as it will not be moving as fast when it reaches the ground.
+
+3. Affects the shape of the trajectory: The effect of air resistance on the trajectory of a projectile can be described using the equations of motion for a projectile in the absence of air resistance (known as the parabolic trajectory) and the modifications to those equations that account for air resistance. In general, the inclusion of air resistance results in a trajectory that is flatter and more horizontal than the parabolic trajectory.
+
+4. Increases the time of flight: The reduction in the projectile's speed due to air resistance causes an increase in the time of flight. This can have practical applications, such as in the design of mortars and artillery shells, where a longer time of flight can increase the effective range of the weapon.
+
+In summary, air resistance causes a projectile to lose energy as it moves through the air, which results in a decreased maximum height, a slower velocity, a flatter trajectory, and an increased time of flight. These effects become more significant as the size, shape, and speed of the projectile increase, as well as at higher altitudes where the air density is lower.",Air resistance opposes velocity. It reduces the maximum height and shortens the horizontal range. It also causes the trajectory to be non-parabolic (steeper on the way down).,0.0,0.0,5.0
+Base,39,mcq,Which physical quantity corresponds to inertia in rotational motion? (A) Mass (B) Torque (C) Moment of Inertia (D) Anger,"[C] Moment of Inertia
+
+Explanation:
+In rotational motion, inertia is represented by the moment of inertia. This physical quantity describes the resistance of a body to rotational acceleration around a particular axis. Moment of inertia depends on both the mass of the body and its distribution of mass around the axis of rotation. Mass alone (Option A) does not directly describe the inertia in rotational motion; it is a factor that enters into the calculation of the moment of inertia. Torque (Option B) is a measure of the force that causes rotational motion. Anger (Option D) is not a physical quantity.",C,1.0,0.0,0.0
+Base,40,numeric,"A vector A has components Ax=3, Ay=4. What is its magnitude?","To find the magnitude (or length) of a vector with components x and y, you can use the formula derived from the Pythagorean theorem:
+
+Magnitude = √(ax² + ay²)
+
+Substituting the given values Ax = 3 and Ay = 4 into the formula:
+
+Magnitude = √(3² + 4²)
+
+First, square each component:
+
+3² = 9, 4² = 16
+
+Now, add the squared components:
+
+Magnitude = √(9 + 16)
+
+Calculate the square root:
+
+Magnitude = √(25)
+Magnitude = 5
+
+So, the magnitude of the vector A with components Ax = 3 and Ay = 4 is 5 units.",5,0.0,1.0,0.0
+Base,41,explanation,Explain the concept of terminal velocity.,"Terminal velocity is the constant maximum speed that an object reaches when it is falling through a liquid or a gas, without being impeded by any external forces other than air resistance or buoyancy. This velocity is dependent on the properties of the object and the medium through which it is falling.
+
+When an object is first released, it falls with an increasing velocity due to the force of gravity. However, as the object gains speed, the air resistance or buoyancy force acting on it also increases. At some point, these opposing forces will balance each other out, and the object will no longer accelerate. This is terminal velocity.
+
+The formula for calculating terminal velocity is:
+
+Vt = sqrt(2 * g * (ρo - ρ) / ρ)
+
+where:
+Vt = terminal velocity
+g = acceleration due to gravity
+ρo = density of the object
+ρ = density of the medium
+
+This formula shows that the terminal velocity depends on the density of the object and the medium. For example, a heavier object will fall faster through a lighter medium, as the buoyancy force will be smaller relative to its weight, and it will reach a higher terminal velocity. Conversely, a lighter object will fall slower through a denser medium, as the buoyancy force will be greater relative to its weight, and it will reach a lower terminal velocity.
+
+In summary, terminal velocity is the constant maximum speed an object reaches when it is falling through a fluid or a gas, and it is determined by the object's density and the medium's density.","Terminal velocity is the constant speed reached by a falling object when the upward force of air resistance exactly balances the downward force of gravity. At this point, net force is zero, so acceleration is zero.",0.0,0.0,4.5
+Base,42,mcq,Power is defined as: (A) Work done per unit distance (B) Force times time (C) Rate of doing work (D) Energy times time,"(C) Rate of doing work. Power is defined as the rate at which work is done. It is measured in watts (W). Therefore, power is equal to force (F) times distance (d) divided by time (t), or P = Fd/t, or P = F·v (where v is velocity). Alternatively, power can be defined as energy (E) per unit time, P = E/t. However, the definition of power as work done per unit distance or force times time is not correct.",C,1.0,0.0,0.0
+Base,43,numeric,An engine does 1000 J of work in 2 seconds. What is its power output in Watts?,"Power is defined as the amount of energy (work) done per unit time. The formula for power is:
+
+Power = Energy / Time
+
+Given that the engine does 1000 Joules of work in 2 seconds, we can calculate its power output as:
+
+Power = 1000 Joules / 2 seconds = 500 Watts
+
+So the engine's power output is 500 Watts.",500,0.0,1.0,0.0
+Base,44,explanation,Why can we not use the kinematic equations (suvat) for a spring-mass system oscillating?,"The kinematic equations, such as those described by the SUVAT (Sum of Velocities, Uniform Acceleration, Variable Acceleration, and Time-of-Flight) system, are primarily used to describe the motion of objects under constant acceleration. In a spring-mass system, the motion is not necessarily under constant acceleration since the acceleration can change as the mass oscillates.
+
+The behavior of a spring-mass system can be described by Hooke's law, which relates the force applied to a spring to the extension or compression of the spring. The equation of motion for a simple harmonic oscillator (a spring-mass system) is given by:
+
+x(t) = A * cos(ωt + δ)
+
+where x is the position, A is the amplitude, ω is the angular frequency, and δ is the phase angle. This equation describes the position of an oscillating mass as a function of time.
+
+To find the acceleration in this system, we can take the second derivative of the position equation:
+
+a(t) = - ω^2 * A * sin(ωt + δ)
+
+The acceleration in the spring-mass system is not constant and depends on the position and velocity of the mass at that instant in time. Therefore, it is not possible to directly apply the kinematic equations to a spring-mass system without making additional assumptions or approximations. Instead, the motion of a spring-mass system is typically described using the second-order differential equation given by Hooke's law and Newton's second law.","Kinematic equations (like $v = u + at$) assume *constant* acceleration. In a spring-mass system ($F = -kx$), the force and thus acceleration varies with position ($a$ is not constant), so those specific equations are invalid. We must use simple harmonic motion equations.",0.0,0.0,5.0
+Base,45,mcq,Elastic collision implies conservation of: (A) Momentum only (B) KE only (C) Momentum and KE (D) Mass only,"The correct answer is (C) Momentum and KE.
+
+In an elastic collision, the total momentum before the collision is equal to the total momentum after the collision. This is a consequence of the conservation of momentum. Additionally, the total kinetic energy before the collision is equal to the total kinetic energy after the collision, assuming no energy is lost to non-conservative forces such as friction or work done by external forces. This is a consequence of the conservation of energy for elastic collisions. Therefore, both the momentum and the kinetic energy are conserved in an elastic collision.",C,1.0,0.0,0.0
+Base,46,numeric,Calculate the gravitational potential energy of a 10kg mass raised to 2 meters. (g=9.8),"The gravitational potential energy of an object is given by the formula:
+
+PE = m * g * h
+
+where m is the mass, g is the acceleration due to gravity, and h is the height.
+
+Substituting the given values into the formula, we get:
+
+PE = 10 kg * 9.8 m/s^2 * 2 m
+
+PE = 196 Joules.
+
+Therefore, the gravitational potential energy of a 10kg mass raised to a height of 2 meters is 196 Joules.",196,0.0,1.0,0.0
+Base,47,explanation,What happens to the period of a simple pendulum if the mass of the bob is doubled? Explain.,"A simple pendulum is a physical system consisting of a mass (the bob) suspended from a fixed point by a rod or string of length L, which is free to swing in a plane. The period T of a simple pendulum is given by the following approximation for small angles (amplitude less than 7 degrees):
+
+T = 2π√(L/g)
+
+Where L is the length of the pendulum and g is the acceleration due to gravity.
+
+If the mass of the bob is doubled, the length of the pendulum remains unchanged. Thus, the period T of the pendulum will be affected:
+
+Tnew = 2π√((L/2g))
+
+To find the new period, we note that the only term inside the square root that changes when the mass is doubled is the mass term. Since the mass is now 2 times the original mass, the square root term must be the square root of 2, i.e., √2. Therefore, the new period Tnew is related to the original period T through:
+
+Tnew = T * √2
+
+So, when the mass of the bob is doubled, the period T of a simple pendulum increases by approximately 14.7% (approximately √2 or 1.414 times the original period). This seems counterintuitive; however, it is a consequence of the increased mass's energy storage capabilities, which requires more time for the pendulum to complete one full swing.",The period remains unchanged. The period of a simple pendulum $T = 2\pi\sqrt{L/g}$ depends only on length $L$ and gravity $g$. Mass cancels out in the derivation because both the restoring force (gravity) and the inertia (mass) scale linearly with mass.,0.0,0.0,4.5
+Base,48,mcq,The scalar product of force and velocity gives: (A) Work (B) Power (C) Momentum (D) Acceleration,"The scalar product of force and velocity represents the magnitude of the power vector. So, the answer is (B) Power.
+
+Explanation:
+
+The scalar product of two vectors A and B is given by the equation: A · B = |A| * |B| * cosθ, where |A| and |B| are the magnitudes of vectors A and B, respectively, and θ is the angle between them.
+
+When we take the scalar product of force F and velocity V, we have:
+
+F · V = |F| * |V| * cosθ
+
+The magnitude of force is given by the equation: |F| = ma, where m is the mass and a is the acceleration.
+
+The magnitude of velocity is given by the equation: |V| = vs, where vs is the speed.
+
+Substituting these values into the scalar product equation, we get:
+
+F · V = m * a * vs * cosθ
+
+The term ""vs * cosθ"" represents the direction cosine between force and velocity vectors. Since the direction cosine lies between -1 and 1, we cannot determine its sign from just this information.
+
+However, we do know that power is defined as force times velocity, so P = F · V. Therefore, the scalar product of force and velocity represents the magnitude of the power vector.
+
+It's important to note that the scalar product of two vectors can also be represented as the product of their magnitudes and their dot product (or inner product), which is a scalar value.
+
+Therefore, P = F · V = (m * a) * (vs * cosθ) = ma * vs * cosθ = F * V * cosθ = F * V (since cosθ is a scalar).
+
+So, the scalar product of force and velocity represents the product of their magnitudes and the direction cosine between them, which is the definition of power.",B,1.0,0.0,0.0
+Base,49,numeric,A force of 10N is applied to a nut using a wrench of length 0.2m perpendicular to the axis. What is the torque?,"To calculate the torque, we need to find the distance from the axis of rotation to the point where the force is applied. In this case, we are given the length of the wrench (0.2m) which is the distance from the point of application of the force to the axis of rotation. Therefore, the torque can be calculated as the product of the force and the distance:
+
+Torque = Force * Distance
+Torque = 10N * 0.2m
+Torque = 2Nm
+
+So, the torque is 2 Newton-meters (Nm).",2,0.0,1.0,0.0
+Base,50,explanation,Explain using the Impulse-Momentum theorem why airbags reduce injury in car crashes.,"The Impulse-Momentum theorem, also known as Newton's Second Law of Motion, relates the force applied to an object to the change in its momentum. The theorem states that the force F acting on an object is equal to the mass m of the object multiplied by its acceleration a (F = ma). In the context of impulse, the theorem can be expressed as the change in an object's momentum (Δp) being equal to the force applied to it for a given time interval (Δt): Δp = F Δt.
+
+In a car crash, the occupants and other objects inside the car experience a sudden change in momentum due to the force of the collision. If not for the presence of safety features like airbags, the occupants could experience a large change in momentum, leading to significant injuries.
+
+Airbags work by absorbing the force of the collision and reducing the deceleration experienced by the occupants, thereby minimizing the change in their momentum and decreasing the risk of injury.
+
+When a car collides with an obstacle, the crash causes the car to decelerate rapidly. The occupants inside the car also experience this deceleration and, without safety features like airbags, would be forced to come to a sudden stop with the car. However, when an airbag is deployed, it inflates rapidly and comes into contact with the occupant, providing a soft and gradual deceleration.
+
+The force of the airbag on the occupant is transferred to the airbag material, which is designed to absorb much of the energy from the collision. By reducing the force of the collision on the occupant, the airbag helps minimize the change in their momentum and shields them from the full brunt of the impact.
+
+Additionally, airbags can help prevent occupants from colliding with hard surfaces in the car, such as the steering wheel or dashboard, which can cause further injuries. Overall, airbags play a crucial role in reducing the force of the collision and minimizing the change in momentum of the occupants, thereby reducing the risk of injury during a car crash.","The change in momentum (to bring the passenger to a stop) is fixed. The Impulse $J = F \Delta t = \Delta p$. Airbags increase the time/duration $\Delta t$ of the collision. By increasing $\Delta t$ for the same $\Delta p$, the average force $F$ exerted on the passenger is significantly reduced, minimizing injury.",0.0,0.0,5.0
+Base+RAG,1,mcq,Which of the following units is an SI base unit? (A) Newton (B) Joule (C) Kilogram (D) Watt,"(C) Kilogram is an SI base unit. The other units listed are derived units in the SI system. A Newton (N) is a derived unit of force, which is measured in kilograms (kg) times meters squared (m²) per second squared (s²). A Joule (J) is a derived unit of energy, which is measured in kilograms (kg) times meters squared (m²) and can also be expressed as newtons (N) times meters (m). A Watt (W) is a derived unit of power, which is measured in kilograms (kg) times meters squared (m²) per second (s).",C,1.0,0.0,0.0
+Base+RAG,2,numeric,"If an object travels 100 meters in 4 seconds, what is its average speed in m/s?","To find the average speed of an object in meters per second given that it travels a certain distance in a certain time, you can use the formula:
+
+$\text{Average speed}=\frac{\text{Distance}}{\text{Time}}.\text{Average speed}=\frac{\text{Distance}}{\text{Time}}.$
+
+Substituting the given values, we have:
+
+$\text{Average speed}=\frac{100\text{m}}{4\text{s}}.\text{Average speed}=\frac{100\text{m}}{4\text{s}}.$
+
+Simplifying the fraction:
+
+$\text{Average speed}=25.0\text{m/s}.\text{Average speed}=25.0\text{m/s}.$
+
+Therefore, the average speed of the object is 25.0 meters per second.",25,0.0,1.0,0.0
+Base+RAG,3,explanation,Explain the difference between accuracy and precision in the context of experimental physics.,"In the context of experimental physics, accuracy and precision are two related but distinct concepts.
+
+Accuracy is how close a measurement is to the true value or accepted reference value. It is a measure of how close the measurement is to the target. For example, if we measure the length of a standard printer paper and obtain a measurement of 11.1 in., 11.2 in., and 10.9 in., and the accepted reference value is 11.0 in., then these measurements are quite accurate because they are very close to the reference value. In contrast, if we had obtained a measurement of 12 in., our measurement would not be very accurate.
+
+Precision, on the other hand, is a measure of the degree of agreement among repeated measurements. It is a measure of the reproducibility of the measurement. For example, if we measure the length of a standard printer paper three times and obtain measurements of 11.1 in., 11.2 in., and 11.0 in., then these measurements are precise because they agree closely with each other. However, if we obtain measurements of 11.1 in., 12.3 in., and 10.7 in., then these measurements are not very precise.
+
+In summary, accuracy refers to how close a measurement is to the true value, while precision refers to how close the agreement is among repeated measurements. An accurate measurement is one that is close to the true value, while a precise measurement is one that has a small degree of disagreement among repeated measurements. It is possible to have measurements that are accurate but not precise, precise but not accurate, or both accurate and precise.","Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate.",0.0,0.0,5.0
+Base+RAG,4,mcq,What is the dimension of Force? (A) MLT^-1 (B) MLT^-2 (C) ML^2T^-2 (D) LT^-2,"The correct answer is (A) MLT^-1. Force has the dimension of mass (M) times length (L) per time squared (T^2). However, the standard definition of force is mass (M) times length per time squared (LT^-1). So, the dimension of force is MLT^-1.",B,0.0,0.0,0.0
+Base+RAG,5,numeric,A car accelerates from rest to 20 m/s in 5 seconds. What is the magnitude of its average acceleration in m/s^2?,"The magnitude of the average acceleration of a car that accelerates from rest to 20 m/s in 5 seconds is 4 m/s².
+
+Here's the reasoning behind this:
+
+We know that acceleration is the change in velocity (Δv) divided by the change in time (Δt). In this case, the initial velocity (v₀) is 0 m/s, the final velocity (v) is 20 m/s, and the time interval (Δt) is 5 seconds.
+
+Using the definition of acceleration, we have:
+
+acceleration = Δv / Δt
+
+acceleration = (v - v₀) / Δt
+
+acceleration = (20 m/s - 0 m/s) / 5 s
+
+acceleration = 4 m/s²
+
+Therefore, the magnitude of the average acceleration of the car is 4 m/s².",4,0.0,1.0,0.0
+Base+RAG,6,mcq,Which vector operation results in a scalar? (A) Cross product (B) Dot product (C) Vector addition (D) Scalar multiplication,(B) Dot product,B,1.0,0.0,0.0
+Base+RAG,7,mcq,An object in uniform circular motion has a constant: (A) Velocity (B) Speed (C) Acceleration vector (D) Displacement,"An object in uniform circular motion has a constant speed (B). However, as the text states, such objects are actually accelerating, but in a specific way. The acceleration in uniform circular motion is called centripetal acceleration and is directed towards the center of the circle. When the speed is changing, there is also a tangential acceleration, which is perpendicular to the direction of centripetal acceleration and is directed tangent to the circle.
+
+In the example provided, the particle moves in a circle of radius r = 2.0 m, and its speed varies with time according to the given equation v(t) = c₁ - c₂/t², where c₁ = 4.0 m/s and c₂ = 6.0 m·s.
+
+To find the centripetal acceleration, we can use the formula for uniform circular motion: aₑ = ô²r, where ô is the angular frequency. First, we need to find the angular frequency from the given speed equation:
+
+v(t) = ôr
+
+ô = v(t) / r
+ô = (4.0 m/s) / (2.0 m) = 2.0 rad/s
+
+Now, we can find the centripetal acceleration:
+
+aₑ = ô²r
+aₑ = (2.0 rad/s)² * (2.0 m) = 4.0 m/s²
+
+The direction of the centripetal acceleration is towards the center of the circle.
+
+To find the tangential acceleration, we differentiate the velocity equation with respect to time:
+
+aₙ = d(v(t))/dt = -2c₂/t³
+
+Now, we can find the tangential acceleration at t = 2.0 s:
+
+aₙ(2.0 s) = -2(6.0 m·s) / (2.0 s)³ = -3.0 m/s²
+
+Since aₑ is directed towards the center and aₙ is directed tangent to the circle, we can find the total acceleration by adding the two vectors:
+
+aₙtotal = aₑ + aₙ
+aₙtotal",B,0.0,0.0,0.0
+Base+RAG,8,numeric,calculate the work done (in Joules) by a 10 N force moving an object 5 meters in the direction of the force.,"To calculate the work done by a force moving an object, we can use the formula:
+
+Work = Force × Distance
+
+In this case, the force is 10 N and the distance is 5 meters, so:
+
+Work = 10 N × 5 m = 50 Joules
+
+Therefore, the work done by the 10 N force moving an object 5 meters in the direction of the force is 50 Joules.",50,0.0,1.0,0.0
+Base+RAG,9,explanation,Why does a passenger in a turning car feel pushed to the side?,"A passenger in a turning car feels pushed to the side due to the centrifugal force, which is an inertial force that results from the passenger's inertia as the car turns. Although the passenger is moving in a circular path with the car, from an inertial frame of reference (such as the earth), the passenger is actually moving in a straight line. The force felt by the passenger is not due to any physical cause like tension, friction, or gravitation, but rather it is a result of the passenger's tendency to continue moving in a straight line as the car turns.
+
+Centripetal force, on the other hand, is the force that always acts perpendicularly towards the center of a circular path and keeps an object moving in a circular motion. It can be caused by various forces such as tension, friction, gravitational force, or even inertial force in the case of a rotating reference frame.
+
+When a passenger feels pushed to the side in a turning car, it is because of the centrifugal force, not the centripetal force. The centripetal force required to keep the passenger moving in a circular path is actually being provided by the seat belt or the car's frame, which prevent the passenger from flying out of the car due to centrifugal force.","This is due to basic inertia (Newton's First Law). The passenger's body tends to continue moving in a straight line, while the car turns. The sensation of being pushed outward is a 'fictitious force' (centrifugal force) experienced in the non-inertial reference frame of the car.",0.0,0.0,4.5
+Base+RAG,10,mcq,The slope of a velocity-time graph represents: (A) Displacement (B) Acceleration (C) Force (D) Momentum,"The slope of a velocity-time graph represents acceleration. Therefore, the answer is (B) Acceleration.",B,0.0,0.0,0.0
+Base+RAG,11,numeric,A 2 kg block slides down a frictionless 30-degree incline. value of g is 9.8 m/s^2. What is the acceleration along the incline in m/s^2?,"The acceleration of a block sliding down a frictionless incline can be calculated using the formula:
+
+$a=gsin\theta$
+
+where:
+
+* $a$ is the acceleration
+* $g$ is the acceleration due to gravity
+* $\theta$ is the angle of the incline
+
+Given:
+
+* Mass of block $m=2\ kg$
+* Angle of incline $\theta =30\ degrees$
+* Gravity $g=9.8\ m/s^2$
+
+First, convert angles to radians:
+
+$\theta =30\ degrees =0.524\ radians$
+
+Then, calculate the acceleration:
+
+$a=gsin\theta =9.8\ m/s^2\times sin(0.524) \approx 4.32\ m/s^2$
+
+So, the acceleration along the incline is approximately $4.32\ m/s^2$.",4.9,0.0,0.0,0.0
+Base+RAG,12,mcq,Which of Newton's laws explains recoil in a gun? (A) First Law (B) Second Law (C) Third Law (D) Law of Gravitation,"(C) Third Law explains recoil in a gun. When a bullet is fired from a gun, the force of the explosion pushes the bullet forward with great force. By Newton's third law, there is an equal and opposite reaction force that pushes the gun back, causing the recoil.",C,1.0,0.0,0.0
+Base+RAG,13,explanation,Describe the relationship between kinetic energy and work as stated by the Work-Energy Theorem.,"The Work-Energy Theorem states that the change in kinetic energy of an object is equal to the work done on it by an external force. In mathematical terms, this can be expressed as:
+
+ΔK.E. = W
+
+where ΔK.E. is the change in kinetic energy, W is the work done, and both are measured with respect to the same reference frame. This theorem helps to relate work and energy, showing that work can be used to increase the kinetic energy of an object, and conversely, that the kinetic energy of an object can be used to do work.","The Work-Energy Theorem states that the net work done on an object is equal to the change in its kinetic energy ($W_{net} = \Delta KE$). If positive work is done, kinetic energy increases; if negative work is done, it decreases.",0.0,0.0,4.5
+Base+RAG,14,mcq,"If the distance between two masses is doubled, the gravitational force between them becomes: (A) Double (B) Half (C) One-fourth (D) Four times","The correct answer is (B) Half. The gravitational force between two masses is given by the formula F = G * (m1 * m2 / r^2), where m1 and m2 are the masses, r is the distance between them, and G is the gravitational constant. If we double the distance r between the masses, the gravitational force will be reduced by a factor of 1/2 (because the mass term in the denominator is squared). Therefore, the force is not doubled, but rather halved.",C,0.0,0.0,0.0
+Base+RAG,15,numeric,Convert 72 km/h to m/s.,"To convert 72 km/h to m/s, we can use the conversion factor that relates kilometers per hour to meters per second. We know that 1 km/h is equal to 1000 m/s, so we can set up the conversion as follows:
+
+$72\text{km/h}Ã\frac{1000\text{m/s}}{1\text{km/h}}=72,000\text{m/s}72\text{km/h}Ã\frac{1000\text{m/s}}{1\text{km/h}}=72,000\text{m/s}.$
+
+However, this answer is not correct because it is not in the desired units of meters per second. We made an error in our calculation by not canceling the units properly. The correct calculation is as follows:
+
+$72\text{km/h}Ã\frac{1000\text{m/s}}{36,000\text{m/s}}=\frac{72\text{km/h}Ã1000\text{m/s}}{36,000\text{m/s}}=\frac{72}{36}\approx 2\text{m/s}72\text{km/h}Ã\frac{1000\text{m/s}}{36,000\text{m/s}}=\frac{72\text{km/h}Ã1000\text{m/s}}{36,000\text{m/s}}=\frac{72}{36}\approx 2\text{m/s}.$
+
+Therefore, the conversion factor to convert from km/h to m/s is $\frac{1000\text{m/s}}{36,000\text{m/s}}$ instead of $\frac{1000\text{m/s}}{1\text{km/h}}$. Using this conversion factor, we find that 72 km/h is equivalent to approximately 2 m/s.",20,0.0,0.0,0.0
+Base+RAG,16,explanation,Explain why static friction is usually greater than kinetic friction.,"Static friction is the force that prevents objects from moving when they are in contact, while kinetic friction is the force that opposes the motion of an object when it is already in motion. The reason why the coefficient of static friction is usually greater than the coefficient of kinetic friction is due to the microscopic interactions between the surfaces in contact.
+
+When two surfaces are in contact, the actual area of contact is much smaller than the total area due to the roughness and irregularities of the surfaces. The normal force applied to the surfaces increases the pressure at the points of contact, which in turn increases the actual area of contact. This results in a larger force of static friction.
+
+However, when an object is already in motion, the microscopic interactions between the surfaces are different. The molecules at the points of contact are no longer in their rest position and have some degree of sliding or rolling motion. This reduces the effectiveness of the intermolecular forces that contribute to the frictional force, resulting in a lower coefficient of kinetic friction.
+
+Therefore, the coefficient of static friction is usually greater than the coefficient of kinetic friction due to the larger area of actual contact and the more effective intermolecular forces that exist when surfaces are in the static state.","Static friction arises from the interlocking of irregularities and molecular bonds between surfaces at rest, requiring more force to break them ('cold welding'). Kinetic friction occurs when surfaces are already sliding, where the contact points don't have enough time to bond as strongly.",0.0,0.0,5.0
+Base+RAG,17,mcq,Potential energy is associated with: (A) Motion (B) Position (C) Time (D) Velocity,(B) Position. Potential energy is a property of a system and depends on the position of the objects involved in the system.,B,1.0,0.0,0.0
+Base+RAG,18,numeric,A spring with constant k=100 N/m is compressed by 0.2 m. How much potential energy (in J) is stored?,"To find the potential energy stored in the compressed spring, we can use the formula:
+
+Potential Energy = 0.5 * k * x^2
+
+where:
+- k is the spring constant (100 N/m)
+- x is the displacement from the equilibrium position (0.2 m)
+
+Plugging in the values, we have:
+
+Potential Energy = 0.5 * 100 N/m * (0.2 m)²
+Potential Energy = 20 J
+
+Therefore, the spring stores 20 Joules of potential energy when compressed by 0.2 meters.",2,0.0,0.0,0.0
+Base+RAG,19,mcq,"In an inelastic collision, which quantity is conserved? (A) Kinetic Energy (B) Momentum (C) Both (D) Neither","(B) Momentum
+
+Explanation: In an inelastic collision, the total momentum before the collision is equal to the total momentum after the collision. This is because energy is transferred between the colliding objects, but no energy is lost to external forces such as friction or air resistance. Therefore, the conservation of momentum is the key property that makes inelastic collisions predictable. The conservation of kinetic energy only holds true for elastic collisions, where some energy is lost as heat due to the deformation of the colliding objects.",B,1.0,0.0,0.0
+Base+RAG,20,explanation,What is the difference between mass and weight?,"Mass is a measure of the amount of matter in an object, while weight is the force exerted on an object due to gravity. Mass is a property of an object and does not change regardless of its location, whereas weight depends on the gravitational force acting on an object and can vary depending on the location. For example, an object with a mass of 5 kg has the same mass on Earth as it does on the Moon, but it weighs less on the Moon because the Moon's gravitational force is weaker than Earth's.","Mass is the measure of the amount of matter in an object and is intrinsic (scalar, doesn't change with location). Weight is the force of gravity acting on that mass ($W=mg$) and depends on the local gravitational field (vector).",0.0,0.0,5.0
+Base+RAG,21,mcq,The area under a force-displacement graph represents: (A) Impulse (B) Work (C) Power (D) Acceleration,The area under a force-displacement graph represents work. (B),B,0.0,0.0,0.0
+Base+RAG,22,numeric,"What is the period (in seconds) of a pendulum of length 1 meter? (Assume g=9.8 m/s^2, use T = 2*pi*sqrt(L/g), pi approx 3.14)","The period T of a simple pendulum is given by the formula T = 2π√(L/g), where L is the length of the pendulum and g is the acceleration due to gravity.
+
+Substituting the given value of L = 1 m, we have:
+
+T = 2π√(1 m / 9.8 m/s²)
+
+Using the approximation π ≈ 3.14, we get:
+
+T ≈ 2 * 3.14 * √(1 m / 9.8 m/s²)
+
+T ≈ 2 * 3.14 * √(0.10206)
+
+T ≈ 2 * 3.14 * 0.1025
+
+T ≈ 0.6287 seconds
+
+Therefore, the period of the pendulum is approximately 0.629 seconds.",2.0,0.0,0.0,0.0
+Base+RAG,23,explanation,Use the concept of center of mass to explain why a high jumper uses the Fosbury Flop technique.,"The Fosbury Flop technique is used by high jumpers to clear the bar in a more efficient and effective way. This technique involves approaching the bar at an angle, bending backwards and kicking the feet over the bar, allowing the body to arch over the bar and land on the other side.
+
+The reason behind this technique from the perspective of center of mass is that it helps to keep the center of mass below the bar during the jump. In the traditional scissors kick technique, the center of mass passes above the bar, which requires more energy to clear it and increases the risk of missing the bar or not jumping high enough.
+
+By using the Fosbury Flop technique, the center of mass remains below the bar during the jump, allowing the athlete to use their energy more efficiently to clear the bar with less effort and a higher jumping height. This is a significant advantage in high jump competitions, as it allows athletes to jump higher and clear the bar with fewer attempts, ultimately leading to a better performance and potentially winning the competition.",The Fosbury Flop allows the jumper to arch their back such that their center of mass passes *under* the bar while their body passes over it. This requires less energy/vertical lift compared to techniques where the center of mass must clear the bar height.,0.0,0.0,4.5
+Base+RAG,24,mcq,Which force is non-conservative? (A) Gravity (B) Spring force (C) Friction (D) Electrostatic force,"(C) Friction
+
+Explanation:
+
+Gravity, spring force, and electrostatic force are conservative forces. They only depend on the position or configuration of the bodies involved and not on the path taken to get there. Friction, on the other hand, is a non-conservative force. Its effect depends not only on the positions of the bodies but also on the contact between them and the path taken. When work is done by or against a non-conservative force, energy is lost and cannot be regained. In the case of friction, energy is dissipated as heat.",C,1.0,0.0,0.0
+Base+RAG,25,numeric,A wheel rotates at 300 revolutions per minute. What is its angular velocity in rad/s? (Use pi=3.14),"To find the angular velocity of the wheel in radians per second, we can use the given angular frequency (revolutions per minute) and convert it to radians per second using the conversion factor of 2π radians per revolution.
+
+Angular frequency (angular velocity) = 300 revolutions per minute
+
+First, convert revolutions per minute to revolutions per second:
+
+300 revolutions per minute × (1 minute / 60 seconds) = 5 revolutions per second
+
+Now, convert revolutions per second to radians per second using the conversion factor of 2π radians per revolution:
+
+Angular velocity = 5 revolutions per second × 2π radians per revolution = 10π radians per second ≈ 31.42 radians per second
+
+So, the angular velocity of the wheel is approximately 31.42 radians per second.",31.4,0.0,1.0,0.0
+Base+RAG,26,explanation,Why is banking of roads used on curves?,"Banking of roads on curves is used to help vehicles negotiate the curve by reducing the force needed to keep the vehicle moving in a circular path. This is achieved by sloping the road surface inward, which creates a centripetal force that helps to counteract the centrifugal force experienced by the vehicle as it moves around the curve. This allows vehicles to travel at higher speeds around a curve without losing control or skidding, and can also reduce the need for friction between the tires and the road surface.","Banking provides a component of the Normal force towards the center of the curve, which contributes to the necessary centripetal force. This reduces the reliance on friction to turn the vehicle, allowing for higher speeds or safer turns on slippery surfaces.",0.0,0.0,4.5
+Base+RAG,27,mcq,The rate of change of momentum is equal to: (A) Impulse (B) Force (C) Energy (D) Power,The rate of change of momentum is equal to (B) Force.,B,1.0,0.0,0.0
+Base+RAG,28,numeric,A 5 kg ball is dropped from a height of 10 meters. What is its potential energy relative to the ground? (g=9.8 m/s^2),"To find the potential energy of the ball relative to the ground, we can use the formula:
+
+PE = mgh
+
+where m is the mass of the ball, g is the acceleration due to gravity, and h is the height of the ball above the ground.
+
+Given:
+m = 5 kg
+g = 9.8 m/s²
+h = 10 m
+
+Plugging these values into the formula, we get:
+
+PE = (5 kg) x (9.8 m/s²) x (10 m) = 490 J
+
+So, the potential energy of the ball relative to the ground is 490 J.",490,0.0,1.0,0.0
+Base+RAG,29,explanation,Explain Newton's First Law (Law of Inertia) with an example.,"Newton's First Law, also known as the Law of Inertia, states that an object will remain in its state of motion (at rest or in uniform motion) if there is no net external force acting on it. This means that an object requires a force to change its state of motion.
+
+Let's consider an example to illustrate this concept. Suppose you are sitting in a parked car, and there are no external forces acting on the car (no friction, wind, or other forces). In this situation, the car remains at rest because there is no net external force acting on it. If, however, you apply the car's brakes, the net external force causes the car to slow down and eventually come to a stop.
+
+Another example is an astronaut in a spacecraft that is moving at constant velocity in a vacuum. In this case, there is no net external force acting on the spacecraft, so it continues to move at constant velocity in a straight line. This is why astronauts in space can float around the spacecraft without the need for any propulsion or other means to stay in place.
+
+Therefore, Newton's First Law explains that an object will remain at rest or in uniform motion if there is no net external force acting on it. This principle is fundamental to our understanding of motion and is a key concept in physics.","An object at rest stays at rest, and an object in motion stays in motion with the same velocity unless acted upon by a net external force. Example: A hockey puck sliding on frictionless ice will continue indefinitely until it hits a wall.",0.0,0.0,4.5
+Base+RAG,30,mcq,Torque depends on: (A) Force only (B) Lever arm only (C) Force and lever arm (D) Mass and velocity,"The correct answer is (C) Force and lever arm. Torque is the product of the force applied and the length of the lever arm, which is the perpendicular distance from the pivot to the point where the force is applied.",C,1.0,0.0,0.0
+Base+RAG,31,numeric,Calculate the impulse derived from a force of 50 N acting for 0.1 seconds.,"The impulse (J) is the product of force (F) and time (t): J = Ft. In this case, the force is 50 N and the time is 0.1 seconds, so the impulse is J = 50 N * 0.1 s = 5 Joules.",5,0.0,1.0,0.0
+Base+RAG,32,explanation,Why does a solitary force not exist in nature according to Newton's Third Law?,"According to Newton's Third Law, when one body exerts a force on another body, the first body experiences a force that is equal in magnitude and opposite in direction to the force that it exerts. This means that forces always come in pairs, where each force is acting on different bodies or systems. Therefore, a solitary force, where only one body is exerting a force without any reaction, does not exist in nature based on Newton's Third Law.","Newton's Third Law states that for every action, there is an equal and opposite reaction. Forces always occur in pairs (action-reaction pairs) acting on different objects. You cannot touch something without it touching you back.",0.0,0.0,4.5
+Base+RAG,33,mcq,Angular momentum is conserved when: (A) Net force is zero (B) Net torque is zero (C) Kinetic energy is constant (D) Velocity is constant,"The correct answer is (B) Net torque is zero.
+
+Angular momentum, represented by the product of an object's mass, linear velocity, and the distance from the pivot to the object, is conserved when there is no net external torque acting on the system. This is because the net torque is the sum of all the partial torques acting on an object and represents the tendency of a net force to cause an object to rotate about a pivot point. If the net torque is zero, then the angular momentum, which is a measure of the rotational motion of an object, remains constant.",B,1.0,0.0,0.0
+Base+RAG,34,numeric,A 1000 kg car rounds a turn of radius 50 m at 10 m/s. What is the centripetal force required?,"To find the centripetal force required for the car to round the turn of radius 50 m at a speed of 10 m/s, we can use the centripetal force equation:
+
+${F}_{\text{c}}=\frac{m{v}^{2}}{r}.$
+
+Substituting the given values, we get:
+
+${F}_{\text{c}}=\frac{(1000\text{ kg}){(10\text{ m/s})}^{2}}{(50\text{ m})}.$
+
+Simplifying the expression, we get:
+
+${F}_{\text{c}}=20,000\text{ N}.$
+
+Therefore, the centripetal force required for the car to round the turn is 20,000 N.",2000,0.0,0.0,0.0
+Base+RAG,35,explanation,Differentiate between conservative and non-conservative forces.,"Conservative forces are those that can be described by a potential energy function. This means that the force is dependent on the position or configuration of the system, and the work done by the force in moving a particle from one position to another can be calculated as the difference in potential energy between the two positions. Examples of conservative forces include the force of gravity and the force of a spring (as described by Hooke's law).
+
+Non-conservative forces, on the other hand, do not have a corresponding potential energy function. The work done by a non-conservative force in moving a particle from one position to another depends on the path taken, and cannot be calculated solely based on the initial and final positions. Examples of non-conservative forces include frictional forces and the force of air resistance.
+
+It's important to note that whether a force is conservative or non-conservative depends on the specific situation and the frame of reference being used. For example, the force of friction is non-conservative in one reference frame (the frame where the object is moving), but it can be considered conservative in another reference frame (the frame where the object is at rest).
+
+In summary, conservative forces are those for which the work done can be calculated from the difference in potential energy between two positions, while non-conservative forces do not have a corresponding potential energy function and the work done depends on the path taken.","A conservative force (like gravity) does work that is independent of the path taken; energy used against it is stored as potential energy and is recoverable. A non-conservative force (like friction) depends on the path, and work done dissipates mechanical energy into heat.",0.0,0.0,4.5
+Base+RAG,36,mcq,A skater spins faster when she pulls her arms in. This is due to conservation of: (A) Energy (B) Linear Momentum (C) Angular Momentum (D) Mass,"(C) Angular Momentum. When a skater pulls her arms in, she decreases the distance between her arms and the mass of her body is concentrated in a smaller area, resulting in an increase in angular momentum and a faster spinning rate.",C,1.0,0.0,0.0
+Base+RAG,37,numeric,Find the kinetic energy of a 2 kg object moving at 3 m/s.,"To find the kinetic energy of a 2 kg object moving at 3 m/s, we use the formula:
+
+K.E. = 1/2 * m * v^2
+
+where m is the mass of the object and v is its velocity. Substituting the given values, we get:
+
+K.E. = 1/2 * 2 kg * (3 m/s)²
+
+K.E. = 1/2 * 2 kg * 9 m²/s²
+
+K.E. = 9 joules.
+
+Therefore, the kinetic energy of a 2 kg object moving at 3 m/s is 9 joules.",9,0.0,1.0,0.0
+Base+RAG,38,explanation,How does air resistance affect the trajectory of a projectile?,"Air resistance can significantly affect the trajectory of a projectile by opposing its motion through the air. In ideal situations, as discussed in the text, air resistance is neglected, and the motion of a projectile is considered to be solely under the influence of the acceleration of gravity. However, in the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size. This is because air resistance acts in the opposite direction to the motion of the object, increasing the force required to maintain a constant velocity. As a result, the trajectory of a projectile in the real world would be different from that in the absence of air resistance. The effect of air resistance becomes more significant as the size, shape, and speed of the projectile increase. Therefore, to accurately model the motion of a projectile in real-world conditions, it is necessary to take into account the effects of air resistance.",Air resistance opposes velocity. It reduces the maximum height and shortens the horizontal range. It also causes the trajectory to be non-parabolic (steeper on the way down).,0.0,0.0,0.0
+Base+RAG,39,mcq,Which physical quantity corresponds to inertia in rotational motion? (A) Mass (B) Torque (C) Moment of Inertia (D) Anger,(C) Moment of Inertia,C,1.0,0.0,0.0
+Base+RAG,40,numeric,"A vector A has components Ax=3, Ay=4. What is its magnitude?","To find the magnitude of a vector with components Ax and Ay in a two-dimensional coordinate system, you can use the formula given by Equation 2.15 in the context:
+
+A = √( Ax² + Ay² ).
+
+Substitute the given values:
+
+A = √( 3² + 4² ) = √( 9 + 16 ) = √( 25 ) = 5.
+
+So the magnitude of vector A is 5 units.",5,0.0,1.0,0.0
+Base+RAG,41,explanation,Explain the concept of terminal velocity.,"Terminal velocity is the constant velocity that a falling object eventually reaches when the force of gravity is balanced by the opposing force of air resistance or drag. In other words, it is the maximum velocity an object can reach when falling through a fluid medium, such as air or water, before it stops accelerating and maintains a constant speed.
+
+When an object is initially released or thrown upwards, it undergoes an acceleration due to the force of gravity. However, as the object gains velocity, the force of air resistance acting against it also increases. Eventually, the upward acceleration due to gravity is counteracted by the downward acceleration due to air resistance, resulting in a state of equilibrium and a constant terminal velocity.
+
+The value of terminal velocity depends on several factors, including the mass and shape of the object, the density and velocity of the surrounding fluid, and the drag coefficient (a measure of the object's resistance to air). The larger the mass, surface area, or drag coefficient of the object, the greater the force of air resistance and the resulting terminal velocity.
+
+In the given problem, the terminal velocity of a 100-kg skydiver is given to be 60 m/s. By using the given equation for the drag force, we can find the value of the constant b.","Terminal velocity is the constant speed reached by a falling object when the upward force of air resistance exactly balances the downward force of gravity. At this point, net force is zero, so acceleration is zero.",0.0,0.0,4.5
+Base+RAG,42,mcq,Power is defined as: (A) Work done per unit distance (B) Force times time (C) Rate of doing work (D) Energy times time,"C. Rate of doing work.
+
+Power is defined as the rate at which work is done or the amount of energy transferred per unit time. It is a scalar quantity and is measured in watts (W) or joules per second (J/s).
+
+Therefore, the correct answer is (C) Rate of doing work.",C,1.0,0.0,0.0
+Base+RAG,43,numeric,An engine does 1000 J of work in 2 seconds. What is its power output in Watts?,"To find the power output of the engine, we can use the formula:
+
+power = work done / time taken
+
+Given, work done = 1000 J and time taken = 2 s
+
+Power = 1000 J / 2 s = 500 W
+
+Therefore, the power output of the engine is 500 Watts.",500,0.0,1.0,0.0
+Base+RAG,44,explanation,Why can we not use the kinematic equations (suvat) for a spring-mass system oscillating?,"The kinematic equations (suvat) are derived based on the assumption of constant acceleration. However, in a spring-mass system, the acceleration is not constant as it changes direction during the oscillation. Therefore, the kinematic equations cannot be directly applied to analyze the motion of a spring-mass system. Instead, we need to use the principles of physics, such as Newton's laws of motion and energy conservation, to analyze the oscillation of a spring-mass system.","Kinematic equations (like $v = u + at$) assume *constant* acceleration. In a spring-mass system ($F = -kx$), the force and thus acceleration varies with position ($a$ is not constant), so those specific equations are invalid. We must use simple harmonic motion equations.",0.0,0.0,4.5
+Base+RAG,45,mcq,Elastic collision implies conservation of: (A) Momentum only (B) KE only (C) Momentum and KE (D) Mass only,(A) Momentum only,C,0.0,0.0,0.0
+Base+RAG,46,numeric,Calculate the gravitational potential energy of a 10kg mass raised to 2 meters. (g=9.8),"To calculate the gravitational potential energy of a mass raised to a certain height, we use the formula:
+
+Gravitational Potential Energy = m * g * h
+
+where m is the mass, g is the acceleration due to gravity, and h is the height.
+
+First, let's calculate the value of g:
+
+g = 9.8 m/s²
+
+Next, let's calculate the gravitational potential energy:
+
+Gravitational Potential Energy = 10 kg * 9.8 m/s² * 2 m
+
+Gravitational Potential Energy = 196 Joules
+
+So, the gravitational potential energy of a 10kg mass raised to a height of 2 meters is 196 Joules.",196,0.0,1.0,0.0
+Base+RAG,47,explanation,What happens to the period of a simple pendulum if the mass of the bob is doubled? Explain.,"The period of a simple pendulum is given by the equation: T = 2π√(L/g), where L is the length of the pendulum and g is the acceleration due to gravity. If the mass of the bob is doubled, the length of the pendulum would remain unchanged. Therefore, the period of the pendulum would be affected as follows:
+
+Tnew = Told × √(1 + m/m bob / m total)
+
+Where mbot is the mass of the bob and mtotal is the total mass of the system. Since the mass of the bob has been doubled (mbot × 2), the new period (Tnew) would be longer than the original period (Told) due to the increased mass:
+
+Tnew = Told × √(1 + 2/1) = Told × √3 ≈ 1.16 × Told
+
+So, the period of a simple pendulum is extended by approximately 16.7% if the mass of the bob is doubled. This is because the increased mass requires more time for the pendulum to complete one full swing.",The period remains unchanged. The period of a simple pendulum $T = 2\pi\sqrt{L/g}$ depends only on length $L$ and gravity $g$. Mass cancels out in the derivation because both the restoring force (gravity) and the inertia (mass) scale linearly with mass.,0.0,0.0,4.5
+Base+RAG,48,mcq,The scalar product of force and velocity gives: (A) Work (B) Power (C) Momentum (D) Acceleration,"The scalar product of force and velocity does not directly give any physical quantity. It is only used to find the components of a vector or to calculate the dot product of two vectors. None of the options (A), (B), (C), or (D) can be determined directly from the scalar product of force and velocity.",B,0.0,0.0,0.0
+Base+RAG,49,numeric,A force of 10N is applied to a nut using a wrench of length 0.2m perpendicular to the axis. What is the torque?,"To find the torque, we can use the definition of torque as the vector product of the moment arm (distance from the pivot to the force application point) and the force:
+
+Torque = Moment arm × Force
+
+In this case, the moment arm is the length of the wrench (0.2 m), and the force is 10 N. So,
+
+Torque = 0.2 m × 10 N
+Torque = 2 N·m
+
+Therefore, the torque is 2 N·m.",2,0.0,1.0,0.0
+Base+RAG,50,explanation,Explain using the Impulse-Momentum theorem why airbags reduce injury in car crashes.,"The Impulse-Momentum theorem, also known as the principle of conservation of linear momentum, states that the total momentum of a closed system is constant if there is no net external force acting on the system. In the context of a car crash, when a car collides with an immovable object or another car, the total momentum of the system (car + car or car + object) remains conserved.
+
+When a car crashes, the occupants inside are subjected to a violent change in velocity, which can result in significant injuries. However, when an airbag deploys, it absorbs a large amount of energy through the impulse it delivers to the occupants. The impulse is equal to the change in momentum (Δp) of the occupants:
+
+Δp = F * Δt
+
+where F is the force applied by the airbag and Δt is the duration of the interaction. The force applied by the airbag is significant but brief, which means that the change in momentum of the occupants is reduced when compared to the uncontrolled collision with the car's interior or the immovable object.
+
+By reducing the change in momentum, the Impulse-Momentum theorem explains why airbags help reduce the injuries sustained in a car crash. The occupants still experience a significant deceleration, but the force is distributed over a longer period of time and with less suddenness, which helps minimize the risk of injury.","The change in momentum (to bring the passenger to a stop) is fixed. The Impulse $J = F \Delta t = \Delta p$. Airbags increase the time/duration $\Delta t$ of the collision. By increasing $\Delta t$ for the same $\Delta p$, the average force $F$ exerted on the passenger is significantly reduced, minimizing injury.",0.0,0.0,4.5

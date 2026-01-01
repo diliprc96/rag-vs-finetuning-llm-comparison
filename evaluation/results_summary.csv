@@ -1,0 +1,5 @@
+config,score_mcq,score_numeric,score_explanation
+Base,0.26,0.2,1.43
+Base+RAG,0.24,0.22,1.29
+finetuned,0.14,0.12,1.22
+finetuned+RAG,0.12,0.08,1.23

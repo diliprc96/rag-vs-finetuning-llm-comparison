@@ -1,20 +1,302 @@
 [
-    {
-        "id": 1,
-        "type": "mcq",
-        "question": "Which of the following units is an SI base unit?\n(A) Newton\n(B) Joule\n(C) Kilogram\n(D) Watt",
-        "answer": "C"
-    },
-    {
-        "id": 2,
-        "type": "numeric",
-        "question": "If an object travels 100 meters in 4 seconds, what is its average speed in m/s?",
-        "answer": "25"
-    },
-    {
-        "id": 3,
-        "type": "explanation",
-        "question": "Explain the difference between accuracy and precision.",
-        "answer": "Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate."
-    }
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "Which of the following units is an SI base unit? (A) Newton (B) Joule (C) Kilogram (D) Watt",
+    "answer": "C"
+  },
+  {
+    "id": 2,
+    "type": "numeric",
+    "question": "If an object travels 100 meters in 4 seconds, what is its average speed in m/s?",
+    "answer": "25"
+  },
+  {
+    "id": 3,
+    "type": "explanation",
+    "question": "Explain the difference between accuracy and precision in the context of experimental physics.",
+    "answer": "Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate."
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "What is the dimension of Force? (A) MLT^-1 (B) MLT^-2 (C) ML^2T^-2 (D) LT^-2",
+    "answer": "B"
+  },
+  {
+    "id": 5,
+    "type": "numeric",
+    "question": "A car accelerates from rest to 20 m/s in 5 seconds. What is the magnitude of its average acceleration in m/s^2?",
+    "answer": "4"
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "Which vector operation results in a scalar? (A) Cross product (B) Dot product (C) Vector addition (D) Scalar multiplication",
+    "answer": "B"
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "An object in uniform circular motion has a constant: (A) Velocity (B) Speed (C) Acceleration vector (D) Displacement",
+    "answer": "B"
+  },
+  {
+    "id": 8,
+    "type": "numeric",
+    "question": "calculate the work done (in Joules) by a 10 N force moving an object 5 meters in the direction of the force.",
+    "answer": "50"
+  },
+  {
+    "id": 9,
+    "type": "explanation",
+    "question": "Why does a passenger in a turning car feel pushed to the side?",
+    "answer": "This is due to basic inertia (Newton's First Law). The passenger's body tends to continue moving in a straight line, while the car turns. The sensation of being pushed outward is a 'fictitious force' (centrifugal force) experienced in the non-inertial reference frame of the car."
+  },
+  {
+    "id": 10,
+    "type": "mcq",
+    "question": "The slope of a velocity-time graph represents: (A) Displacement (B) Acceleration (C) Force (D) Momentum",
+    "answer": "B"
+  },
+  {
+    "id": 11,
+    "type": "numeric",
+    "question": "A 2 kg block slides down a frictionless 30-degree incline. value of g is 9.8 m/s^2. What is the acceleration along the incline in m/s^2?",
+    "answer": "4.9"
+  },
+  {
+    "id": 12,
+    "type": "mcq",
+    "question": "Which of Newton's laws explains recoil in a gun? (A) First Law (B) Second Law (C) Third Law (D) Law of Gravitation",
+    "answer": "C"
+  },
+  {
+    "id": 13,
+    "type": "explanation",
+    "question": "Describe the relationship between kinetic energy and work as stated by the Work-Energy Theorem.",
+    "answer": "The Work-Energy Theorem states that the net work done on an object is equal to the change in its kinetic energy ($W_{net} = \\Delta KE$). If positive work is done, kinetic energy increases; if negative work is done, it decreases."
+  },
+  {
+    "id": 14,
+    "type": "mcq",
+    "question": "If the distance between two masses is doubled, the gravitational force between them becomes: (A) Double (B) Half (C) One-fourth (D) Four times",
+    "answer": "C"
+  },
+  {
+    "id": 15,
+    "type": "numeric",
+    "question": "Convert 72 km/h to m/s.",
+    "answer": "20"
+  },
+  {
+    "id": 16,
+    "type": "explanation",
+    "question": "Explain why static friction is usually greater than kinetic friction.",
+    "answer": "Static friction arises from the interlocking of irregularities and molecular bonds between surfaces at rest, requiring more force to break them ('cold welding'). Kinetic friction occurs when surfaces are already sliding, where the contact points don't have enough time to bond as strongly."
+  },
+  {
+    "id": 17,
+    "type": "mcq",
+    "question": "Potential energy is associated with: (A) Motion (B) Position (C) Time (D) Velocity",
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "type": "numeric",
+    "question": "A spring with constant k=100 N/m is compressed by 0.2 m. How much potential energy (in J) is stored?",
+    "answer": "2"
+  },
+  {
+    "id": 19,
+    "type": "mcq",
+    "question": "In an inelastic collision, which quantity is conserved? (A) Kinetic Energy (B) Momentum (C) Both (D) Neither",
+    "answer": "B"
+  },
+  {
+    "id": 20,
+    "type": "explanation",
+    "question": "What is the difference between mass and weight?",
+    "answer": "Mass is the measure of the amount of matter in an object and is intrinsic (scalar, doesn't change with location). Weight is the force of gravity acting on that mass ($W=mg$) and depends on the local gravitational field (vector)."
+  },
+  {
+    "id": 21,
+    "type": "mcq",
+    "question": "The area under a force-displacement graph represents: (A) Impulse (B) Work (C) Power (D) Acceleration",
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "type": "numeric",
+    "question": "What is the period (in seconds) of a pendulum of length 1 meter? (Assume g=9.8 m/s^2, use T = 2*pi*sqrt(L/g), pi approx 3.14)",
+    "answer": "2.0"
+  },
+  {
+    "id": 23,
+    "type": "explanation",
+    "question": "Use the concept of center of mass to explain why a high jumper uses the Fosbury Flop technique.",
+    "answer": "The Fosbury Flop allows the jumper to arch their back such that their center of mass passes *under* the bar while their body passes over it. This requires less energy/vertical lift compared to techniques where the center of mass must clear the bar height."
+  },
+  {
+    "id": 24,
+    "type": "mcq",
+    "question": "Which force is non-conservative? (A) Gravity (B) Spring force (C) Friction (D) Electrostatic force",
+    "answer": "C"
+  },
+  {
+    "id": 25,
+    "type": "numeric",
+    "question": "A wheel rotates at 300 revolutions per minute. What is its angular velocity in rad/s? (Use pi=3.14)",
+    "answer": "31.4"
+  },
+  {
+    "id": 26,
+    "type": "explanation",
+    "question": "Why is banking of roads used on curves?",
+    "answer": "Banking provides a component of the Normal force towards the center of the curve, which contributes to the necessary centripetal force. This reduces the reliance on friction to turn the vehicle, allowing for higher speeds or safer turns on slippery surfaces."
+  },
+  {
+    "id": 27,
+    "type": "mcq",
+    "question": "The rate of change of momentum is equal to: (A) Impulse (B) Force (C) Energy (D) Power",
+    "answer": "B"
+  },
+  {
+    "id": 28,
+    "type": "numeric",
+    "question": "A 5 kg ball is dropped from a height of 10 meters. What is its potential energy relative to the ground? (g=9.8 m/s^2)",
+    "answer": "490"
+  },
+  {
+    "id": 29,
+    "type": "explanation",
+    "question": "Explain Newton's First Law (Law of Inertia) with an example.",
+    "answer": "An object at rest stays at rest, and an object in motion stays in motion with the same velocity unless acted upon by a net external force. Example: A hockey puck sliding on frictionless ice will continue indefinitely until it hits a wall."
+  },
+  {
+    "id": 30,
+    "type": "mcq",
+    "question": "Torque depends on: (A) Force only (B) Lever arm only (C) Force and lever arm (D) Mass and velocity",
+    "answer": "C"
+  },
+  {
+    "id": 31,
+    "type": "numeric",
+    "question": "Calculate the impulse derived from a force of 50 N acting for 0.1 seconds.",
+    "answer": "5"
+  },
+  {
+    "id": 32,
+    "type": "explanation",
+    "question": "Why does a solitary force not exist in nature according to Newton's Third Law?",
+    "answer": "Newton's Third Law states that for every action, there is an equal and opposite reaction. Forces always occur in pairs (action-reaction pairs) acting on different objects. You cannot touch something without it touching you back."
+  },
+  {
+    "id": 33,
+    "type": "mcq",
+    "question": "Angular momentum is conserved when: (A) Net force is zero (B) Net torque is zero (C) Kinetic energy is constant (D) Velocity is constant",
+    "answer": "B"
+  },
+  {
+    "id": 34,
+    "type": "numeric",
+    "question": "A 1000 kg car rounds a turn of radius 50 m at 10 m/s. What is the centripetal force required?",
+    "answer": "2000"
+  },
+  {
+    "id": 35,
+    "type": "explanation",
+    "question": "Differentiate between conservative and non-conservative forces.",
+    "answer": "A conservative force (like gravity) does work that is independent of the path taken; energy used against it is stored as potential energy and is recoverable. A non-conservative force (like friction) depends on the path, and work done dissipates mechanical energy into heat."
+  },
+  {
+    "id": 36,
+    "type": "mcq",
+    "question": "A skater spins faster when she pulls her arms in. This is due to conservation of: (A) Energy (B) Linear Momentum (C) Angular Momentum (D) Mass",
+    "answer": "C"
+  },
+  {
+    "id": 37,
+    "type": "numeric",
+    "question": "Find the kinetic energy of a 2 kg object moving at 3 m/s.",
+    "answer": "9"
+  },
+  {
+    "id": 38,
+    "type": "explanation",
+    "question": "How does air resistance affect the trajectory of a projectile?",
+    "answer": "Air resistance opposes velocity. It reduces the maximum height and shortens the horizontal range. It also causes the trajectory to be non-parabolic (steeper on the way down)."
+  },
+  {
+    "id": 39,
+    "type": "mcq",
+    "question": "Which physical quantity corresponds to inertia in rotational motion? (A) Mass (B) Torque (C) Moment of Inertia (D) Anger",
+    "answer": "C"
+  },
+  {
+    "id": 40,
+    "type": "numeric",
+    "question": "A vector A has components Ax=3, Ay=4. What is its magnitude?",
+    "answer": "5"
+  },
+  {
+    "id": 41,
+    "type": "explanation",
+    "question": "Explain the concept of terminal velocity.",
+    "answer": "Terminal velocity is the constant speed reached by a falling object when the upward force of air resistance exactly balances the downward force of gravity. At this point, net force is zero, so acceleration is zero."
+  },
+  {
+    "id": 42,
+    "type": "mcq",
+    "question": "Power is defined as: (A) Work done per unit distance (B) Force times time (C) Rate of doing work (D) Energy times time",
+    "answer": "C"
+  },
+  {
+    "id": 43,
+    "type": "numeric",
+    "question": "An engine does 1000 J of work in 2 seconds. What is its power output in Watts?",
+    "answer": "500"
+  },
+  {
+    "id": 44,
+    "type": "explanation",
+    "question": "Why can we not use the kinematic equations (suvat) for a spring-mass system oscillating?",
+    "answer": "Kinematic equations (like $v = u + at$) assume *constant* acceleration. In a spring-mass system ($F = -kx$), the force and thus acceleration varies with position ($a$ is not constant), so those specific equations are invalid. We must use simple harmonic motion equations."
+  },
+  {
+    "id": 45,
+    "type": "mcq",
+    "question": "Elastic collision implies conservation of: (A) Momentum only (B) KE only (C) Momentum and KE (D) Mass only",
+    "answer": "C"
+  },
+  {
+    "id": 46,
+    "type": "numeric",
+    "question": "Calculate the gravitational potential energy of a 10kg mass raised to 2 meters. (g=9.8)",
+    "answer": "196"
+  },
+  {
+    "id": 47,
+    "type": "explanation",
+    "question": "What happens to the period of a simple pendulum if the mass of the bob is doubled? Explain.",
+    "answer": "The period remains unchanged. The period of a simple pendulum $T = 2\\pi\\sqrt{L/g}$ depends only on length $L$ and gravity $g$. Mass cancels out in the derivation because both the restoring force (gravity) and the inertia (mass) scale linearly with mass."
+  },
+  {
+    "id": 48,
+    "type": "mcq",
+    "question": "The scalar product of force and velocity gives: (A) Work (B) Power (C) Momentum (D) Acceleration",
+    "answer": "B"
+  },
+  {
+    "id": 49,
+    "type": "numeric",
+    "question": "A force of 10N is applied to a nut using a wrench of length 0.2m perpendicular to the axis. What is the torque?",
+    "answer": "2"
+  },
+  {
+    "id": 50,
+    "type": "explanation",
+    "question": "Explain using the Impulse-Momentum theorem why airbags reduce injury in car crashes.",
+    "answer": "The change in momentum (to bring the passenger to a stop) is fixed. The Impulse $J = F \\Delta t = \\Delta p$. Airbags increase the time/duration $\\Delta t$ of the collision. By increasing $\\Delta t$ for the same $\\Delta p$, the average force $F$ exerted on the passenger is significantly reduced, minimizing injury."
+  }
 ]

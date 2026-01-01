@@ -3,8 +3,11 @@ import json
 import argparse
 import pandas as pd
 import torch
+from dotenv import load_dotenv
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+load_dotenv()
 from peft import PeftModel, PeftConfig
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -152,6 +155,7 @@ def main():
     # 2. Run Finetuned Model Tasks
     ft_tasks = [c for c in configs if c[1]]
     if ft_tasks:
+        torch.cuda.empty_cache()
         try:
             model, tokenizer = load_models(run_finetuned=True)
             for name, _, use_rag in ft_tasks:
@@ -159,7 +163,7 @@ def main():
                 for q in tqdm(questions):
                     context = ""
                     if use_rag and db:
-                        docs = retrieve(db, q['question'])
+                        docs = retrieve(db, q['question'], k=2)
                         context = format_docs(docs)
                     
                     ans = generate_answer(model, tokenizer, q['question'], context)
@@ -188,6 +192,7 @@ def main():
                     })
         except Exception as e:
             print(f"Skipping Finetuned runs: {e}")
+            # traceback.print_exc()
 
     # Save
     df = pd.DataFrame(results)

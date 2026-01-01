@@ -4,4 +4,3 @@ data_extraction/openstax_physics/
 evaluation/__pycache__/
 rag_pipeline/__pycache__/
 results/
-evaluation/results_table.csv
