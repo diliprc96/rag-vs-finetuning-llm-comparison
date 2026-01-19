@@ -27,6 +27,8 @@ Here is a section from a Physics textbook:
 Based on this text, generate {num_pairs} diverse instruction-response pairs.
 Mix Explanation, Problem-Solving, and Concept Q&A.
 
+IMPORTANT: Use LaTeX formatting for ALL math formulas, equations, and variables. Enclose them in dollar signs (e.g., $F=ma$, $v$, $10^{{2}}$).
+
 Format:
 [
   {{"instruction": "Question?", "input": "", "output": "Answer..."}},
