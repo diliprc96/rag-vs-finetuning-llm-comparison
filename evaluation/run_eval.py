@@ -20,7 +20,7 @@ ADAPTER_PATH = "results/mistral-7b-physics-finetune" # Path to local adapter aft
 EVAL_DATA_PATH = "evaluation/physics_questions_50.json" # User provided
 OUTPUT_FILE = "evaluation/results_table.csv"
 
-def load_models(run_finetuned=False):
+def load_models(run_finetuned=False, adapter_id=ADAPTER_PATH):
     print(f"Loading Base Model: {BASE_MODEL_ID}")
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -36,10 +36,11 @@ def load_models(run_finetuned=False):
     )
     
     if run_finetuned:
-        if not os.path.exists(ADAPTER_PATH):
-            raise FileNotFoundError(f"Adapter not found at {ADAPTER_PATH}. Run training first.")
-        print(f"Loading LoRA Adapter from {ADAPTER_PATH}")
-        model = PeftModel.from_pretrained(model, ADAPTER_PATH)
+        if not adapter_id:
+            raise ValueError("Adapter ID/Path must be provided for finetuned mode.")
+        print(f"Loading LoRA Adapter from {adapter_id}")
+        # Note: If adapter_id is a remote Hub ID (private), ensure HF_TOKEN is set.
+        model = PeftModel.from_pretrained(model, adapter_id)
     
     return model, tokenizer
 
@@ -73,6 +74,7 @@ def main():
     parser.add_argument("--mode", choices=["base", "finetuned", "all"], default="all")
     parser.add_argument("--rag", action="store_true", help="Enable RAG")
     parser.add_argument("--eval_file", default=EVAL_DATA_PATH)
+    parser.add_argument("--adapter_id", default=ADAPTER_PATH, help="Path or HF ID of the adapter to load")
     args = parser.parse_args()
 
     if not os.path.exists(args.eval_file):
@@ -157,7 +159,7 @@ def main():
     if ft_tasks:
         torch.cuda.empty_cache()
         try:
-            model, tokenizer = load_models(run_finetuned=True)
+            model, tokenizer = load_models(run_finetuned=True, adapter_id=args.adapter_id)
             for name, _, use_rag in ft_tasks:
                 print(f"Running Configuration: {name}")
                 for q in tqdm(questions):

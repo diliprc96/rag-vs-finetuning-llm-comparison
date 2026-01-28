@@ -17,7 +17,7 @@ from trl import SFTTrainer, SFTConfig
 # Configuration
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
 NEW_MODEL_NAME = "mistral-7b-physics-finetune"
-DATASET_FILE = "data_extraction/alpaca_physics_5k.jsonl" # Path on Runpod
+DATASET_FILE = "data_extraction/alpaca_physics_5k_cleaned.jsonl" # Path on Runpod
 OUTPUT_DIR = "./results"
 
 def main():
