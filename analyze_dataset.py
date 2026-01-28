@@ -1,7 +1,7 @@
 import json
 from collections import Counter
 
-file_path = '/workspace/rag-vs-finetuning-llm-comparison/data_extraction/alpaca_physics_5k.jsonl'
+file_path = '/workspace/rag-vs-finetuning-llm-comparison/data_extraction/alpaca_physics_5k_cleaned.jsonl'
 
 types = Counter()
 keys = Counter()

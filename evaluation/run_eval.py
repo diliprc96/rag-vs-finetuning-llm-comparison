@@ -14,14 +14,39 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from rag_pipeline.retriever import load_index, retrieve, format_docs
 from evaluation.scorers import grade_mcq, grade_numeric, grade_explanation
 
+import logging
+import datetime
+
 # Configuration
 BASE_MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
-ADAPTER_PATH = "results/mistral-7b-physics-finetune" # Path to local adapter after training
-EVAL_DATA_PATH = "evaluation/physics_questions_50.json" # User provided
-OUTPUT_FILE = "evaluation/results_table.csv"
+ADAPTER_PATH = "results/mistral-7b-physics-finetune" 
+EVAL_DATA_PATH = "evaluation/physics_questions_50.json" 
+
+# Versioned Output
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+OUTPUT_FILE = f"evaluation/results_table_{timestamp}.csv"
+LOG_FILE = f"evaluation/eval_{timestamp}.log"
+
+# Setup Logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(LOG_FILE),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Redirect print to logger (optional, or just use logger)
+# Ideally replace print with logger.info, but for quick fix:
+def log_print(*args, **kwargs):
+    msg = " ".join(map(str, args))
+    logger.info(msg)
+    print(*args, **kwargs)
 
 def load_models(run_finetuned=False, adapter_id=ADAPTER_PATH):
-    print(f"Loading Base Model: {BASE_MODEL_ID}")
+    log_print(f"Loading Base Model: {BASE_MODEL_ID}")
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_quant_type="nf4",
@@ -38,7 +63,7 @@ def load_models(run_finetuned=False, adapter_id=ADAPTER_PATH):
     if run_finetuned:
         if not adapter_id:
             raise ValueError("Adapter ID/Path must be provided for finetuned mode.")
-        print(f"Loading LoRA Adapter from {adapter_id}")
+        log_print(f"Loading LoRA Adapter from {adapter_id}")
         # Note: If adapter_id is a remote Hub ID (private), ensure HF_TOKEN is set.
         model = PeftModel.from_pretrained(model, adapter_id)
     
@@ -78,7 +103,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.exists(args.eval_file):
-        print(f"Error: Eval file {args.eval_file} not found. Please provide the 50 questions.")
+        log_print(f"Error: Eval file {args.eval_file} not found. Please provide the 50 questions.")
         return
 
     with open(args.eval_file, "r") as f:
@@ -89,12 +114,22 @@ def main():
     if args.rag or args.mode == "all":
         try:
             db = load_index()
-            print("RAG Index loaded.")
+            log_print("RAG Index loaded.")
         except Exception as e:
-            print(f"RAG Load Error: {e}")
+            log_print(f"RAG Load Error: {e}")
             if args.rag: return
 
-    results = []
+    # Load existing results if they exist to support resume
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            existing_df = pd.read_csv(OUTPUT_FILE)
+            results = existing_df.to_dict('records')
+            log_print(f"Loaded {len(results)} existing results.")
+        except:
+            log_print("Could not load existing results. Starting fresh.")
+            results = []
+    else:
+        results = []
 
     # Define configurations to run
     configs = []
@@ -119,8 +154,12 @@ def main():
     if base_tasks:
         model, tokenizer = load_models(run_finetuned=False)
         for name, _, use_rag in base_tasks:
-            print(f"Running Configuration: {name}")
+            log_print(f"Running Configuration: {name}")
             for q in tqdm(questions):
+                # Check if already done
+                if any(r['question_id'] == q['id'] and r['config'] == name for r in results):
+                    continue
+                
                 context = ""
                 if use_rag and db:
                     docs = retrieve(db, q['question'])
@@ -151,9 +190,12 @@ def main():
                     "score_numeric": score_num,
                     "score_explanation": score_exp
                 })
+                # Incremental Save
+                pd.DataFrame(results).to_csv(OUTPUT_FILE, index=False)
+
         del model
         torch.cuda.empty_cache()
-
+ 
     # 2. Run Finetuned Model Tasks
     ft_tasks = [c for c in configs if c[1]]
     if ft_tasks:
@@ -161,8 +203,12 @@ def main():
         try:
             model, tokenizer = load_models(run_finetuned=True, adapter_id=args.adapter_id)
             for name, _, use_rag in ft_tasks:
-                print(f"Running Configuration: {name}")
+                log_print(f"Running Configuration: {name}")
                 for q in tqdm(questions):
+                    # Check if already done
+                    if any(r['question_id'] == q['id'] and r['config'] == name for r in results):
+                        continue
+
                     context = ""
                     if use_rag and db:
                         docs = retrieve(db, q['question'], k=2)
@@ -192,15 +238,17 @@ def main():
                         "score_numeric": score_num,
                         "score_explanation": score_exp
                     })
+                    # Incremental Save
+                    pd.DataFrame(results).to_csv(OUTPUT_FILE, index=False)
         except Exception as e:
-            print(f"Skipping Finetuned runs: {e}")
-            # traceback.print_exc()
+            log_print(f"Skipping Finetuned runs: {e}")
+            # traceback.log_print_exc()
 
     # Save
     df = pd.DataFrame(results)
     df.to_csv(OUTPUT_FILE, index=False)
-    print(f"Results saved to {OUTPUT_FILE}")
-    print(df.groupby("config")[["score_mcq", "score_numeric", "score_explanation"]].mean())
+    log_print(f"Results saved to {OUTPUT_FILE}")
+    log_print(df.groupby("config")[["score_mcq", "score_numeric", "score_explanation"]].mean())
 
 if __name__ == "__main__":
     main()

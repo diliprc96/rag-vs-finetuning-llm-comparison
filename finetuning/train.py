@@ -27,6 +27,7 @@ def main():
     parser.add_argument("--learning_rate", type=float, default=2e-4)
     parser.add_argument("--dataset_path", type=str, default=DATASET_FILE)
     parser.add_argument("--resume_from_checkpoint", type=str, default=None, help="Path to checkpoint or 'True' to resume from latest")
+    parser.add_argument("--max_steps", type=int, default=-1, help="Limit number of training steps for debugging")
     args = parser.parse_args()
 
     print(f"Loading dataset from {args.dataset_path}...")
@@ -69,7 +70,7 @@ def main():
 
     # PEFT Config
     peft_config = LoraConfig(
-        lora_alpha=16,
+        lora_alpha=128,
         lora_dropout=0.1,
         r=64,
         bias="none",
@@ -91,7 +92,7 @@ def main():
         fp16=False,
         bf16=False,
         max_grad_norm=0.3,
-        max_steps=-1,
+        max_steps=args.max_steps,
         warmup_ratio=0.03,
         group_by_length=True,
         lr_scheduler_type="constant",
