@@ -39,8 +39,10 @@ def grade_mcq(predicted_text: str, reference_answer: str, client: Optional[Anthr
     
     Instructions:
     1. If the Student's Answer matches the Correct Answer (A, B, C, or D) or clearly states the text of the correct option, score 1.
-    2. Otherwise, score 0.
-    3. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
+    2. If the answer is correct in concept but verbose (e.g., writes out the full sentence instead of just 'A'), score 1.
+    3. Ignore formatting artifacts or extra text.
+    4. Only score 0 if the answer is fundamentally wrong or selects a different option.
+    5. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
     """
 
     try:
@@ -85,10 +87,11 @@ def grade_numeric(predicted_text: str, reference_answer: str, tolerance: float =
     Tolerance: +/- {tolerance*100}%
     
     Instructions:
-    1. Identify the final numeric answer in the Student's Answer. Ignore units unless they are fundamentally wrong (e.g. asking for meters but given seconds).
-    2. Compare it to the Correct Answer value.
-    3. If the value is within {tolerance*100}% of the Correct Answer, score 1. Otherwise, score 0.
-    4. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
+    1. Identify the final numeric answer in the Student's Answer. Extract it even if buried in text or JSON.
+    2. Ignore units unless they are fundamentally wrong (e.g. asking for meters but given seconds).
+    3. Compare it to the Correct Answer value.
+    4. If the value is within {tolerance*100}% of the Correct Answer, score 1. Otherwise, score 0.
+    5. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
     """
 
     try:
@@ -134,16 +137,17 @@ def grade_explanation(predicted_text: str, reference_text: str, rubric=None, cli
     Reference Answer: "{reference_text}"
     
     Rubric:
-    - 1.0: Perfect. Captures the core physical concept, reasoning, and key details accurately.
-    - 0.75: Good. Correct core concept but misses minor details or phrasing is slightly ambiguous.
-    - 0.5: Weak. Captures some correct keywords but misses the main logic or contains significant errors.
-    - 0.25: Poor. Barely relevant or mostly incorrect, but attempts the topic.
+    - 1.0: Correct. Captures the core physical concept. Ignore formatting, length, or extra "chatty" text.
+    - 0.75: Good. Correct core concept but misses minor details.
+    - 0.5: Weak. Captures some correct keywords but misses the main logic.
+    - 0.25: Poor. Barely relevant or mostly incorrect.
     - 0.0: Wrong. Completely incorrect, irrelevant, or IDK.
     
     Instructions:
-    1. Compare the core physical meaning. Do not penalize for different wording if the physics is sound.
-    2. Output ONLY a valid JSON object with: {{"score": <float>, "reasoning": "<short text>"}}.
-    3. Allowed scores: [0.0, 0.25, 0.5, 0.75, 1.0].
+    1. Compare the core physical meaning. Do not penalize for verbosity or formatting.
+    2. Focus on whether the student understands the physics.
+    3. Output ONLY a valid JSON object with: {{"score": <float>, "reasoning": "<short text>"}}.
+    4. Allowed scores: [0.0, 0.25, 0.5, 0.75, 1.0].
     """
 
     try:
