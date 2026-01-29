@@ -1,0 +1,3 @@
+[submodule "mistral-7b-physics-finetuned"]
+	path = mistral-7b-physics-finetuned
+	url = https://huggingface.co/Dilip-Ravi/mistral-7b-physics-finetuned

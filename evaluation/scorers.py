@@ -1,160 +1,197 @@
-import re
 import os
+import re
 import json
+import logging
+import math
+from typing import Optional, Dict, Any, Union
+from dotenv import load_dotenv
 from anthropic import Anthropic
 
-def get_client():
+load_dotenv()
+
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def get_claude_client():
     api_key = os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
-        print("Warning: No ANTHROPIC_API_KEY set.")
+        logger.warning("Error: ANTHROPIC_API_KEY not found in environment variables.")
         return None
     return Anthropic(api_key=api_key)
 
-def llm_extract(text, instruction, model="claude-3-haiku-20240307"):
-    client = get_client()
-    if not client: return None
-    
-    try:
-        message = client.messages.create(
-            model=model,
-            max_tokens=100,
-            messages=[{
-                "role": "user", 
-                "content": f"Extract the requested information from the text. Return ONLY the value, nothing else.\n\nText: {text}\n\nInstruction: {instruction}"
-            }]
-        )
-        return message.content[0].text.strip()
-    except Exception as e:
-        print(f"LLM Extraction Error: {e}")
-        return None
-
-def grade_mcq(predicted_text, correct_answer):
+def grade_mcq(predicted_text: str, reference_answer: str, client: Optional[Anthropic] = None) -> float:
     """
-    Checks if the predicted text matches the correct option (A, B, C, D).
-    Robust: Regex -> LLM Fallback (Haiku)
-    """
-    predicted_text = predicted_text.strip()
-    correct_answer = correct_answer.strip().upper()
-    
-    # 1. Regex Heuristic
-    match = re.search(r'\b([A-D])\b', predicted_text.upper())
-    if match:
-        # Check if the match is plausible (e.g., "The answer is A")
-        # Sometimes it matches "A" in "A car is moving..."
-        # If the text is short, regex is fine. If long, maybe risky.
-        # But let's try strict regex first.
-        pred_letter = match.group(1)
-        if pred_letter == correct_answer:
-            return 1.0
-            
-    # 2. LLM Fallback (Robustness)
-    # If regex failed (or to double check), ask Haiku to extract the option.
-    extracted = llm_extract(predicted_text, "Extract the final Multiple Choice Option (A, B, C, or D). Return only the letter.")
-    if extracted:
-        match_llm = re.search(r'\b([A-D])\b', extracted.upper())
-        if match_llm and match_llm.group(1) == correct_answer:
-            return 1.0
-
-    return 0.0
-
-def grade_numeric(predicted_text, correct_value, tolerance=0.05):
-    """
-    Extracts number and compares with tolerance (Increased to 5%).
-    Robust: Regex (Last number) -> LLM Fallback
-    """
-    # 1. Regex Heuristic (Last number)
-    numbers = re.findall(r"[-+]?\d*\.\d+|\d+", predicted_text)
-    correct = float(correct_value)
-    
-    if numbers:
-        try:
-            val = float(numbers[-1])
-            if abs(val - correct) <= tolerance * abs(correct):
-                return 1.0
-        except:
-            pass
-
-    # 2. LLM Fallback
-    extracted = llm_extract(predicted_text, "Extract the final numeric answer value. Return only the number.")
-    if extracted:
-        try:
-            # Clean up extracted string
-            val_str = re.findall(r"[-+]?\d*\.\d+|\d+", extracted)
-            if val_str:
-                val_llm = float(val_str[0])
-                if abs(val_llm - correct) <= tolerance * abs(correct):
-                    return 1.0
-        except:
-            pass
-            
-    return 0.0
-
-def grade_explanation(predicted_text, reference_text, rubric=None, client=None):
-    """
-    Uses Claude to grade the explanation based on a 0-5 scale.
-    Upgraded to Claude-3.5-Sonnet for better reasoning.
+    Grades MCQ using Claude to extract the answer and compare.
+    Returns 1.0 if correct, 0.0 otherwise.
     """
     if not client:
-        client = get_client()
-        if not client: return 0.0
+        client = get_claude_client()
+        if not client:
+            return 0.0
+
+    prompt = f"""
+    You are an impartial grader.
+    Task: Identify the selected option (A, B, C, or D) from the Student's Answer and compare it to the Correct Answer.
+    
+    Student's Answer: "{predicted_text}"
+    Correct Answer: "{reference_answer}"
+    
+    Instructions:
+    1. If the Student's Answer matches the Correct Answer (A, B, C, or D) or clearly states the text of the correct option, score 1.
+    2. Otherwise, score 0.
+    3. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
+    """
+
+    try:
+        message = client.messages.create(
+            model="claude-3-5-haiku-20241022",
+            max_tokens=100,
+            temperature=0.0,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        response_text = message.content[0].text.strip()
         
-    model = "claude-sonnet-4-5-20250929" # Updated to available model
+        # Extract JSON
+        match = re.search(r'\{.*"score":\s*([0-1]).*\}', response_text, re.DOTALL)
+        if match:
+             # simple regex for 0 or 1
+            return float(match.group(1))
+        
+        # Try full JSON parse if regex fails
+        data = json.loads(response_text)
+        return float(data.get("score", 0))
+
+    except Exception as e:
+        logger.error(f"Error in grade_mcq: {e}")
+        return 0.0
+
+def grade_numeric(predicted_text: str, reference_answer: str, tolerance: float = 0.05, client: Optional[Anthropic] = None) -> float:
+    """
+    Grades numeric answers using Claude to extract the value and compare.
+    Returns 1.0 if within tolerance, 0.0 otherwise.
+    """
+    if not client:
+        client = get_claude_client()
+        if not client:
+            return 0.0
+
+    prompt = f"""
+    You are an impartial grader.
+    Task: Extract the numeric value from the Student's Answer and determine if it matches the Correct Answer.
     
-    prompt = f"""You are a physics professor grading a student's answer.
+    Student's Answer: "{predicted_text}"
+    Correct Answer: "{reference_answer}"
+    Tolerance: +/- {tolerance*100}%
     
-    Question Context: A physics problem.
-    Reference Answer: {reference_text}
-    Student Answer: {predicted_text}
+    Instructions:
+    1. Identify the final numeric answer in the Student's Answer. Ignore units unless they are fundamentally wrong (e.g. asking for meters but given seconds).
+    2. Compare it to the Correct Answer value.
+    3. If the value is within {tolerance*100}% of the Correct Answer, score 1. Otherwise, score 0.
+    4. Output ONLY a valid JSON object with the format: {{"score": 0}} or {{"score": 1}}. Do not output any other text.
+    """
+
+    try:
+        message = client.messages.create(
+            model="claude-3-5-haiku-20241022",
+            max_tokens=100,
+            temperature=0.0,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        response_text = message.content[0].text.strip()
+        
+        # Extract JSON
+        match = re.search(r'\{.*"score":\s*([0-1]).*\}', response_text, re.DOTALL)
+        if match:
+            return float(match.group(1))
+            
+        data = json.loads(response_text)
+        return float(data.get("score", 0))
+
+    except Exception as e:
+        logger.error(f"Error in grade_numeric: {e}")
+        return 0.0
+
+
+def grade_explanation(predicted_text: str, reference_text: str, rubric=None, client: Optional[Anthropic] = None) -> Dict[str, Any]:
+    """
+    Grades explanations using Claude on a 5-point scale (0, 0.25, 0.5, 0.75, 1.0).
+    Returns a dict with 'score' and 'reasoning'.
+    """
+    if not client:
+        client = get_claude_client()
+        if not client:
+            return {"score": 0.0, "reasoning": "API Key missing"}
+
+    # Use Sonnet for better reasoning on explanations
+    model = "claude-sonnet-4-5-20250929" 
+
+    prompt = f"""
+    You are an expert Physics grader.
+    Task: Grade the Student's Explanation against the Reference Explanation.
+    
+    Student's Answer: "{predicted_text}"
+    Reference Answer: "{reference_text}"
     
     Rubric:
-    - Correctness (0-2.5 pts)
-    - Completeness (0-1.5 pts)
-    - Clarity (0-1.0 pts)
+    - 1.0: Perfect. Captures the core physical concept, reasoning, and key details accurately.
+    - 0.75: Good. Correct core concept but misses minor details or phrasing is slightly ambiguous.
+    - 0.5: Weak. Captures some correct keywords but misses the main logic or contains significant errors.
+    - 0.25: Poor. Barely relevant or mostly incorrect, but attempts the topic.
+    - 0.0: Wrong. Completely incorrect, irrelevant, or IDK.
     
-    Task: Grade the student answer on a scale of 0 to 5.
-    Output ONLY a JSON object with the score and reasoning.
-    Format: {{"score": 4.5, "reasoning": "..."}}
+    Instructions:
+    1. Compare the core physical meaning. Do not penalize for different wording if the physics is sound.
+    2. Output ONLY a valid JSON object with: {{"score": <float>, "reasoning": "<short text>"}}.
+    3. Allowed scores: [0.0, 0.25, 0.5, 0.75, 1.0].
     """
-    
+
     try:
         message = client.messages.create(
             model=model,
             max_tokens=300,
+            temperature=0.0,
             messages=[{"role": "user", "content": prompt}]
         )
-        response = message.content[0].text
+        response_text = message.content[0].text.strip()
         
-        # Robust Extraction: Regex first (ignores bad JSON formatting like unescaped LaTeX)
-        match = re.search(r'"score":\s*([0-9.]+)', response)
-        if match:
-            return float(match.group(1))
-            
-        # Fallback: Try strict JSON parse
-        response_clean = response.replace("```json", "").replace("```", "").strip()
+        # Clean potential markdown
+        response_clean = response_text.replace("```json", "").replace("```", "").strip()
+        
+        # Try finding json bracket
+        start = response_clean.find("{")
+        end = response_clean.rfind("}")
+        if start != -1 and end != -1:
+            response_clean = response_clean[start:end+1]
+
         data = json.loads(response_clean)
-        return float(data.get("score", 0.0))
-        
+        return {
+            "score": float(data.get("score", 0.0)),
+            "reasoning": data.get("reasoning", "No reasoning provided")
+        }
+
     except Exception as e:
-        print(f"Grading error with {model}: {e}")
-        # Try fallback model if Sonnet fails (e.g., API error) or extraction fails
-        print("Falling back to Haiku...")
+        logger.error(f"Error in grade_explanation: {e}")
+        # Fallback to Haiku if Sonnet fails
         try:
-             # Fallback to Haiku
+            logger.info("Falling back to Haiku for explanation grading...")
             message = client.messages.create(
                 model="claude-3-5-haiku-20241022",
                 max_tokens=300,
+                temperature=0.0,
                 messages=[{"role": "user", "content": prompt}]
             )
-            response = message.content[0].text
-            
-            # Regex for Haiku too
-            match = re.search(r'"score":\s*([0-9.]+)', response)
-            if match:
-                return float(match.group(1))
+            response_clean = message.content[0].text.strip().replace("```json", "").replace("```", "").strip()
+            start = response_clean.find("{")
+            end = response_clean.rfind("}")
+            if start != -1 and end != -1:
+                response_clean = response_clean[start:end+1]
                 
-            response_clean = response.replace("```json", "").replace("```", "").strip()
             data = json.loads(response_clean)
-            return float(data.get("score", 0.0))
+            return {
+                "score": float(data.get("score", 0.0)),
+                "reasoning": data.get("reasoning", "Fallback grading")
+            }
         except Exception as e2:
-             print(f"Fallback Grading error: {e2}")
-             return 0.0
+            logger.error(f"Fallback failed: {e2}")
+            return {"score": 0.0, "reasoning": f"Error: {str(e)}"}
