@@ -8,3 +8,7 @@ scipy
 pandas
 tqdm
 datasets
+tensorboard
+langchain_huggingface
+langchain_community
+anthropic

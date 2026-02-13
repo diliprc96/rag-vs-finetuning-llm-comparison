@@ -1,0 +1,219 @@
+config,question_id,type,question,predicted,correct,score_mcq,score_numeric,score_explanation,reasoning
+Base,1,mcq,Which of the following units is an SI base unit? (A) Newton (B) Joule (C) Kilogram (D) Watt,"All of the given units (A) Newton, (B) Joule, (C) Kilogram, and (D) Watt are SI base units.
+
+Newton (N) is the unit of force.
+Joule (J) is the unit of energy.
+Kilogram (kg) is the unit of mass.
+Watt (W) is the unit of power.
+
+SI base units are the fundamental units in the International System of Units (SI) from which all other units can be derived. There are seven base units in the SI system: meter (m) for length, kilogram (kg) for mass, second (s) for time, ampere (A) for electric current, Kelvin (K) for temperature, mole (mol) for amount of substance, and candela (cd) for luminous intensity. The given units (Newton, Joule, Kilogram, and Watt) are among the derived base units in the SI system.",C,0.0,0.0,0.0,
+Base,2,numeric,"If an object travels 100 meters in 4 seconds, what is its average speed in m/s?","To find the average speed of an object, you can use the formula:
+
+Average speed = Distance / Time
+
+Given that the object travels a distance of 100 meters in 4 seconds, we can calculate its average speed as follows:
+
+Average speed = 100 meters / 4 seconds
+
+First, divide the distance by the time in seconds:
+
+25 meters/second
+
+Then, convert the speed from meters per second to meters per second squared (m/s²) for consistency with the SI unit:
+
+Average speed = 25 m/s
+
+So, the average speed of the object is 25 meters per second.",25,0.0,1.0,0.0,
+Base,3,explanation,Explain the difference between accuracy and precision in the context of experimental physics.,"In the context of experimental physics, accuracy and precision are two important concepts that are often used to evaluate the quality of measurements.
+
+Precision refers to the degree of agreement among repeated measurements of the same quantity. In other words, it measures how close the results of multiple measurements are to each other. A high precision means that the measurements are very consistent and repeatable. For example, if you measure the length of a rod ten times and get results that vary by only 0.1 millimeter, then your measurements are very precise.
+
+Accuracy, on the other hand, refers to how close the measured value is to the true value of the quantity being measured. In other words, it measures how close the measurement is to the target or the correct answer. For example, if you measure the length of a rod to be 100.5 millimeters, and the true length is 100 millimeters, then your measurement is not very accurate, even if it is very precise.
+
+It is important to note that precision does not necessarily imply accuracy, and accuracy does not necessarily imply precision. For example, if you measure the length of a rod ten times and get results that vary widely, but the average of all the measurements is very close to the true value, then your measurements may be accurate, even if they are not very precise.
+
+In summary, precision is about the consistency and repeatability of measurements, while accuracy is about how close the measured value is to the true value. Both concepts are important in experimental physics, and a good experiment should strive for both precision and accuracy.","Accuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close repeated measurements are to each other, regardless of whether they are accurate.",0.0,0.0,0.75,"The student's explanation provides a comprehensive and accurate description of accuracy and precision. The core definitions match the reference answer, with additional elaborative details. The key distinction between precision (consistency of measurements) and accuracy (closeness to true value) is correctly explained. The only reason for not giving a perfect score is the slightly more verbose explanation compared to the concise reference answer, but the physics understanding is fundamentally sound."
+Base,4,mcq,What is the dimension of Force? (A) MLT^-1 (B) MLT^-2 (C) ML^2T^-2 (D) LT^-2,"The dimension of force is MLT^-2. Therefore, the correct answer is (A) MLT^-2.
+
+Force is a vector quantity that measures the amount of push or pull on an object. It is defined as the mass of an object multiplied by its acceleration. The SI unit of force is the Newton (N), which is named after Sir Isaac Newton. One Newton is equal to the force required to accelerate a mass of one kilogram at a rate of one meter per second squared.
+
+The dimensions of force can be derived from the definition of force as mass times acceleration. Mass has dimensions of M, length has dimensions of L, and time has dimensions of T. Therefore, the dimensions of force are MLT^-2.",B,0.0,0.0,0.0,
+Base,5,numeric,A car accelerates from rest to 20 m/s in 5 seconds. What is the magnitude of its average acceleration in m/s^2?,"To find the average acceleration, we can use the formula:
+
+Average Acceleration = Change in Velocity / Change in Time
+
+Given:
+Change in Velocity = 20 m/s
+Change in Time = 5 seconds
+
+Average Acceleration = 20 m/s / 5 s
+
+Average Acceleration = 4 m/s^2
+
+So, the magnitude of the car's average acceleration is 4 m/s^2.",4,0.0,1.0,0.0,
+Base,6,mcq,Which vector operation results in a scalar? (A) Cross product (B) Dot product (C) Vector addition (D) Scalar multiplication,"The dot product of two vectors results in a scalar. This is because the dot product operation takes two vectors as inputs and produces a single scalar value as output. The other vector operations you listed, cross product, vector addition, and scalar multiplication, all result in vectors or new vectors as outputs.",B,1.0,0.0,0.0,
+Base,7,mcq,An object in uniform circular motion has a constant: (A) Velocity (B) Speed (C) Acceleration vector (D) Displacement,"The answer is (B) Speed. In uniform circular motion, the object moves at a constant speed, but its velocity changes as it changes direction. The acceleration is always directed towards the center of the circle, but its magnitude changes depending on the object's speed. Displacement, on the other hand, is not constant in circular motion as the object moves in a circular path covering different distances in each revolution.",B,1.0,0.0,0.0,
+Base,8,numeric,calculate the work done (in Joules) by a 10 N force moving an object 5 meters in the direction of the force.,"The work done by a force acting on an object is given by the equation:
+
+Work = Force * Distance
+
+In this case, the force is 10 Newtons and the distance is 5 meters. So, the work done would be:
+
+Work = 10 N * 5 m
+Work = 50 Joules",50,0.0,1.0,0.0,
+Base,9,explanation,Why does a passenger in a turning car feel pushed to the side?,"When a car turns, the force of inertia pushes the occupants in the direction they were originally traveling. In a straight line, this force is forward. But when the car turns, the direction of forward changes, and the occupants must change their direction to follow the new forward. This change in direction creates a force that pushes the occupants towards the outside of the turn. This is why passengers in a turning car feel pushed to the side. This effect is more pronounced in cars that turn sharply or at high speeds.","This is due to basic inertia (Newton's First Law). The passenger's body tends to continue moving in a straight line, while the car turns. The sensation of being pushed outward is a 'fictitious force' (centrifugal force) experienced in the non-inertial reference frame of the car.",0.0,0.0,0.75,"The student's explanation captures the core concept of inertia and how passengers experience a force during turning. They correctly describe that the body wants to continue moving in the original direction while the car turns. The explanation is mostly accurate, though less precise than the reference answer. The student uses 'force of inertia' instead of referencing Newton's First Law and doesn't explicitly mention the 'fictitious force' or 'non-inertial reference frame'. However, the fundamental physics understanding is sound and the explanation is scientifically reasonable."
+Base,10,mcq,The slope of a velocity-time graph represents: (A) Displacement (B) Acceleration (C) Force (D) Momentum,"The slope of a velocity-time graph represents acceleration. This is because the change in velocity (which is the slope of the velocity-time graph) over a given change in time is equal to the acceleration. Therefore, the answer is (B) acceleration.",B,1.0,0.0,0.0,
+Base,11,numeric,A 2 kg block slides down a frictionless 30-degree incline. value of g is 9.8 m/s^2. What is the acceleration along the incline in m/s^2?,"To find the acceleration of the block sliding down the incline, we can use the formula for acceleration in terms of mass, gravity, and angle of the incline:
+
+acceleration = mg sinθ
+
+where:
+- m is the mass of the block (2 kg)
+- g is the acceleration due to gravity (9.8 m/s^2)
+- θ is the angle of the incline (30 degrees)
+
+First, we need to convert the angle from degrees to radians:
+
+θ = 30° = 0.524 radians
+
+Now, we can calculate the acceleration:
+
+acceleration = (2 kg) × (9.8 m/s^2) × sin(0.524)
+acceleration = 9.8 m/s^2 × 0.848
+acceleration ≈ 8.35 m/s^2
+
+So, the acceleration of the block along the incline is approximately 8.35 m/s^2.",4.9,0.0,0.0,0.0,
+Base,12,mcq,Which of Newton's laws explains recoil in a gun? (A) First Law (B) Second Law (C) Third Law (D) Law of Gravitation,"(C) Third Law: For every action, there is an equal and opposite reaction. When a gun is fired, the bullet is propelled forward due to the action of the explosive force in the cartridge. According to the third law, there is an equal and opposite reaction, which is the recoil felt by the gun and the shooter.",C,1.0,0.0,0.0,
+Base,13,explanation,Describe the relationship between kinetic energy and work as stated by the Work-Energy Theorem.,"The Work-Energy Theorem is a fundamental principle in physics that relates the work done by a force on an object to the change in the object's kinetic energy. According to this theorem, the work W done by a constant force F on an object as it moves a distance d is equal to the change ΔK in the object's kinetic energy:
+
+W = ΔK
+
+This equation can also be written in integral form as:
+
+∫F⋅dr = ΔK
+
+where the integral is taken over the entire distance the object moves.
+
+In other words, the Work-Energy Theorem states that the work done by a constant force on an object is equal to the change in the object's kinetic energy. This relationship is important because it allows us to calculate the kinetic energy of an object given the work done on it, or the work required to change an object's kinetic energy.
+
+For example, consider an object of mass m that is initially at rest and is then given a velocity v by a constant force F. The work done by the force is given by:
+
+W = F⋅d = F⋅(mv/F) = mv²
+
+According to the Work-Energy Theorem, this work is equal to the change in the object's kinetic energy:
+
+ΔK = ½mv²
+
+Therefore, the final kinetic energy of the object is:
+
+Kf = ½mv² = W
+
+This shows that the work done by a constant force on an object is equal to the change in the object's kinetic energy, which is a powerful result that has many applications in physics.","The Work-Energy Theorem states that the net work done on an object is equal to the change in its kinetic energy ($W_{net} = \Delta KE$). If positive work is done, kinetic energy increases; if negative work is done, it decreases.",0.0,0.0,0.75,"The student's explanation captures the core concept of the Work-Energy Theorem very well. They correctly describe that work done is equal to the change in kinetic energy. The mathematical representation and example are sound. The only minor deviation from the reference answer is emphasizing 'constant force' and not explicitly highlighting 'net work', but the underlying physics is accurate. The explanation provides more depth and context than the reference answer, demonstrating good understanding."
+Base,14,mcq,"If the distance between two masses is doubled, the gravitational force between them becomes: (A) Double (B) Half (C) One-fourth (D) Four times","The correct answer is (A) Double. The gravitational force between two masses is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. So, if the distance is doubled, the force is also doubled, assuming the masses remain constant.",C,0.0,0.0,0.0,
+Base,15,numeric,Convert 72 km/h to m/s.,"To convert kilometers per hour (km/h) to meters per second (m/s), you can use the following conversion formula: m/s = km/h * (1000 m / 3600 s)
+
+So, to convert 72 km/h to m/s, you can do the following calculation:
+
+m/s = 72 km/h * (1000 m / 3600 s)
+
+m/s = 20.0833 m/s (rounded to four decimal places)
+
+Therefore, 72 km/h is equivalent to approximately 20.0833 m/s.",20,0.0,1.0,0.0,
+Base,16,explanation,Explain why static friction is usually greater than kinetic friction.,"Static friction and kinetic friction are two types of frictional forces that act between two surfaces in contact. The main difference between the two lies in the motion of the objects.
+
+Static friction is the force that prevents an object from moving when there is no net force acting on it. It arises due to the intermolecular forces between the surfaces in contact. These forces are at their maximum when there is no relative motion between the surfaces. In other words, the molecules are locked in place, creating a strong resistance to any attempt to move the object.
+
+On the other hand, kinetic friction is the force that opposes the motion of an object once it is in motion. It arises due to the same intermolecular forces that cause static friction, but in this case, the surfaces are in relative motion. The frictional force acting on an object in motion is generally less than the static friction force because the intermolecular forces are not as strong when the surfaces are moving relative to each other.
+
+The reason why static friction is usually greater than kinetic friction is that the intermolecular forces are at their maximum when the surfaces are in contact but not moving. When an object is at rest, the forces holding it in place are at their strongest, making it more difficult to overcome and move the object. Once the object is in motion, the intermolecular forces are not as strong, making it easier to move the object and resulting in a lower frictional force.
+
+In summary, static friction is greater than kinetic friction because the intermolecular forces that cause friction are at their maximum when there is no motion between the surfaces. These forces are stronger than the forces that arise when the surfaces are in motion, resulting in a greater static friction force.","Static friction arises from the interlocking of irregularities and molecular bonds between surfaces at rest, requiring more force to break them ('cold welding'). Kinetic friction occurs when surfaces are already sliding, where the contact points don't have enough time to bond as strongly.",0.0,0.0,0.75,"The student's explanation captures the core concept of static vs kinetic friction well, describing the difference in intermolecular forces and resistance. However, the reference answer provides a more precise physical mechanism involving 'cold welding' and interlocking of surface irregularities, which the student's explanation does not explicitly mention. The student's description is fundamentally correct but lacks the deeper microscopic explanation of friction's origin. The explanation demonstrates good understanding but misses some nuanced physical details."
+Base,17,mcq,Potential energy is associated with: (A) Motion (B) Position (C) Time (D) Velocity,"The correct answer is (B) Position. Potential energy is a type of energy that a system or an object possesses due to its position or configuration relative to other objects or forces. It depends on the position or configuration of the system or object, not on its motion or velocity.",B,1.0,0.0,0.0,
+Base,18,numeric,A spring with constant k=100 N/m is compressed by 0.2 m. How much potential energy (in J) is stored?,"To find the potential energy stored in a compressed spring, we can use the following formula:
+
+Potential Energy = 0.5 * k * (Compression Distance)^2
+
+Given:
+k = 100 N/m
+Compression Distance = 0.2 m
+
+Substitute the values into the formula:
+
+Potential Energy = 0.5 * 100 N/m * (0.2 m)^2
+
+Calculate the square of the compression distance:
+(0.2 m)^2 = 0.04 m^2
+
+Multiply the constants:
+0.5 * 100 N/m = 50 N/m
+
+Multiply the constants and the square of the compression distance:
+50 N/m * 0.04 m^2 = 2 J
+
+So, the potential energy stored in the compressed spring is 2 Joules.",2,0.0,1.0,0.0,
+Base,19,mcq,"In an inelastic collision, which quantity is conserved? (A) Kinetic Energy (B) Momentum (C) Both (D) Neither","The answer is (C) Both. In an inelastic collision, the total momentum before the collision is equal to the total momentum after the collision. Additionally, the total kinetic energy before the collision is equal to the total kinetic energy after the collision. Therefore, both momentum and kinetic energy are conserved in an inelastic collision.",B,0.0,0.0,0.0,
+Base,20,explanation,What is the difference between mass and weight?,"Mass and weight are related concepts in physics, but they are not the same thing.
+
+Mass is a measure of the amount of matter in an object. It is a property of an object that describes how much material it contains and is typically measured in kilograms or grams. Mass is a fundamental property of an object and does not change, regardless of where the object is located or the force acting upon it.
+
+Weight, on the other hand, is a measure of the force of gravity acting upon an object. It is the force with which the Earth pulls an object towards its center. Weight is dependent on both the mass of the object and the acceleration due to gravity. Therefore, an object with a larger mass will have a greater weight than an object with a smaller mass, assuming the same gravitational force.
+
+In summary, mass is a measure of the amount of matter in an object, while weight is a measure of the force of gravity acting upon an object. An object's mass remains constant, while its weight can change depending on the gravitational force acting upon it.","Mass is the measure of the amount of matter in an object and is intrinsic (scalar, doesn't change with location). Weight is the force of gravity acting on that mass ($W=mg$) and depends on the local gravitational field (vector).",0.0,0.0,0.75,"The student's explanation captures the core physical distinction between mass and weight very well. They correctly describe mass as an intrinsic property of matter and weight as a gravitational force. The explanation includes key details like mass being constant and weight being dependent on gravitational acceleration. The only minor deviation from the reference answer is not explicitly stating the mathematical relationship W=mg, but the conceptual understanding is sound."
+Base,21,mcq,The area under a force-displacement graph represents: (A) Impulse (B) Work (C) Power (D) Acceleration,"The area under a force-displacement (also known as work done or force-distance) graph represents work done by the force. Therefore, the correct answer is (B) Work.",B,1.0,0.0,0.0,
+Base,22,numeric,"What is the period (in seconds) of a pendulum of length 1 meter? (Assume g=9.8 m/s^2, use T = 2*pi*sqrt(L/g), pi approx 3.14)","Using the given formula T = 2π√(L/g), where L is the length of the pendulum, g is the acceleration due to gravity, and T is the period.
+
+Given: L = 1 m, g = 9.8 m/s²
+
+First, calculate the value of √(L/g):
+
+√(L/g) = √(1 m / 9.8 m/s²)
+
+Using a calculator, we find:
+
+√(L/g) ≈ 0.433 s
+
+Now, calculate the period T:
+
+T = 2π√(L/g)
+
+T = 2 × 3.14 × 0.433 s
+
+T ≈ 2.597 s
+
+So, the period of a pendulum of length 1 meter is approximately 2.597 seconds.",2.0,0.0,0.0,0.0,
+Base,23,explanation,Use the concept of center of mass to explain why a high jumper uses the Fosbury Flop technique.,"The Fosbury Flop is a high jumping technique named after its inventor, Dick Fosbury. This technique revolutionized high jump by allowing jumpers to clear higher bars with less effort and fewer injuries compared to the previous technique, the straddle jump.
+
+The center of mass (COM) is the point where the total mass of an object or system is assumed to be located. In the context of a high jumper, the COM is the point where the sum of the masses of the jumper's body segments is assumed to be located.
+
+When using the straddle jump technique, the jumper's COM is relatively far from the takeoff point and the bar. This means that a larger amount of kinetic energy is required to propel the jumper over the bar. Additionally, the wide stance of the straddle jump increases the risk of hitting the bar with a body part, resulting in a failure to clear the bar.
+
+In contrast, the Fosbury Flop technique allows the jumper to approach the bar with their COM closer to it. This is achieved by running and approaching the bar at an angle, bending at the waist, and then rotating forward over the bar while using a scissors-like leg action. This technique keeps the jumper's COM closer to the bar, requiring less kinetic energy to clear it.
+
+Furthermore, the rotational motion of the Fosbury Flop allows the jumper to clear the bar with their back facing it, reducing the risk of hitting the bar with a body part. This results in a more efficient and effective high jump, allowing jumpers to clear higher bars with less effort and fewer injuries.",The Fosbury Flop allows the jumper to arch their back such that their center of mass passes *under* the bar while their body passes over it. This requires less energy/vertical lift compared to techniques where the center of mass must clear the bar height.,0.0,0.0,0.75,"The student's explanation captures the core concept of the Fosbury Flop's efficiency by discussing center of mass (COM) positioning. However, the key distinguishing detail from the reference answer - that the COM passes *under* the bar while the body passes over it - is not explicitly stated. The student provides a good, detailed explanation of how the technique reduces energy requirements and injury risk, but misses the precise geometric insight about COM trajectory."
+Base,24,mcq,Which force is non-conservative? (A) Gravity (B) Spring force (C) Friction (D) Electrostatic force,"(C) Friction: Friction is a non-conservative force because it can do work by opposing motion and converting potential energy into kinetic energy or thermal energy. In contrast, gravity, spring force, and electrostatic force are conservative forces, meaning they can only do potential energy work and do not dissipate energy as heat.",C,1.0,0.0,0.0,
+Base,25,numeric,A wheel rotates at 300 revolutions per minute. What is its angular velocity in rad/s? (Use pi=3.14),"To find the angular velocity in radians per second, we can use the formula:
+
+Angular velocity (rad/s) = Number of revolutions per minute * (2 * pi) / 60
+
+Given that the wheel rotates at 300 revolutions per minute, we can calculate its angular velocity as follows:
+
+Angular velocity (rad/s) = 300 rev/min * (2 * 3.14) / 60
+
+First, let's calculate the value inside the parentheses:
+
+2 * 3.14 = 6.28
+
+Now, we can calculate the angular velocity:
+
+Angular velocity (rad/s) = 300 rev/min * 6.28 / 60
+
+Angular velocity (rad/s) = 300 * 0.105 / 1
+
+Angular velocity (rad/s) = 31.5
+
+So, the angular velocity of the wheel is approximately 31.5 radians per second.",31.4,0.0,1.0,0.0,
+Base,26,explanation,Why is banking of roads used on curves?,"Banking of roads, or the outward slope of the pavement on the sides of a curved road, is used to help vehicles stay on the road and prevent them from sliding outwards when turning. The banking angle is determined by the radius of the curve and the speed at which vehicles are traveling.
+
+When a vehicle is moving around a curve, the centrifugal force acts outward on the vehicle, trying to push it away from the center of the curve. The banking angle of the road counteracts this force by providing an additional horizontal force that keeps the vehicle in contact with the road and moving in the desired direction.
+
+Without banking, vehicles would have to travel at slower speeds around curves to avoid sliding outward, which would reduce the efficiency and convenience of the transportation system. Banking allows vehicles to travel at higher speeds around curves while maintaining their safety and stability.","Banking provides a component of the Normal force towards the center of the curve, which contributes to the necessary centripetal force. This reduces the reliance on friction to turn the vehicle, allowing for higher speeds or safer turns on slippery surfaces.",0.0,0.0,0.75,"The student's explanation captures the essential physical concept of banking roads and its purpose. They correctly describe the outward centrifugal force and how banking helps counteract this force. However, the reference answer more precisely articulates the mechanism as providing a component of the normal force towards the curve's center, which contributes to centripetal force. The student's explanation is conceptually sound but lacks the precise mechanical description of how the banking angle generates the centering force."

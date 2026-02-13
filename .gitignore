@@ -4,4 +4,4 @@ data_extraction/openstax_physics/
 evaluation/__pycache__/
 rag_pipeline/__pycache__/
 results/
-evaluation/results_table.csv
+rag_vs_finetuning_backup_20260128_142319.zip

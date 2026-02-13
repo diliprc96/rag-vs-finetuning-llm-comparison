@@ -17,7 +17,7 @@ from trl import SFTTrainer, SFTConfig
 # Configuration
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
 NEW_MODEL_NAME = "mistral-7b-physics-finetune"
-DATASET_FILE = "data_extraction/alpaca_physics_5k.jsonl" # Path on Runpod
+DATASET_FILE = "data_extraction/alpaca_physics_5k_cleaned.jsonl" # Path on Runpod
 OUTPUT_DIR = "./results"
 
 def main():
@@ -27,6 +27,7 @@ def main():
     parser.add_argument("--learning_rate", type=float, default=2e-4)
     parser.add_argument("--dataset_path", type=str, default=DATASET_FILE)
     parser.add_argument("--resume_from_checkpoint", type=str, default=None, help="Path to checkpoint or 'True' to resume from latest")
+    parser.add_argument("--max_steps", type=int, default=-1, help="Limit number of training steps for debugging")
     args = parser.parse_args()
 
     print(f"Loading dataset from {args.dataset_path}...")
@@ -34,16 +35,17 @@ def main():
     dataset = load_dataset('json', data_files=args.dataset_path, split="train")
 
     # Formatting function
-    def format_prompts(examples):
-        output_texts = []
-        for instruction, input_text, output in zip(examples['instruction'], examples['input'], examples['output']):
-            # Mistral Instruct Format: [INST] instruction [/INST] output
-            if input_text:
-                prompt = f"[INST] {instruction}\n\n{input_text} [/INST] {output}"
-            else:
-                prompt = f"[INST] {instruction} [/INST] {output}"
-            output_texts.append(prompt)
-        return output_texts
+    def format_prompts(example):
+        instruction = example['instruction']
+        input_text = example['input']
+        output = example['output']
+        
+        # Mistral Instruct Format: [INST] instruction [/INST] output
+        if input_text:
+            prompt = f"[INST] {instruction}\n\n{input_text} [/INST] {output}"
+        else:
+            prompt = f"[INST] {instruction} [/INST] {output}"
+        return prompt
 
     # QLoRA Config
     bnb_config = BitsAndBytesConfig(
@@ -68,7 +70,7 @@ def main():
 
     # PEFT Config
     peft_config = LoraConfig(
-        lora_alpha=16,
+        lora_alpha=128,
         lora_dropout=0.1,
         r=64,
         bias="none",
@@ -83,19 +85,19 @@ def main():
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=1,
         optim="paged_adamw_32bit",
-        save_steps=50,
-        logging_steps=50,
+        save_strategy="epoch",
+        logging_steps=10,
         learning_rate=args.learning_rate,
         weight_decay=0.001,
         fp16=False,
         bf16=False,
         max_grad_norm=0.3,
-        max_steps=-1,
+        max_steps=args.max_steps,
         warmup_ratio=0.03,
         group_by_length=True,
         lr_scheduler_type="constant",
         report_to="tensorboard",
-        save_total_limit=2,
+        save_total_limit=5,
         max_length=2048,
         packing=False,
     )
