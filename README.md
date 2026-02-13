@@ -2,7 +2,7 @@
 
 > **Can retrieval-augmented generation match or outperform fine-tuning for specializing a general-purpose LLM?**
 
-This study compares **Retrieval-Augmented Generation (RAG)** and **Fine-Tuning (FT)** as strategies for adapting [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) to a domain-specific Physics Question Answering task. Using the [OpenStax College Physics](https://openstax.org/details/books/college-physics-2e) textbook as the knowledge source, we find that **RAG consistently outperforms fine-tuning**, and that even small data-quality issues can cause catastrophic regression during fine-tuning.
+This study compares **Retrieval-Augmented Generation (RAG)** and **Fine-Tuning (FT)** as strategies for adapting [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) to a domain-specific Physics Question Answering task. Using the [OpenStax College Physics](https://openstax.org/details/books/college-physics-2e) textbook as the knowledge source, I find that **RAG consistently outperforms fine-tuning**, and that even small data-quality issues can cause catastrophic regression during fine-tuning.
 
 ---
 
@@ -103,13 +103,13 @@ Fine-tuned Mistral-7B using **QLoRA** (4-bit quantization + Low-Rank Adaptation)
 | Epochs | 5 |
 | Learning Rate | 2e-4 |
 | Batch Size | 4 (effective 16 with gradient accumulation) |
-| Platform | RunPod (NVIDIA A40 48GB) |
+| Platform | RunPod (NVIDIA RTX4090 24GB) |
 
 Training used the cleaned dataset with epoch-level checkpointing and best-model selection based on validation loss.
 
 ### Phase 4 — Relaxed Evaluation
 
-After the fine-tuned model showed poor results, we introduced **relaxed grading** to separate formatting failures from knowledge failures:
+After the fine-tuned model showed poor results, I introduced **relaxed grading** to separate formatting failures from knowledge failures:
 - MCQ: Accept correct answer even without standard A/B/C/D format
 - Numeric: Extract numeric values from verbose responses
 - Explanation: Grade semantic content regardless of structure
@@ -123,13 +123,13 @@ After the fine-tuned model showed poor results, we introduced **relaxed grading*
 ```
 ┌────────────┐     ┌──────────────┐     ┌──────────────────┐     ┌───────────┐
 │  50-Question │────►│  Model Under │────►│  Claude 3.5      │────►│  Scored   │
-│  Benchmark   │     │  Test (±RAG) │     │  Sonnet (Judge)  │     │  Results  │
+│  Benchmark   │     │  Test (±RAG) │     │  Haiku (Judge)  │     │  Results  │
 └────────────┘     └──────────────┘     └──────────────────┘     └───────────┘
 ```
 
 - **Question bank:** Hand-curated from OpenStax Chapters 1–6 (`evaluation/physics_questions_50.json`)
 - **RAG retrieval:** FAISS index over textbook chunks (`rag_pipeline/`)
-- **Judge model:** Claude 3.5 Sonnet scores each response against the reference answer
+- **Judge model:** Claude 3.5 Haiku scores each response against the reference answer
 - **Outputs:** Per-question CSVs (`evaluation/results_*.csv`) and an aggregate summary
 
 ---
@@ -221,7 +221,7 @@ rag-vs-finetuning-llm-comparison/
 ### Prerequisites
 - Python 3.10+
 - Anthropic API key (for Claude-based scoring)
-- GPU with ≥24GB VRAM (for inference) or ≥48GB (for fine-tuning)
+- GPU with ≥24GB VRAM (for inference and fine-tuning)
 
 ### 1. Setup
 
